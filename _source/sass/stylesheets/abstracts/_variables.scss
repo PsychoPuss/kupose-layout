@@ -3,9 +3,6 @@
 // -----------------------------------------------------------------------------
 
 
-
-
-
 /// Regular font family
 /// @type List
 $text-font-stack: 'Lato', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
@@ -13,7 +10,6 @@ $text-font-stack: 'Lato', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
 /// Code (monospace) font family
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
 
 /// Copy text color
 /// @type Color
@@ -36,7 +32,6 @@ $mid-grey: rgb(221, 221, 221) !default;
 /// Dark grey
 /// @type Color
 $dark-grey: rgb(169, 169, 169) !default;
-
 
 /// Header logo, icons
 $light-blue: rgb(0, 80, 153) !default;
