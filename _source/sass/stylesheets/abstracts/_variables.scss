@@ -5,7 +5,7 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Lato', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: 'LatoWeb', 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
@@ -18,8 +18,12 @@ $text-color: rgb(0, 43, 83) !default;
 /// Main brand color
 /// @type Color
 $brand-color-primary: rgb(227, 115, 62) !default;
+$brand-color-primary-darken: darken($brand-color-primary, 10%);
 $brand-color-secondary: rgb(248, 72, 95) !default;
 $brand-color-secondary-light: rgba(234, 27, 54, 0.4) !default;
+$brand-color-secondary-darken: darken($brand-color-secondary, 10%);
+
+
 
 /// Light grey
 /// @type Color

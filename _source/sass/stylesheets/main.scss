@@ -19,11 +19,19 @@
 @import 'layout/header',
 		'layout/footer';
 
+// 4.5. Vendors frameworks
+@import 'vendors/owl-carousel/owl.carousel';
+
 // 5. Components
-@import 'components/button';
+@import 'components/icons',
+		'components/button',
+		'components/carousel';
 
 // 6. Page-specific styles
 @import 'pages/home';
 
 // 7. Themes
 @import 'themes/default';
+
+// 8. Vendors extensions
+@import 'vendors-extensions/owl-carousel/owl.theme';

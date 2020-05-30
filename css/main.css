@@ -1,0 +1,1226 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/*! reset.css | github.com/PsychoPuss/modern-css-reset */
+/* Outline rules */
+:active,
+:focus,
+a:active,
+a:focus {
+  outline: 0;
+}
+
+/* Remove default padding on ul, ol elements with a class attribute */
+ol[class],
+ul[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+blockquote,
+body,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol[class],
+p,
+ul[class] {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  cursor: default;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ol[class],
+ul[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0s !important;
+    animation-duration: 0s !important;
+    -webkit-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0s !important;
+    -o-transition-duration: 0s !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: #e3733e;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #002b53;
+  text-decoration: underline;
+}
+
+/* Webfont: Lato-Black */
+@font-face {
+  font-family: 'LatoWeb';
+  src: url("/fonts/Lato-Black.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/Lato-Black.eot?#iefix") format("embedded-opentype"), url("/fonts/Lato-Black.woff2") format("woff2"), url("/fonts/Lato-Black.woff") format("woff"), url("/fonts/Lato-Black.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+  text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Bold */
+@font-face {
+  font-family: 'LatoWeb';
+  src: url("/fonts/Lato-Bold.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Lato-Bold.woff2") format("woff2"), url("/fonts/Lato-Bold.woff") format("woff"), url("/fonts/Lato-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Lato-Regular */
+@font-face {
+  font-family: 'LatoWeb';
+  src: url("/fonts/Lato-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("/fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/Lato-Regular.woff2") format("woff2"), url("/fonts/Lato-Regular.woff") format("woff"), url("/fonts/Lato-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: #002b53;
+  font: normal 125%/1.4 "LatoWeb", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  max-width: 1180px;
+  /* 1 */
+  margin-left: auto;
+  /* 2 */
+  margin-right: auto;
+  /* 2 */
+  padding-left: 20px;
+  /* 3 */
+  padding-right: 20px;
+  /* 3 */
+  width: 100%;
+  /* 1 */
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.header__col-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: 25px;
+}
+
+.header__logo-link {
+  display: block;
+}
+
+.header__logo-text {
+  width: 145px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #005099;
+}
+
+.header__col-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header__activate {
+  margin-right: 53px;
+}
+
+.header__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-info {
+  height: 100px;
+  background: -webkit-linear-gradient(327.51deg, #005099 -12.16%, #EA1B36 53.63%, #FFA300 110.33%);
+  background: -o-linear-gradient(327.51deg, #005099 -12.16%, #EA1B36 53.63%, #FFA300 110.33%);
+  background: linear-gradient(122.49deg, #005099 -12.16%, #EA1B36 53.63%, #FFA300 110.33%);
+}
+
+.nav-info__svg-bgr {
+  height: 100%;
+  background: url(/img/bgr_nav-info.svg) 0 0 repeat;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 60px;
+}
+
+.nav__contact-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+.nav__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.nav__menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.nav__menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 30px;
+}
+
+.nav__menu-link {
+  padding: 1px 0;
+  font-size: 14px;
+  color: #fff;
+  white-space: nowrap;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff)) 0 100% no-repeat;
+  background: -webkit-linear-gradient(#fff, #fff) 0 100% no-repeat;
+  background: -o-linear-gradient(#fff, #fff) 0 100% no-repeat;
+  background: linear-gradient(#fff, #fff) 0 100% no-repeat;
+  background-size: 0 1px;
+  -webkit-transition: background-size 0.4s;
+  -o-transition: background-size 0.4s;
+  transition: background-size 0.4s;
+}
+
+.nav__menu-link:hover, .nav__menu-link:active, .nav__menu-link:focus {
+  color: #fff;
+  text-decoration: none;
+  background-size: 100% 1px;
+}
+
+.nav-phone {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+}
+
+.nav-phone:hover, .nav-phone:active, .nav-phone:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-workhours {
+  font-size: 12px;
+  color: #fff;
+}
+
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+/*
+ *  Owl Carousel - Core
+ */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+  /* fix firefox animation glitch */
+}
+
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+}
+
+.owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled {
+  display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-dot {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel button.owl-dot {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+
+.owl-carousel.owl-loaded {
+  display: block;
+}
+
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+  visibility: hidden;
+}
+
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.owl-carousel.owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block;
+}
+
+/*
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+  animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*
+ * 	Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  -webkit-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+/*
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item {
+  /**
+			This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
+			calculation of the height of the owl-item that breaks page layouts
+		 */
+}
+
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item .owl-lazy[src^=""], .owl-carousel .owl-item .owl-lazy:not([src]) {
+  max-height: 0;
+}
+
+.owl-carousel .owl-item img.owl-lazy {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/*
+ * 	Owl Carousel - Video Plugin
+ */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 100ms ease;
+  transition: -webkit-transform 100ms ease;
+  -o-transition: transform 100ms ease;
+  transition: transform 100ms ease;
+  transition: transform 100ms ease, -webkit-transform 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+  -ms-transform: scale(1.3, 1.3);
+  -webkit-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none;
+}
+
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.svg-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.svg-icon__cart {
+  width: 26px;
+  height: 23px;
+  fill: #002b53;
+}
+
+.svg-icon__profile {
+  width: 20px;
+  height: 23px;
+  fill: #005099;
+  margin-left: 35px;
+}
+
+.svg-icon__search {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+.svg-icon_ltblue {
+  fill: #005099;
+}
+
+.svg-icon-btn {
+  position: relative;
+}
+
+.svg-icon-btn_cert {
+  width: 16px;
+  height: 22px;
+  fill: #fff;
+  margin-bottom: -5px;
+}
+
+.cart-counter {
+  display: block;
+  min-width: 12px;
+  height: 12px;
+  position: absolute;
+  top: -3px;
+  right: -5px;
+}
+
+.cart-counter_items {
+  background: #f8485f;
+  border-radius: 6px;
+  padding: 0 3px;
+  text-align: center;
+  color: #fff;
+  font-size: 9px;
+  line-height: 12px;
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  font-size: 18px;
+  line-height: 35px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 15px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  white-space: nowrap;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.btn:hover, .btn:active, .btn:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn_normal {
+  font-weight: 400;
+}
+
+.btn_wide {
+  width: 100%;
+}
+
+.btn_xs {
+  line-height: 30px;
+}
+
+.btn_sm {
+  line-height: 33px;
+}
+
+.btn_lg {
+  line-height: 45px;
+}
+
+.btn_primary {
+  background: #e3733e;
+}
+
+.btn_primary:hover, .btn_primary:active, .btn_primary:focus {
+  background: #d0571e;
+}
+
+.btn_secondary {
+  background: #f8485f;
+}
+
+.btn_secondary:hover, .btn_secondary:active, .btn_secondary:focus {
+  background: #f61734;
+}
+
+.btn_disabled {
+  background: darkgray;
+}
+
+.main-carousel {
+  position: relative;
+  margin-top: -40px;
+}
+
+.main-carousel__item {
+  height: 400px;
+  display: block;
+  background: center center no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.main-carousel__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 50px;
+  bottom: 30px;
+  padding: 7px 16px;
+  background: rgba(0, 43, 83, 0.5);
+}
+
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+.main-carousel_theme .owl-stage-outer {
+  border-radius: 10px;
+}
+
+.main-carousel_theme .owl-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -2px;
+  margin-right: 14px;
+  line-height: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.main-carousel_theme .owl-nav [class*='owl-'] {
+  color: #fff !important;
+  font-size: 14px !important;
+  display: inline-block;
+}
+
+.main-carousel_theme .owl-nav [class*='owl-']:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.main-carousel_theme .owl-nav .disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.main-carousel_theme .owl-nav .owl-next::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 17px;
+  background: #fff;
+  margin: 0 10px -5px;
+}
+
+.main-carousel_theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px;
+}
+
+.main-carousel_theme .owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.main-carousel_theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+.main-carousel_theme .owl-dots .owl-dot span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin: 0 2.5px;
+  -webkit-backface-visibility: visible;
+  -webkit-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: transparent;
+  -webkit-box-shadow: 0 0 0 1px transparent;
+  box-shadow: 0 0 0 1px transparent;
+}
+
+.main-carousel_theme .owl-dots .owl-dot.active span, .main-carousel_theme .owl-dots .owl-dot:hover span {
+  background: #fff;
+  -webkit-box-shadow: 0 0 0 1px #fff;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,27 @@
+.main-carousel {
+	position: relative;
+	margin-top: -40px;
+	// .main-carousel__item
+	&__item {
+		height: 400px;
+		display: block;
+		background: center center no-repeat;
+		background-size: cover;
+		border-radius: 10px;
+	}
+	// .main-carousel__controls
+	&__controls {
+		display: flex;
+		position: absolute;
+		right: 50px;
+		bottom: 30px;
+		padding: 7px 16px;
+		background: rgba($text-color, 0.5);
+	}
+}
+.slide {
+	// .slide__caption
+	&__caption {}
+	// .slide__desc
+	&__desc {}
+}

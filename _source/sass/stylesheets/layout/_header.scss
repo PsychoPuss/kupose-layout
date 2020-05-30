@@ -1,3 +1,110 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 60px;
+	// .header__col-left
+	&__col-left {
+		display: flex;
+		align-items: center;
+	}
+	// .header__logo
+	&__logo {
+		margin-right: 25px;
+	}
+	// .header__logo-link
+	&__logo-link {
+		display: block;
+	}
+	// .header__logo-text
+	&__logo-text {
+		width: 145px;
+		font-size: 14px;
+		line-height: 1.4;
+		color: $light-blue;
+	}
+	// .header__col-right
+	&__col-right {
+		display: flex;
+		align-items: center;
+	}
+	// .header__activate
+	&__activate {
+		margin-right: 53px;
+	}
+	// .header__icons
+	&__icons {
+		display: flex;
+	}
+}
+
+.nav-info {
+	height: 100px;
+	background: linear-gradient(122.49deg, #005099 -12.16%, #EA1B36 53.63%, #FFA300 110.33%);
+	// .nav-info__svg-bgr
+	&__svg-bgr {
+		height: 100%;
+		background: url(/img/bgr_nav-info.svg) 0 0 repeat;
+	}
+}
+.nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	// .nav__contact-phone
+	&__contact-phone {
+		display: flex;
+		flex-direction: column;
+		white-space: nowrap;
+	}
+	// .nav__menu
+	&__menu {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+	}
+	// .nav__search-form
+	&__search-form {}
+	// .nav__menu-items
+	&__menu-items {
+		display: flex;
+		align-items: center;
+	}
+	// .nav__menu-item
+	&__menu-item {
+		display: flex;
+		margin-left: 30px;
+	}
+	// .nav__menu-link
+	&__menu-link {
+		padding: 1px 0;
+		font-size: 14px;
+		color: $white;
+		white-space: nowrap;
+		background: linear-gradient($white, $white) 0 100% no-repeat;
+		background-size: 0 1px;
+		transition: background-size 0.4s;
+		@include on-event {
+			color: $white;
+			text-decoration: none;
+			background-size: 100% 1px;
+		}
+	}
+}
+.nav-phone {
+	display: block;
+	font-size: 20px;
+	color: $white;
+	@include on-event {
+		color: $white;
+		text-decoration: none;
+	}
+}
+.nav-workhours {
+	font-size: 12px;
+	color: $white;
+}

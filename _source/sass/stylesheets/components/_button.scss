@@ -1,3 +1,62 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+.btn {
+	display: inline-block;
+	position: relative;
+	color: $white;
+	font-size: 18px;
+	line-height: 35px;
+	font-weight: 700;
+	text-align: center;
+	padding: 0 15px;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+	border-radius: 3px;
+	white-space: nowrap;
+	transition: all 0.25s ease;
+	@include on-event {
+		color: $white;
+		text-decoration: none;
+	}
+	// .btn_normal
+	&_normal {
+		font-weight: 400;
+	}
+	// .btn_wide
+	&_wide {
+		width: 100%;
+	}
+	// .btn_xs
+	&_xs {
+		line-height: 30px;
+	}
+	// .btn_sm
+	&_sm {
+		line-height: 33px;
+	}
+	// .btn_md
+	&_md {}
+	// .btn_lg
+	&_lg {
+		line-height: 45px;
+	}
+
+	// .btn_primary
+	&_primary {
+		background: $brand-color-primary;
+		@include on-event {
+			background: $brand-color-primary-darken;
+		}
+	}
+	// .btn_secondary
+	&_secondary {
+		background: $brand-color-secondary;
+		@include on-event {
+			background: $brand-color-secondary-darken;
+		}
+	}
+	// .btn_disabled
+	&_disabled {
+		background: $dark-grey;
+	}
+}

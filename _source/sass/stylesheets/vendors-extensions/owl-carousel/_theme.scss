@@ -1,0 +1,67 @@
+.main-carousel_theme{
+	.owl-stage-outer {
+		border-radius: 10px;
+	}
+	// Styling Next and Prev buttons
+	.owl-nav {
+		display: flex;
+		margin-top: -2px;
+		margin-right: 14px;
+		line-height: 1;
+		-webkit-tap-highlight-color: transparent;
+		[class*='owl-'] {
+			color: $nav-color !important;
+			font-size: $nav-font-size !important;
+			display: inline-block;
+			&:hover {
+				color: rgba($nav-color-hover, 0.8) !important;
+			}
+		}
+		.disabled {
+			opacity: $nav-disabled-opacity;
+			cursor: default;
+		}
+		.owl-next::before {
+			content: '';
+			display: inline-block;
+			width: 1px;
+			height: 17px;
+			background: #fff;
+			margin: 0 10px -5px;
+		}
+	}
+
+	// Styling dots
+	.owl-nav.disabled + .owl-dots {
+		margin-top: 10px;
+	}
+	.owl-dots {
+		display: flex;
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+		.owl-dot {
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+			span {
+				display: block;
+				width: $dot-width;
+				height: $dot-height;
+				margin: $dot-margin;
+				-webkit-backface-visibility: visible;
+				transition: all 0.1s ease;
+				border: 1px solid $dot-background-active;
+				border-radius: $dot-rounded;
+				background: $dot-background;
+				box-shadow: 0 0 0 1px $dot-background;
+			}
+			&.active,
+			&:hover {
+				span {
+					background: $dot-background-active;
+					box-shadow: 0 0 0 1px $dot-background-active;
+				}
+			}
+		}
+	}
+}
