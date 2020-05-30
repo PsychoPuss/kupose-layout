@@ -81,18 +81,7 @@
 	}
 	// .nav__menu-link
 	&__menu-link {
-		padding: 1px 0;
-		font-size: 14px;
-		color: $white;
-		white-space: nowrap;
-		background: linear-gradient($white, $white) 0 100% no-repeat;
-		background-size: 0 1px;
-		transition: background-size 0.4s;
-		@include on-event {
-			color: $white;
-			text-decoration: none;
-			background-size: 100% 1px;
-		}
+		@include link-border(14, $white);
 	}
 }
 .nav-phone {

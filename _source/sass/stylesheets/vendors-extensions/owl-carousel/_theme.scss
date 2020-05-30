@@ -26,18 +26,16 @@
 			display: inline-block;
 			width: 1px;
 			height: 17px;
-			background: #fff;
+			background: $nav-color;
 			margin: 0 10px -5px;
 		}
 	}
-
 	// Styling dots
 	.owl-nav.disabled + .owl-dots {
 		margin-top: 10px;
 	}
 	.owl-dots {
 		display: flex;
-		text-align: center;
 		-webkit-tap-highlight-color: transparent;
 		.owl-dot {
 			display: inline-block;
@@ -61,6 +59,12 @@
 					background: $dot-background-active;
 					box-shadow: 0 0 0 1px $dot-background-active;
 				}
+			}
+			&:first-child span {
+				margin-left: 0;
+			}
+			&:last-child span {
+				margin-right: 0;
 			}
 		}
 	}

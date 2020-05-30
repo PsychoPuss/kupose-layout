@@ -32,3 +32,17 @@
   }
 }
 
+@mixin link-border($font-size, $color) {
+	padding: 1px 0;
+	font-size: $font-size * 1px;
+	color: $color;
+	white-space: nowrap;
+	background: linear-gradient($color, $color) 0 100% no-repeat;
+	background-size: 0 1px;
+	transition: background-size 0.4s;
+	@include on-event {
+		color: $color;
+		text-decoration: none;
+		background-size: 100% 1px;
+	}
+}

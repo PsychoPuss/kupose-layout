@@ -505,7 +505,7 @@ a:hover, a:active, a:focus {
  */
 body {
   color: #002b53;
-  font: normal 125%/1.4 "LatoWeb", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font: normal 100%/1.4 "LatoWeb", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 /**
@@ -723,6 +723,139 @@ body {
 .nav-workhours {
   font-size: 12px;
   color: #fff;
+}
+
+.nav-cat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  margin-bottom: 33px;
+}
+
+.nav-cat__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+}
+
+.nav-cat__main-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 -5px !important;
+}
+
+.nav-cat__main-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.nav-cat__main-item:first-child {
+  font-weight: 700;
+}
+
+.nav-cat__main-item:first-child::before {
+  content: '';
+  display: inline-block;
+  margin-right: 7px;
+  height: 100%;
+  width: 25px;
+  height: 15px;
+  background: url(/img/catalog-burger.svg) 0 50% no-repeat;
+}
+
+.nav-cat__main-link {
+  padding: 1px 0;
+  font-size: 18px;
+  color: #e3733e;
+  white-space: nowrap;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e3733e), to(#e3733e)) 0 100% no-repeat;
+  background: -webkit-linear-gradient(#e3733e, #e3733e) 0 100% no-repeat;
+  background: -o-linear-gradient(#e3733e, #e3733e) 0 100% no-repeat;
+  background: linear-gradient(#e3733e, #e3733e) 0 100% no-repeat;
+  background-size: 0 1px;
+  -webkit-transition: background-size 0.4s;
+  -o-transition: background-size 0.4s;
+  transition: background-size 0.4s;
+}
+
+.nav-cat__main-link:hover, .nav-cat__main-link:active, .nav-cat__main-link:focus {
+  color: #e3733e;
+  text-decoration: none;
+  background-size: 100% 1px;
+}
+
+.nav-cat__buttons {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  margin: 0 -11px 0 8px;
+}
+
+.nav-cat__buttons .btn {
+  margin: 0 11px;
+}
+
+.nav-cat__more {
+  -webkit-box-flex: 1;
+  -ms-flex: auto;
+  flex: auto;
+  margin-top: 25px;
+  margin-bottom: 33px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.nav-cat__more-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 -5px !important;
+}
+
+.nav-cat__more-item {
+  margin: 0 5px;
+}
+
+.nav-cat__more-link {
+  padding: 1px 0;
+  font-size: 18px;
+  color: #002b53;
+  white-space: nowrap;
+  background: -webkit-gradient(linear, left top, left bottom, from(#002b53), to(#002b53)) 0 100% no-repeat;
+  background: -webkit-linear-gradient(#002b53, #002b53) 0 100% no-repeat;
+  background: -o-linear-gradient(#002b53, #002b53) 0 100% no-repeat;
+  background: linear-gradient(#002b53, #002b53) 0 100% no-repeat;
+  background-size: 0 1px;
+  -webkit-transition: background-size 0.4s;
+  -o-transition: background-size 0.4s;
+  transition: background-size 0.4s;
+}
+
+.nav-cat__more-link:hover, .nav-cat__more-link:active, .nav-cat__more-link:focus {
+  color: #002b53;
+  text-decoration: none;
+  background-size: 100% 1px;
 }
 
 /**
@@ -1191,7 +1324,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -1221,6 +1353,14 @@ body {
   background: #fff;
   -webkit-box-shadow: 0 0 0 1px #fff;
   box-shadow: 0 0 0 1px #fff;
+}
+
+.main-carousel_theme .owl-dots .owl-dot:first-child span {
+  margin-left: 0;
+}
+
+.main-carousel_theme .owl-dots .owl-dot:last-child span {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
