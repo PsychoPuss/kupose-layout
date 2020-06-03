@@ -13,11 +13,19 @@
 @import 'base/base',
 		'base/fonts',
 		'base/typography',
-		'base/helpers';
+		'base/helpers',
+		'base/headings';
 
 // 4. Layout-related sections
 @import 'layout/header',
 		'layout/nav-catalog',
+		'layout/nav-mobile',
+		'layout/content/common_elements',
+		'layout/content/section_leaders',
+		'layout/content/section_for-whom',
+		'layout/content/section_about',
+		'layout/content/section_present',
+		'layout/content/section_pay-systems',
 		'layout/footer';
 
 // 4.5. Vendors frameworks

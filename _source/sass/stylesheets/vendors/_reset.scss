@@ -7,10 +7,11 @@ a:focus {
 	outline: 0
 }
 
-/* Remove default padding on ul, ol elements with a class attribute */
-ol[class],
-ul[class] {
-	padding: 0
+/* Remove default padding and list styles on ul, ol elements */
+ol,
+ul {
+	padding: 0;
+	list-style: none
 }
 
 /* Remove default margin */
@@ -25,9 +26,9 @@ h3,
 h4,
 h5,
 h6,
-ol[class],
+ol,
 p,
-ul[class] {
+ul {
 	margin: 0
 }
 
@@ -42,12 +43,6 @@ body {
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
 	cursor: default;
-}
-
-/* Remove list styles on ul, ol elements with a class attribute */
-ol[class],
-ul[class] {
-	list-style: none
 }
 
 /* A elements that don't have a class get default styles */

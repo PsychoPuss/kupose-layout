@@ -1,0 +1,95 @@
+.leaders {
+	padding: 21px 0 0;
+	@include respond-to(lg) {
+		background: $light-grey;
+		box-shadow: inset 0 0 10px rgba($black, 0.1);
+	}
+}
+.leader-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	@include respond-to(sm) {
+	}
+	@include respond-to(lg) {
+		justify-content: start;
+	}
+}
+.leader-item {
+	width: 100%;
+	position: relative;
+	padding-top: 5px;
+	display: flex;
+	flex-direction: column;
+	@include respond-to(sm) {
+		width: calc(50% - 10px);
+		&:nth-child(odd) {
+			margin-right: 10px;
+		}
+		&:nth-child(even) {
+			margin-left: 10px;
+		}
+	}
+	@include respond-to(md) {
+		max-width: 400px;
+		margin-top: 10px;
+	}
+	@include respond-to(lg) {
+		width: 26%;
+		margin-left: 0;
+		margin-right: 28px !important;
+	}
+	@include respond-to(xl) {
+		margin-right: 32px !important;
+	}
+	&:last-child {
+		display: block;
+		width: 100%;
+		line-height: 1;
+		text-align: center;
+		align-self: center;
+		margin-top: 0;
+		padding: 0 0 50px 0;
+		@include respond-to(sm) {
+			left: -10px;
+		}
+		@include respond-to(md) {
+			padding-right: 10px;
+		}
+		@include respond-to(lg) {
+			width: auto;
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
+.leader-img-link {
+	display: block;
+}
+.leader-img {
+	width: 100%;
+	border-radius: 10px;
+	object-fit: cover;
+}
+.leader-text {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin: 13px 0 15px;
+	@include respond-to(md) {
+		margin-top: 20px;
+	}
+}
+.leader-prices {
+	display: flex;
+	margin-top: 6px;
+}
+.leaders-showall {
+	display: inline;
+	font-size: 14px;
+	line-height: 1.1;
+	border-bottom: 1px solid $light-blue;
+	@include on-event {
+		border-bottom: 1px solid $brand-color-primary;
+	}
+}

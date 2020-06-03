@@ -1,0 +1,45 @@
+.for-whom {
+	padding: 37px 0;
+	// .owl-item {
+	// 	// width: 230px !important;
+	// }
+	// .for-whom__carousel
+	&__carousel {
+		width: 100vw;
+		margin-top: 10px;
+		@include respond-to(xl) {
+			width: calc(100vw - (100vw - 1180px) / 2);
+		}
+	}
+	// .for-whom__carousel-item
+	&__carousel-item {}
+	// .for-whom__image-wrapper
+	&__image-wrapper {
+		width: 230px;
+		height: 230px;
+		margin-bottom: 17px;
+	}
+	// .for-whom__image
+	&__image {
+		position: relative;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 12px;
+			right: 12px;
+			bottom: 12px;
+			left: 12px;
+			border: 1px solid $white;
+		}
+	}
+}
+// .owl-stage {
+// 	// display: box !important;
+// 	// width: calc(100vw - (100vw - 1180px) / 2) !important;
+// 	// width: 100vw !important;
+// }

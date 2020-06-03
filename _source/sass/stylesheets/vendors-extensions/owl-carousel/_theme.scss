@@ -1,14 +1,23 @@
 .main-carousel_theme{
+	padding: 0;
+	@include respond-to(md) {
+		padding: 0 $max-padding;
+	}
 	.owl-stage-outer {
-		border-radius: 10px;
+		@include respond-to(md) {
+			border-radius: 10px;
+		}
 	}
 	// Styling Next and Prev buttons
 	.owl-nav {
-		display: flex;
-		margin-top: -2px;
-		margin-right: 14px;
-		line-height: 1;
-		-webkit-tap-highlight-color: transparent;
+		display: none;
+		@include respond-to(md) {
+			display: flex;
+			margin-top: -2px;
+			margin-right: 14px;
+			line-height: 1;
+			-webkit-tap-highlight-color: transparent;
+		}
 		[class*='owl-'] {
 			color: $nav-color !important;
 			font-size: $nav-font-size !important;

@@ -7,34 +7,34 @@
 /// @param {Bool} $self [false] - Whether or not to include current selector
 /// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
 @mixin on-event($self: false) {
-  @if $self {
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
-  } @else {
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
-  }
+	@if $self {
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			@content;
+		}
+	}
+	@else {
+		&:hover,
+		&:active,
+		&:focus {
+			@content;
+		}
+	}
 }
 
 /// Make a context based selector a little more friendly
 /// @author Hugo Giraudel
 /// @param {String} $context
 @mixin when-inside($context) {
-  #{$context} & {
-    @content;
-  }
+	#{$context} & {
+		@content;
+	}
 }
 
-@mixin link-border($font-size, $color) {
-	padding: 1px 0;
-	font-size: $font-size * 1px;
+@mixin link-border($color) {
+	// padding: 1px 0;
 	color: $color;
 	white-space: nowrap;
 	background: linear-gradient($color, $color) 0 100% no-repeat;
@@ -44,5 +44,23 @@
 		color: $color;
 		text-decoration: none;
 		background-size: 100% 1px;
+		border: 0;
+	}
+}
+
+@mixin respond-to($breakpoint, $type: false) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@if ($type == 'max') {
+			@media (max-width: #{map-get($breakpoints, $breakpoint) - 1}) {
+				@content;
+			}
+		} @else {
+			@media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+				@content;
+			}
+		}
+	}
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "+"Please make sure it is defined in `$breakpoints` map.";
 	}
 }

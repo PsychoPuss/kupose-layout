@@ -1,6 +1,21 @@
 /* Carousel init */
+let breakpoints = {
+	xs: 320,
+	sm: 425,
+	md: 768,
+	lg: 1024,
+	xl: 1180
+
+	//  small: 0,
+	// 	medium: 518,
+	// 	large: 758,
+	// 	xlarge: 998,
+	// 	xxlarge: 1238
+}
+
 function initOwl() {
-	var $mainSlider = $('.main-carousel>.owl-carousel');
+	let $mainSlider = $('.main-carousel>.owl-carousel');
+	let $whomSlider = $('.for-whom__carousel>.owl-carousel');
 	// $mainBanner = $('.main-banner'),
 	// $mainNews = $('.main-news-carousel'),
 	// $mainBrand = $('.main-brand-carousel'),
@@ -13,13 +28,12 @@ function initOwl() {
 	// $innerTeam = $('.inner-team');
 
 	if ($mainSlider.length) {
-		var itemLength = $mainSlider.find('.main-carousel__item').length,
+		let itemLength = $mainSlider.find('.main-carousel__item').length,
 			params = {
 				items: 1,
-				center: true,
-				navText: ['пред.', 'след.'],
 				autoplay: true,
-				margin: 10
+				margin: 10,
+				navText: ['пред.', 'след.'],
 			};
 		if (itemLength > 1) {
 			params['loop'] = true;
@@ -29,6 +43,19 @@ function initOwl() {
 			params['dots'] = false;
 		}
 		$mainSlider.owlCarousel(params);
+	}
+
+	if ($whomSlider.length) {
+		let itemLength = $whomSlider.find('.for-whom__carousel-item').length,
+			params = {
+				margin: 40,
+				loop: false,
+				dots: false,
+				autoWidth: true,
+				items: 1,
+				navText: [],
+			};
+		$whomSlider.owlCarousel(params);
 	}
 	/*
 		if ($mainBanner.length) {

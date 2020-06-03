@@ -1,7 +1,24 @@
-
+.svg-sprite {
+	position: absolute;
+	width: 0;
+	height: 0;
+}
 .svg-icon {
 	display: flex;
 	position: relative;
+	// .svg-icon__headerlogo
+	&__headerlogo {
+		width: 100%;
+		max-width: 187px;
+		height: 40px;
+	}
+	// .svg-icon__footerlogo
+	&__footerlogo {
+		width: 100%;
+		max-width: 179px;
+		height: 32px;
+		fill: $white;
+	}
 	// .svg-icon__cart
 	&__cart {
 		width: 26px;
@@ -21,6 +38,26 @@
 		height: 20px;
 		fill: $white;
 	}
+	// .svg-icon__hamburger
+	&__hamburger {
+		width: 25px;
+		height: 15px;
+		fill: $white;
+	}
+	// .svg-icon__nav-close
+	&__nav-close {
+		width: 15px;
+		height: 15px;
+		stroke: $text-color;
+	}
+	// .svg-icon__benefits
+	&__benefits {
+		width: 80px;
+		height: 80px;
+		fill: none;
+	}
+
+
 
 
 
@@ -56,11 +93,11 @@
 	&_items {
 		background: $brand-color-secondary;
 		border-radius: 6px;
-		padding: 0 3px;
+		padding: 1px 3px 0;
 		text-align: center;
 		color: $white;
 		font-size: 9px;
-		line-height: 12px;
+		line-height: 11px;
 		font-weight: 700;
 	}
 }
