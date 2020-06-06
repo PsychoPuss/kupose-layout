@@ -1,7 +1,7 @@
 .present {
 	height: 214px;
 	margin: 24px 0 50px;
-	background: url(/img/bgr_present-box.svg) 78% bottom no-repeat;
+	background: url(../img/bgr_present-box.svg) 78% bottom no-repeat;
 	@include respond-to(md) {
 		margin-bottom: 62px;
 		background-position: center bottom;

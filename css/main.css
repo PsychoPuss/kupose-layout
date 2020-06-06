@@ -736,7 +736,7 @@ body {
 }
 .nav-info__svg-bgr {
 	height: 100%;
-	background: url(/img/bgr_nav-info.svg) 0 0 repeat;
+	background: url(../img/bgr_nav-info.svg) 0 0 repeat;
 	background-size: cover;
 }
 @media (min-width: 768px) {
@@ -928,7 +928,7 @@ body {
 	margin: -4px 7px 0 0;
 	width: 25px;
 	height: 100%;
-	background: url(/img/catalog-burger.svg) 0 50% no-repeat;
+	background: url(../img/catalog-burger.svg) 0 50% no-repeat;
 }
 .nav-cat__main-link {
 	color: #e3733e;
@@ -1533,7 +1533,7 @@ html.overlay-mobile-menu::before {
 .about__svg-bgr {
 	height: 100%;
 	padding: 41px 0 57px;
-	background: url(/img/bgr_about.svg) 0 0 repeat;
+	background: url(../img/bgr_about.svg) 0 0 repeat;
 	background-size: cover;
 }
 @media (min-width: 768px) {
@@ -1548,7 +1548,7 @@ html.overlay-mobile-menu::before {
 .present {
 	height: 214px;
 	margin: 24px 0 50px;
-	background: url(/img/bgr_present-box.svg) 78% bottom no-repeat;
+	background: url(../img/bgr_present-box.svg) 78% bottom no-repeat;
 }
 @media (min-width: 768px) {
 	.present {
@@ -1662,7 +1662,7 @@ html.overlay-mobile-menu::before {
 
 .pay-systems {
 	height: 52px;
-	background: #f2f2f2 url(/img/logo-pay-systems.png) center/auto 19px no-repeat;
+	background: #f2f2f2 url(../img/logo-pay-systems.png) center/auto 19px no-repeat;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -2368,7 +2368,7 @@ fieldset.checkbox input:checked + label::after {
 	left: 3px;
 	width: 15px;
 	height: 15px;
-	background: url(/img/checkbox.svg) 0 0 no-repeat;
+	background: url(../img/checkbox.svg) 0 0 no-repeat;
 	background-size: contain;
 }
 

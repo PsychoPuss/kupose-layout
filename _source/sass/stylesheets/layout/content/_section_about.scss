@@ -3,7 +3,7 @@
 	&__svg-bgr {
 		height: 100%;
 		padding: 41px 0 57px;
-		background: url(/img/bgr_about.svg) 0 0 repeat;
+		background: url(../img/bgr_about.svg) 0 0 repeat;
 		background-size: cover;
 		@include respond-to(md) {
 			background-size: auto;
