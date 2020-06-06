@@ -1,0 +1,55 @@
+.content {
+	display: flex;
+	flex-direction: column;
+	padding-top: 35px;
+	margin-left: -15px;
+	margin-right: -15px;
+
+	@include respond-to(md) {
+		flex-direction: row;
+	}
+
+	// .content__col-left
+	&__col-left {
+		flex: 1 1 100%;
+		margin-bottom: 20px;
+		padding: 0 15px;
+
+		@include respond-to(md) {
+			flex: 1 1 25%;
+			margin-bottom: 0;
+		}
+
+		@include respond-to(lg) {
+			flex: 1 1 20%;
+		}
+
+		@include respond-to(xl) {
+			flex: 1 1 17%;
+		}
+	}
+
+	// .content__col-right
+	&__col-right {
+		flex: 1 1 100%;
+		padding: 0 15px;
+
+		@include respond-to(md) {
+			flex: 1 1 75%;
+		}
+
+		@include respond-to(lg) {
+			flex: 1 1 80%;
+		}
+
+		@include respond-to(xl) {
+			flex: 1 1 83%;
+		}
+	}
+
+	// .content__col-main
+	&__col-main {
+		flex: 1 1 100%;
+		padding: 0 15px;
+	}
+}

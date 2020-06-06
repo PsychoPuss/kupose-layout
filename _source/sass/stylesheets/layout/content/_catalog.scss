@@ -23,39 +23,7 @@
 	}
 }
 
-
-
-.catalog-wrapper {
-	display: flex;
-	flex-direction: column;
-	padding-top: 35px;
-	margin-left: -15px;
-	margin-right: -15px;
-
-	@include respond-to(md) {
-		flex-direction: row;
-	}
-}
-
-
 .filter {
-	flex: 1 1 100%;
-	margin-bottom: 20px;
-
-	@include respond-to(md) {
-		flex: 1 1 25%;
-		margin-bottom: 0;
-	}
-
-	@include respond-to(lg) {
-		flex: 1 1 20%;
-	}
-
-	@include respond-to(xl) {
-		flex: 1 1 17%;
-	}
-
-	padding: 0 15px;
 
 	// .filter__show-button
 	&__show-button {
@@ -76,22 +44,6 @@
 }
 
 .catalog {
-	flex: 1 1 100%;
-
-	@include respond-to(md) {
-		flex: 1 1 75%;
-	}
-
-	@include respond-to(lg) {
-		flex: 1 1 80%;
-	}
-
-	@include respond-to(xl) {
-		flex: 1 1 83%;
-	}
-
-	// width: 84%;
-	padding: 0 15px;
 
 	// .catalog__sort
 	&__sort {
