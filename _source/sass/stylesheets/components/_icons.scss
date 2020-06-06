@@ -3,15 +3,19 @@
 	width: 0;
 	height: 0;
 }
+
 .svg-icon {
 	display: flex;
 	position: relative;
+	transition: transform 0.2s;
+
 	// .svg-icon__headerlogo
 	&__headerlogo {
 		width: 100%;
 		max-width: 187px;
 		height: 40px;
 	}
+
 	// .svg-icon__footerlogo
 	&__footerlogo {
 		width: 100%;
@@ -19,12 +23,19 @@
 		height: 32px;
 		fill: $white;
 	}
+
 	// .svg-icon__cart
 	&__cart {
 		width: 26px;
 		height: 23px;
 		fill: $text-color;
+
+		// .svg-icon__cart_ltblue
+		&_ltblue {
+			fill: $light-blue;
+		}
 	}
+
 	// .svg-icon__profile
 	&__profile {
 		width: 20px;
@@ -32,24 +43,29 @@
 		fill: $light-blue;
 		margin-left: 35px;
 	}
+
 	// .svg-icon__search
 	&__search {
 		width: 20px;
 		height: 20px;
-		fill: $white;
+		fill: $search-color;
+		transition: fill 0.2s;
 	}
+
 	// .svg-icon__hamburger
 	&__hamburger {
 		width: 25px;
 		height: 15px;
 		fill: $white;
 	}
+
 	// .svg-icon__nav-close
 	&__nav-close {
 		width: 15px;
 		height: 15px;
 		stroke: $text-color;
 	}
+
 	// .svg-icon__benefits
 	&__benefits {
 		width: 80px;
@@ -57,26 +73,83 @@
 		fill: none;
 	}
 
-
-
-
-
-	// .svg-icon_ltblue
-	&_ltblue {
-		fill: $light-blue;
+	// .svg-icon__like
+	&__like {
+		width: 16px;
+		height: 14px;
+		fill: $brand-color-primary;
 	}
-	// .svg-icon_white
-	// &_white {
-	// 	fill: $white;
-	// }
+
+	// .svg-icon__angle-down
+	&__angle-down {
+		width: 9px;
+		height: 20px;
+		fill: $brand-color-primary;
+	}
+
+	// .svg-icon__load-more
+	&__load-more {
+		width: 30px;
+		height: 34px;
+		fill: $dark-grey;
+		transition: transform 0.2s;
+	}
+
+	// .svg-icon_center
+	&_center {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// .svg-icon_rotate
+	&_rotate {
+		@include on-event() {
+			svg {
+				transform: rotate(360deg) translate(0, -2px) scale(1.3);
+			}
+		}
+	}
+
+	// .svg-icon_text-load-more
+	&_text-load-more {
+		color: $dark-grey;
+
+		@include on-event {
+			color: $mid-grey;
+
+			.svg-icon__load-more {
+				fill: $mid-grey;
+			}
+		}
+
+		span {
+			margin-top: 4px;
+		}
+	}
+
+}
+
+.svg-icon-white {
+	fill: $white;
 }
 
 .svg-icon-btn {
 	position: relative;
+	transition: transform 0.2s;
+
 	// .svg-icon-btn_cert
 	&_cert {
 		width: 16px;
 		height: 22px;
+		fill: $white;
+		margin-bottom: -5px;
+	}
+
+	// .svg-icon-btn_angle-down
+	&_angle-down {
+		width: 19px;
+		height: 20px;
 		fill: $white;
 		margin-bottom: -5px;
 	}
@@ -85,10 +158,11 @@
 .cart-counter {
 	display: block;
 	min-width: 12px;
-    height: 12px;
+	height: 12px;
 	position: absolute;
 	top: -3px;
 	right: -5px;
+
 	// .cart-counter_items
 	&_items {
 		background: $brand-color-secondary;
@@ -101,4 +175,3 @@
 		font-weight: 700;
 	}
 }
-

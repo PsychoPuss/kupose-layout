@@ -25,7 +25,7 @@
 				</div>
 				<div class="header__icons">
 					<a href="" class="svg-icon">
-						<svg class="svg-icon__cart svg-icon_ltblue">
+						<svg class="svg-icon__cart svg-icon__cart_ltblue">
 							<use xlink:href="#icon-cart"></use>
 						</svg>
 						<div class="cart-counter">
@@ -45,15 +45,18 @@
 				<div class="nav container">
 					<div class="nav__contact-phone">
 						<a href="tel:+74951503877" class="nav-phone">+7 (495) 150-38-77</a>
-						<span class="nav-workhours">ежедневно с 08:00 до 22:00</span>
+						<span class="nav-workhours">Ежедневно, с 8:00 до 22:00</span>
 					</div>
 					<div class="nav__menu">
-						<form action="" class="nav__search-form">
-							<a href="" class="svg-icon">
-								<svg class="svg-icon__search">
+						<form action="" class="search-form search-form_closed">
+							<div class="search-form__wrapper">
+								<input type="text" class="form-input form-input_search" value="" name="search" placeholder="Начать поиск">
+							</div>
+							<button type="submit" class="form-button form-button_search svg-icon">
+								<svg class="svg-icon__search svg-icon-white">
 									<use xlink:href="#icon-search"></use>
 								</svg>
-							</a>
+							</button>
 						</form>
 						<ul class="nav__menu-items" data-da="nav-mobile,4,1023">
 							<li class="nav__menu-item"><a href="" class="nav__menu-link">Как это работает</a></li>

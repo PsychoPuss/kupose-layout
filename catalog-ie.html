@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="bx-ie11">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -128,8 +128,8 @@
 			</a>
 		</div>
 	</section>
-	<div class="home-activate-mobile"></div>
-	<nav class="nav-cat container">
+
+	<nav class="nav-cat hidden-lg container">
 		<div class="nav-cat__main">
 			<ul class="nav-cat__main-items" data-da="nav-mobile,1,1023">
 				<li class="nav-cat__main-item"><a href="" class="nav-cat__main-link">Все впечатления</a></li>
@@ -156,171 +156,442 @@
 			</ul>
 		</div>
 	</nav>
-		<section class="leaders">
-		<div class="container">
-			<h1 class="text-title">Лидеры продаж:</h1>
-			<div class="leader-items">
-				<div class="leader-item">
-					<div class="badge">Хит</div>
-					<a href="" class="leader-img-link">
-						<img src="/img/temp/leaders_1.png" class="leader-img" alt="">
-					</a>
-					<div class="leader-text">
-						<a href="" class="link-name">Оздоровление в Галокамере</a>
-						<div class="leader-prices">
-							<div class="price price_leader">680 руб.</div>
+	<div class="breadcrumbs container">
+		<ul class="breadcrumbs__items">
+			<li class="breadcrumbs__item"><a href="/">Главная</a></li>
+			<li class="breadcrumbs__item breadcrumbs__item_active">Каталог товаров</li>
+		</ul>
+	</div>
+	<section class="container">
+		<div class="catalog-wrapper">
+			<aside class="filter">
+				<div class="filter__show-button">
+					<button class="btn btn_normal btn_sm btn_long btn_secondary">Фильтр
+						<svg class="svg-icon-btn svg-icon-btn_angle-down">
+							<use xlink:href="#icon-angle-down"></use>
+						</svg>
+					</button>
+				</div>
+<nav class="inner-menu columns show-for-xlarge" id="catalog-filter-wrapper">
+	<div class="catalog-filters" id="catalog-filter" data-filter-tip="">
+		<div class="catalog-filters-inner">
+			<form name="_form" action="/catalog/" method="get" class="smartfilter">
+				<div class="catalog-filters__block bx-filter-parameters-box showed">
+					<div class="heading">
+						<span>Цена</span>
+					</div>
+					<div class="body bx-filter-container-modef">
+						<div class="row">
+							<div class="row catalog-slider-row">
+								<div class="column small-6">
+									<div class="input-group">
+										<span class="input-group-label hollow">От</span>
+										<input id="arrFilter_P1_MIN" name="arrFilter_P1_MIN" class="input-group-field hollow" value="" type="number" onkeyup="smartFilter.keyup(this)" data-tip-top="3" placeholder="0" max="180000" min="0" step="1">
+									</div>
+								</div>
+								<div class="column small-6">
+									<div class="input-group">
+										<span class="input-group-label hollow">До</span>
+										<input id="arrFilter_P1_MAX" name="arrFilter_P1_MAX" class="input-group-field hollow" value="" type="number" onkeyup="smartFilter.keyup(this)" data-tip-top="3" placeholder="180000" max="180000" min="0" step="1">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slider" data-start="0" data-end="180000" data-initial-start="0" data-initial-end="180000" data-slider="fhhszp-slider">
+							<span class="slider-handle" data-slider-handle="" role="slider" tabindex="0" aria-controls="arrFilter_P1_MIN" aria-valuenow="0" aria-valuemax="180000" aria-valuemin="0" aria-orientation="horizontal" style="left: 0%;"></span>
+							<span class="slider-fill" data-slider-fill="" style="width: 0px; min-width: 99.34%; left: 0%;"></span>
+							<span class="slider-handle" data-slider-handle="" role="slider" tabindex="0" aria-controls="arrFilter_P1_MAX" aria-valuenow="180000" aria-valuemax="180000" aria-valuemin="0" aria-orientation="horizontal" style="left: 91%;"></span>
 						</div>
 					</div>
 				</div>
-				<div class="leader-item">
-					<div class="badge">Безопасный экстрим</div>
-					<a href="" class="leader-img-link">
-						<img src="/img/temp/leaders_2.png" class="leader-img" alt="">
-					</a>
-					<div class="leader-text">
-						<a href="" class="link-name">Прыжки на батуте</a>
-						<div class="leader-prices">
-							<div class="price price_leader">700 руб.</div>
-							<div class="price-old price-old_leader">800 руб.</div>
+				<div class="catalog-filters__block bx-filter-parameters-box">
+					<div class="heading">
+						<span>Тематика</span>
+					</div>
+					<div class="body bx-filter-container-modef">
+						<fieldset class="checkbox" id="TEMATIKA">
+							<input type="checkbox" name="arrFilter_149_725582281" value="Y" id="arrFilter_149_725582281" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_149_725582281" for="arrFilter_149_725582281" class="bx-filter-param-label">Активный отдых</label>
+							<input type="checkbox" name="arrFilter_149_28185492" value="Y" id="arrFilter_149_28185492" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_149_28185492" for="arrFilter_149_28185492" class="bx-filter-param-label">Мастер-классы</label>
+							<input type="checkbox" name="arrFilter_149_770606158" value="Y" id="arrFilter_149_770606158" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_149_770606158" for="arrFilter_149_770606158" class="bx-filter-param-label">Полеты</label>
+							<input type="checkbox" name="arrFilter_149_3260818684" value="Y" id="arrFilter_149_3260818684" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_149_3260818684" for="arrFilter_149_3260818684" class="bx-filter-param-label">Спа и здоровье</label>
+							<input type="checkbox" name="arrFilter_149_2561098286" value="Y" id="arrFilter_149_2561098286" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_149_2561098286" for="arrFilter_149_2561098286" class="bx-filter-param-label">Квесты</label>
+							<input type="checkbox" name="arrFilter_149_2159964091" value="Y" id="arrFilter_149_2159964091" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_149_2159964091" for="arrFilter_149_2159964091" class="bx-filter-param-label">Музыка</label>
+							<input type="checkbox" name="arrFilter_149_3553604221" value="Y" id="arrFilter_149_3553604221" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_149_3553604221" for="arrFilter_149_3553604221" class="bx-filter-param-label">Фотосессия</label>
+						</fieldset>
+					</div>
+				</div>
+				<div class="catalog-filters__block bx-filter-parameters-box">
+					<div class="heading">
+						<span>Для кого</span>
+					</div>
+					<div class="body bx-filter-container-modef">
+						<fieldset class="checkbox" id="FOR_WHOM">
+							<input type="checkbox" name="arrFilter_286_2749831780" value="Y" id="arrFilter_286_2749831780" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_286_2749831780" for="arrFilter_286_2749831780" class="bx-filter-param-label">Для него</label>
+							<input type="checkbox" name="arrFilter_286_3571460850" value="Y" id="arrFilter_286_3571460850" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_286_3571460850" for="arrFilter_286_3571460850" class="bx-filter-param-label">Для нее</label>
+							<input type="checkbox" name="arrFilter_286_100901230" value="Y" id="arrFilter_286_100901230" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_286_100901230" for="arrFilter_286_100901230" class="bx-filter-param-label">Для двоих</label>
+							<input type="checkbox" name="arrFilter_286_2249310613" value="Y" id="arrFilter_286_2249310613" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_286_2249310613" for="arrFilter_286_2249310613" class="bx-filter-param-label">Для детей</label>
+							<input type="checkbox" name="arrFilter_286_4044812547" value="Y" id="arrFilter_286_4044812547" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_286_4044812547" for="arrFilter_286_4044812547" class="bx-filter-param-label">Для компании</label>
+						</fieldset>
+					</div>
+				</div>
+				<div class="catalog-filters__block bx-filter-parameters-box">
+					<div class="heading">
+						<span>Повод</span>
+					</div>
+					<div class="body bx-filter-container-modef">
+						<fieldset class="checkbox" id="FOR_EVENT">
+							<input type="checkbox" name="arrFilter_287_4135269658" value="Y" id="arrFilter_287_4135269658" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_287_4135269658" for="arrFilter_287_4135269658" class="bx-filter-param-label">День рождения</label>
+							<input type="checkbox" name="arrFilter_287_622364711" value="Y" id="arrFilter_287_622364711" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_287_622364711" for="arrFilter_287_622364711" class="bx-filter-param-label">Юбилей</label>
+							<input type="checkbox" name="arrFilter_287_3155286429" value="Y" id="arrFilter_287_3155286429" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_287_3155286429" for="arrFilter_287_3155286429" class="bx-filter-param-label">Свадьба</label>
+							<input type="checkbox" name="arrFilter_287_1377810609" value="Y" id="arrFilter_287_1377810609" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_287_1377810609" for="arrFilter_287_1377810609" class="bx-filter-param-label">Выпускной</label>
+							<input type="checkbox" name="arrFilter_287_1869767840" value="Y" id="arrFilter_287_1869767840" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_287_1869767840" for="arrFilter_287_1869767840" class="bx-filter-param-label">Новый год</label>
+							<input type="checkbox" name="arrFilter_287_2172388748" value="Y" id="arrFilter_287_2172388748" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_287_2172388748" for="arrFilter_287_2172388748" class="bx-filter-param-label">14 февраля</label>
+							<input type="checkbox" name="arrFilter_287_521703471" value="Y" id="arrFilter_287_521703471" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_287_521703471" for="arrFilter_287_521703471" class="bx-filter-param-label">23 февраля</label>
+							<input type="checkbox" name="arrFilter_287_1746903225" value="Y" id="arrFilter_287_1746903225" class="show-for-sr" onclick="smartFilter.click(this)" data-tip-top="-5">
+							<label data-role="label_arrFilter_287_1746903225" for="arrFilter_287_1746903225" class="bx-filter-param-label">8 Марта</label>
+						</fieldset>
+					</div>
+				</div>
+				<div class="catalog-filters__block bx-filter-parameters-box showed">
+					<div class="heading">
+						<span>Количество человек</span>
+					</div>
+					<div class="body bx-filter-container-modef">
+						<div class="row">
+							<div class="row catalog-slider-row">
+								<div class="column small-6">
+									<div class="input-group">
+										<span class="input-group-label hollow">От</span>
+										<input id="arrFilter_215_MIN" name="arrFilter_215_MIN" class="input-group-field hollow" value="" type="number" onkeyup="smartFilter.keyup(this)" data-tip-top="3" placeholder="1" max="30" min="1" step="1">
+									</div>
+								</div>
+								<div class="column small-6">
+									<div class="input-group">
+										<span class="input-group-label hollow">До</span>
+										<input id="arrFilter_215_MAX" name="arrFilter_215_MAX" class="input-group-field hollow" value="" type="number" onkeyup="smartFilter.keyup(this)" data-tip-top="3" placeholder="30" max="30" min="1" step="1">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slider" data-start="1" data-end="30" data-initial-start="1" data-initial-end="30" data-slider="2euxky-slider">
+							<span class="slider-handle" data-slider-handle="" role="slider" tabindex="0" aria-controls="arrFilter_215_MIN" aria-valuenow="1" aria-valuemax="30" aria-valuemin="1" aria-orientation="horizontal" style="left: 0%;"></span>
+							<span class="slider-fill" data-slider-fill="" style="width: 0px; min-width: 99.34%; left: 0%;"></span>
+							<span class="slider-handle" data-slider-handle="" role="slider" tabindex="0" aria-controls="arrFilter_215_MAX" aria-valuenow="30" aria-valuemax="30" aria-valuemin="1" aria-orientation="horizontal" style="left: 91%;"></span>
 						</div>
 					</div>
 				</div>
-				<div class="leader-item">
-					<div class="badge">Лучший выбор</div>
-					<a href="" class="leader-img-link">
-						<img src="/img/temp/leaders_3.png" class="leader-img" alt="">
-					</a>
-					<div class="leader-text">
-						<a href="" class="link-name">Мини-гонка на картах. Картинг</a>
-						<div class="leader-prices">
-							<div class="price price_leader">1100 руб.</div>
-						</div>
-					</div>
+				<input type="hidden" name="sort" value="">
+				<input type="hidden" name="view" value="">
+				<input type="hidden" name="PAGE_EL_COUNT" value="">
+				<div class="catalog-filters__buttons">
+					<input class="button expanded btn btn_secondary btn_wide" type="submit" id="set_filter" name="set_filter" value="Показать" onclick="getCatalogItems(this, '.catalog-reload', true); return false;" href="/catalog/?load=Y">
+					<input class="button expanded secondary btn btn_disabled btn_wide" type="submit" id="del_filter" name="del_filter" value="Сбросить" onclick="window.location.href = smartFilter.generateParamsUrl($(this).attr('href')); return false;" href="/catalog/">
 				</div>
-				<div class="leader-item">
-					<a href="" class="leaders-showall">Смотреть все</a>
-				</div>
-			</div>
+				<!-- <div class="bx-filter-popup-result filter-tip" id="modef" style="display:none; top:0px; margin-top:0px;">
+					Выбрано: <span id="modef_num">0</span> <a href="/catalog/?set_filter=y" data-ajax="/catalog/?set_filter=y&amp;load=Y" target="" onclick="getCatalogItems(this, '.catalog-reload', true); return false;">Показать</a>
+				</div> -->
+			</form>
 		</div>
-	</section>	<section class="for-whom">
-		<div class="container">
-			<h1 class="text-title">Для кого:</h1>
-			<div class="for-whom__carousel">
-				<div class="owl-carousel">
-					<div class="for-whom__carousel-item">
-						<a href="" class="zoomout for-whom__image-wrapper">
-							<div class="zoomout__bgr for-whom__image" style="background-image: url(/img/temp/whom_1.jpg);"></div>
-						</a>
-						<a href="" class="link-name">Для него</a>
+	</div>
+	<!-- <script>
+		var smartFilter = new JCSmartFilter('/catalog/', 'VERTICAL', []);
+	</script> -->
+</nav>
+			</aside>
+			<div class="catalog">
+				<div class="catalog__sort">
+					<span class="catalog__sort-label">Сортировка по:</span>
+					<div class="catalog__sort-box">
+						<div class="catalog__sort-box-active">
+							сначала популярные
+						</div>
+						<div class="svg-icon">
+							<svg class="svg-icon__angle-down">
+								<use xlink:href="#icon-angle-down"></use>
+							</svg>
+						</div>
 					</div>
-					<div class="for-whom__carousel-item">
-						<a href="" class="zoomout for-whom__image-wrapper">
-							<div class="zoomout__bgr for-whom__image" style="background-image: url(/img/temp/whom_2.jpg);"></div>
-						</a>
-						<a href="" class="link-name">Для нее</a>
+				</div>
+				<h1 class="text-title text-title_catalog">Наборы впечатлений</h1>
+				<div class="catalog__items catalog__items_kit">
+					<div class="grid-sizer"></div>
+					<div class="product product_kit">
+						<div class="product__wrapper product__wrapper_kit">
+							<div class="badge badge_kit">4 в 1</div>
+							<a href="" class="product__img-link"><img src="/img/temp/kit_1.png" alt="" class="product__img"></a>
+							<div class="product__text">
+								<div class="product__kit-count">Впечатлений в наборе – 14</div>
+								<div class="price price_catalog">1300 руб.</div>
+								<a href="" class="product__name">Подарочный набор “Лучшее для лучших”</a>
+								<div class="product__desc">Барабаны солнца! Увлекательный мастер-класс для вас. Это творческое действо подарит радость и удовлетворение.</div>
+							</div>
+							<div>
+								<div class="product__like">
+									<div class="svg-icon">
+										<svg class="svg-icon__like">
+											<use xlink:href="#icon-like"></use>
+										</svg>
+									</div>
+									<div class="product__like-label">веселье, творчество и драйв</div>
+								</div>
+								<div class="product__buttons">
+									<a href="" class="btn btn_primary btn_wide">Подробнее</a>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="for-whom__carousel-item">
-						<a href="" class="zoomout for-whom__image-wrapper">
-							<div class="zoomout__bgr for-whom__image" style="background-image: url(/img/temp/whom_3.jpg);"></div>
-						</a>
-						<a href="" class="link-name">Для двоих</a>
+					<div class="product product_kit">
+						<div class="product__wrapper product__wrapper_kit">
+							<div class="badge badge_kit">4 в 1</div>
+							<a href="" class="product__img-link"><img src="/img/temp/kit_1.png" alt="" class="product__img"></a>
+							<div class="product__text">
+								<div class="product__kit-count">Впечатлений в наборе – 14</div>
+								<div class="price price_catalog">1300 руб.</div>
+								<a href="" class="product__name">Подарочный набор</a>
+								<div class="product__desc">Барабаны солнца! Увлекательный мастер-класс для вас. Это творческое действо подарит радость и удовлетворение.</div>
+							</div>
+							<div>
+								<div class="product__like">
+									<div class="svg-icon">
+										<svg class="svg-icon__like">
+											<use xlink:href="#icon-like"></use>
+										</svg>
+									</div>
+									<div class="product__like-label">веселье, творчество и драйв</div>
+								</div>
+								<div class="product__buttons">
+									<a href="" class="btn btn_primary btn_wide">Подробнее</a>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="for-whom__carousel-item">
-						<a href="" class="zoomout for-whom__image-wrapper">
-							<div class="zoomout__bgr for-whom__image" style="background-image: url(/img/temp/whom_4.jpg);"></div>
-						</a>
-						<a href="" class="link-name">На день рождения</a>
+					<div class="product product_kit">
+						<div class="product__wrapper product__wrapper_kit">
+							<div class="badge badge_kit">4 в 1</div>
+							<a href="" class="product__img-link"><img src="/img/temp/kit_1.png" alt="" class="product__img"></a>
+							<div class="product__text">
+								<div class="product__kit-count">Впечатлений в наборе – 14</div>
+								<div class="price price_catalog">1300 руб.</div>
+								<a href="" class="product__name">Подарочный набор “Лучшее для лучших”</a>
+								<div class="product__desc">Барабаны солнца! Увлекательный мастер-класс для вас. Это творческое действо подарит радость и удовлетворение.</div>
+							</div>
+							<div>
+								<div class="product__like">
+									<div class="svg-icon">
+										<svg class="svg-icon__like">
+											<use xlink:href="#icon-like"></use>
+										</svg>
+									</div>
+									<div class="product__like-label">веселье, творчество и драйв</div>
+								</div>
+								<div class="product__buttons">
+									<a href="" class="btn btn_primary btn_wide">Подробнее</a>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="for-whom__carousel-item">
-						<a href="" class="zoomout for-whom__image-wrapper">
-							<div class="zoomout__bgr for-whom__image" style="background-image: url(/img/temp/whom_5.jpg);"></div>
-						</a>
-						<a href="" class="link-name">На свадьбу</a>
+					<div class="product product_kit">
+						<div class="product__wrapper product__wrapper_kit">
+							<div class="badge badge_kit">4 в 1</div>
+							<a href="" class="product__img-link"><img src="/img/temp/kit_1.png" alt="" class="product__img"></a>
+							<div class="product__text">
+								<div class="product__kit-count">Впечатлений в наборе – 14</div>
+								<div class="price price_catalog">1300 руб.</div>
+								<a href="" class="product__name">Подарочный набор “Лучшее для лучших”</a>
+								<div class="product__desc">Барабаны солнца! Увлекательный мастер-класс для вас. Это творческое действо подарит радость и удовлетворение.</div>
+							</div>
+							<div>
+								<div class="product__like">
+									<div class="svg-icon">
+										<svg class="svg-icon__like">
+											<use xlink:href="#icon-like"></use>
+										</svg>
+									</div>
+									<div class="product__like-label">веселье, творчество и драйв</div>
+								</div>
+								<div class="product__buttons">
+									<a href="" class="btn btn_primary btn_wide">Подробнее</a>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="for-whom__carousel-item">
-						<a href="" class="zoomout for-whom__image-wrapper">
-							<div class="zoomout__bgr for-whom__image" style="background-image: url(/img/temp/whom_3.jpg);"></div>
-						</a>
-						<a href="" class="link-name">Еще 1</a>
+				</div>
+
+
+
+
+
+
+				<h1 class="text-title text-title_catalog">Впечатления</h1>
+				<div class="catalog__items catalog__items_product">
+					<div class="grid-sizer"></div>
+					<div class="product product_cat">
+						<div class="product__wrapper">
+							<div class="badge">4 в 1</div>
+							<a href="" class="product__img-link"><img src="/img/temp/kit_1.png" alt="" class="product__img"></a>
+							<div class="product__text">
+								<div class="price price_catalog">1300 руб.</div>
+								<a href="" class="product__name">Подарочный набор “Лучшее для лучших”</a>
+								<div class="product__desc">Барабаны солнца! Увлекательный мастер-класс для вас. Это творческое действо подарит радость и удовлетворение.</div>
+							</div>
+							<div>
+								<div class="product__like">
+									<div class="svg-icon">
+										<svg class="svg-icon__like">
+											<use xlink:href="#icon-like"></use>
+										</svg>
+									</div>
+									<div class="product__like-label">веселье, творчество и драйв</div>
+								</div>
+								<div class="product__buttons">
+									<a href="" class="btn btn_secondary">Подробнее</a>
+									<a href="" class="svg-icon">
+										<svg class="svg-icon__cart">
+											<use xlink:href="#icon-cart"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="for-whom__carousel-item">
-						<a href="" class="zoomout for-whom__image-wrapper">
-							<div class="zoomout__bgr for-whom__image" style="background-image: url(/img/temp/whom_2.jpg);"></div>
+					<div class="product product_cat">
+						<div class="product__wrapper">
+							<div class="badge">4 в 1</div>
+							<a href="" class="product__img-link"><img src="/img/temp/kit_1.png" alt="" class="product__img"></a>
+							<div class="product__text">
+								<div class="price price_catalog">1300 руб.</div>
+								<a href="" class="product__name">Подарочный набор</a>
+								<div class="product__desc">Барабаны солнца! Увлекательный мастер-класс для вас. Это творческое действо подарит радость и удовлетворение.</div>
+							</div>
+							<div>
+								<div class="product__like">
+									<div class="svg-icon">
+										<svg class="svg-icon__like">
+											<use xlink:href="#icon-like"></use>
+										</svg>
+									</div>
+									<div class="product__like-label">веселье, творчество и драйв</div>
+								</div>
+								<div class="product__buttons">
+									<a href="" class="btn btn_secondary">Подробнее</a>
+									<a href="" class="svg-icon">
+										<svg class="svg-icon__cart">
+											<use xlink:href="#icon-cart"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="product product_cat">
+						<div class="product__wrapper">
+							<div class="badge">4 в 1</div>
+							<a href="" class="product__img-link"><img src="/img/temp/kit_1.png" alt="" class="product__img"></a>
+							<div class="product__text">
+								<div class="price price_catalog">1300 руб.</div>
+								<a href="" class="product__name">Подарочный набор “Лучшее для лучших”</a>
+								<div class="product__desc">Барабаны солнца! тво подарит радость и удовлетворение.</div>
+							</div>
+							<div>
+								<div class="product__like">
+									<div class="svg-icon">
+										<svg class="svg-icon__like">
+											<use xlink:href="#icon-like"></use>
+										</svg>
+									</div>
+									<div class="product__like-label">веселье, творчество и драйв</div>
+								</div>
+								<div class="product__buttons">
+									<a href="" class="btn btn_secondary">Подробнее</a>
+									<a href="" class="svg-icon">
+										<svg class="svg-icon__cart">
+											<use xlink:href="#icon-cart"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="product product_cat">
+						<div class="product__wrapper">
+							<div class="badge">4 в 1</div>
+							<a href="" class="product__img-link"><img src="/img/temp/kit_1.png" alt="" class="product__img"></a>
+							<div class="product__text">
+								<div class="price price_catalog">1300 руб.</div>
+								<a href="" class="product__name">Подарочный набор “Лучшее для лучших”</a>
+								<div class="product__desc">Барабаны солнца! Увлекательный мастер-класс для вас. Это творческое действо подарит радость и удовлетворение.</div>
+							</div>
+							<div>
+								<div class="product__like">
+									<div class="svg-icon">
+										<svg class="svg-icon__like">
+											<use xlink:href="#icon-like"></use>
+										</svg>
+									</div>
+									<div class="product__like-label">веселье, творчество и драйв</div>
+								</div>
+								<div class="product__buttons">
+									<a href="" class="btn btn_secondary">Подробнее</a>
+									<a href="" class="svg-icon">
+										<svg class="svg-icon__cart">
+											<use xlink:href="#icon-cart"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="catalog-footer">
+					<div class="catalog-footer__col catalog-footer__col_show-count">
+						<div class="catalog-footer__label">Показывать по:</div>
+						<ul class="catalog-footer__items">
+							<li><a href="" class="catalog-footer__link catalog-footer__link_active">16</a></li>
+							<li><a href="" class="catalog-footer__link">64</a></li>
+							<li><a href="" class="catalog-footer__link">все</a></li>
+						</ul>
+					</div>
+					<div class="catalog-footer__col catalog-footer__col_load-more">
+						<a href="" class="svg-icon svg-icon_center svg-icon_rotate svg-icon_text-load-more">
+							<svg class="svg-icon__load-more visible-lg">
+								<use xlink:href="#icon-load-more"></use>
+							</svg>
+							<span>Показать еще</span>
 						</a>
-						<a href="" class="link-name">Еще 2</a>
+					</div>
+					<div class="catalog-footer__col catalog-footer__col_pagination">
+						<ul class="catalog-footer__items">
+							<li><a href="" class="catalog-footer__link catalog-footer__link_active">1</a></li>
+							<li><a href="" class="catalog-footer__link">2</a></li>
+							<li><a href="" class="catalog-footer__link">3</a></li>
+							<li><a href="" class="catalog-footer__link">...</a></li>
+							<li><a href="" class="catalog-footer__link">14</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="about">
-		<div class="about__svg-bgr">
-			<div class="container">
-				<h1 class="text-title text-title_white">О нас</h1>
-				<div class="about__content">«KUPOSE — Магазин подарочных сертификатов. Мы работаем в партнерстве с лучшими поставщиками удивительных мероприятий и приключений. Тысячи клиентов наполнили свою жизнь яркими событиями и счастливыми мгновениями.</div>
-				<ul class="benefits">
-					<li class="benefits__item">
-						<div class="svg-icon">
-							<svg class="svg-icon__benefits">
-								<use xlink:href="#benefits_1"></use>
-							</svg>
-						</div>
-						<div class="benefits__text">1 год срок действия сертификата с даты покупки </div>
-					</li>
-					<li class="benefits__item">
-						<div class="svg-icon">
-							<svg class="svg-icon__benefits">
-								<use xlink:href="#benefits_2"></use>
-							</svg>
-						</div>
-						<div class="benefits__text">100% качества — надежные и проверенные партнеры </div>
-					</li>
-					<li class="benefits__item">
-						<div class="svg-icon">
-							<svg class="svg-icon__benefits">
-								<use xlink:href="#benefits_3"></use>
-							</svg>
-						</div>
-						<div class="benefits__text">Моментальная доставка на email или курьером. <div class="benefits__text-small">*Вы можете выбрать дату отправки</div></div>
-					</li>
-					<li class="benefits__item">
-						<div class="svg-icon">
-							<svg class="svg-icon__benefits">
-								<use xlink:href="#benefits_4"></use>
-							</svg>
-						</div>
-						<div class="benefits__text">Праздничный дизайн упаковки и сертификата к любому поводу</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</section><section class="present">
-	<div class="container present_border">
-		<div class="present__stars">
-			<svg class="present__stars-bgr">
-				<use xlink:href="#present-stars"></use>
-			</svg>
-		</div>
-		<div class="present__confetti">
-			<svg class="present__confetti-bgr">
-				<use xlink:href="#present-confetti"></use>
-			</svg>
-		</div>
-		<div class="present__ribbons">
-			<svg class="present__ribbons-bgr">
-				<use xlink:href="#present-ribbons"></use>
-			</svg>
-		</div>
-		<div class="present__choose">
-			<a href="" class="present__button">
-				<div class="present__button-label">Выбрать подарок</div>
-				<svg class="present__button-bgr">
-					<use xlink:href="#present-button"></use>
-				</svg>
-			</a>
-		</div>
-	</div>
-</section>
+
 	<section class="pay-systems"></section>
 	<footer class="footer">
 		<div class="container">

@@ -11,6 +11,7 @@
 
 // 3. Base stuff
 @import 'base/base',
+		'base/columns', // нах?
 		'base/fonts',
 		'base/typography',
 		'base/helpers',
@@ -20,12 +21,15 @@
 @import 'layout/header',
 		'layout/nav-catalog',
 		'layout/nav-mobile',
+		'layout/breadcrumbs',
 		'layout/content/common_elements',
 		'layout/content/section_leaders',
 		'layout/content/section_for-whom',
 		'layout/content/section_about',
 		'layout/content/section_present',
 		'layout/content/section_pay-systems',
+		'layout/content/catalog',
+		'layout/content/filter',
 		'layout/footer';
 
 // 4.5. Vendors frameworks
@@ -33,6 +37,7 @@
 
 // 5. Components
 @import 'components/icons',
+		'components/form',
 		'components/button',
 		'components/carousel';
 

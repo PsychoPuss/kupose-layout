@@ -87,6 +87,7 @@
 	}
 }
 .nav {
+	position: relative; ///
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -106,8 +107,6 @@
 		justify-content: end;
 		align-items: center;
 	}
-	// .nav__search-form
-	&__search-form {}
 	// .nav__menu-items
 	&__menu-items {
 		// display: none;
@@ -150,6 +149,7 @@
 .nav-workhours {
 	font-size: 8px;
 	color: $white;
+	text-transform: lowercase;
 	@include respond-to(md) {
 		font-size: 12px;
 	}

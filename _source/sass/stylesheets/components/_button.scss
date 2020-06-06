@@ -2,6 +2,7 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 .btn {
+	cursor: pointer;
 	display: inline-block;
 	position: relative;
 	color: $white;
@@ -11,6 +12,7 @@
 	text-align: center;
 	padding: 0 15px;
 	box-shadow: 0 0 4px rgba($black, 0.25);
+	border: 0;
 	border-radius: 3px;
 	white-space: nowrap;
 	transition: all 0.25s ease;
@@ -25,6 +27,11 @@
 	// .btn_wide
 	&_wide {
 		width: 100%;
+	}
+	// .btn_long
+	&_long {
+		width: 100%;
+		max-width: 260px;
 	}
 	// .btn_xs
 	&_xs {

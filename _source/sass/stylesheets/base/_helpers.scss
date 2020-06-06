@@ -58,3 +58,19 @@
 	position: absolute;
 	width: 1px;
 }
+
+
+// .hidden-lg
+.hidden-lg {
+	@include respond-to(lg) {
+		display: none !important;
+	}
+}
+
+// .visible-lg
+.visible-lg {
+	display: none !important;
+	@include respond-to(lg) {
+		display: block !important;
+	}
+}
