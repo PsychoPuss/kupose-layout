@@ -493,9 +493,9 @@ a:hover, a:active, a:focus {
 /* Webfont: Lato-Black */
 @font-face {
 	font-family: "LatoWeb";
-	src: url("/fonts/Lato-Black.eot");
+	src: url("../fonts/Lato-Black.eot");
 	/* IE9 Compat Modes */
-	src: url("/fonts/Lato-Black.eot?#iefix") format("embedded-opentype"), url("/fonts/Lato-Black.woff2") format("woff2"), url("/fonts/Lato-Black.woff") format("woff"), url("/fonts/Lato-Black.ttf") format("truetype");
+	src: url("../fonts/Lato-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Black.woff2") format("woff2"), url("../fonts/Lato-Black.woff") format("woff"), url("../fonts/Lato-Black.ttf") format("truetype");
 	font-style: normal;
 	font-weight: 900;
 	text-rendering: optimizeLegibility;
@@ -503,9 +503,9 @@ a:hover, a:active, a:focus {
 /* Webfont: Lato-Bold */
 @font-face {
 	font-family: "LatoWeb";
-	src: url("/fonts/Lato-Bold.eot");
+	src: url("../fonts/Lato-Bold.eot");
 	/* IE9 Compat Modes */
-	src: url("/fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("/fonts/Lato-Bold.woff2") format("woff2"), url("/fonts/Lato-Bold.woff") format("woff"), url("/fonts/Lato-Bold.ttf") format("truetype");
+	src: url("../fonts/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff"), url("../fonts/Lato-Bold.ttf") format("truetype");
 	font-style: normal;
 	font-weight: 700;
 	text-rendering: optimizeLegibility;
@@ -513,9 +513,9 @@ a:hover, a:active, a:focus {
 /* Webfont: Lato-Regular */
 @font-face {
 	font-family: "LatoWeb";
-	src: url("/fonts/Lato-Regular.eot");
+	src: url("../fonts/Lato-Regular.eot");
 	/* IE9 Compat Modes */
-	src: url("/fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("/fonts/Lato-Regular.woff2") format("woff2"), url("/fonts/Lato-Regular.woff") format("woff"), url("/fonts/Lato-Regular.ttf") format("truetype");
+	src: url("../fonts/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato-Regular.woff") format("woff"), url("../fonts/Lato-Regular.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 	text-rendering: optimizeLegibility;
