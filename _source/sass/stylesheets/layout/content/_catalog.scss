@@ -1,16 +1,6 @@
-.bx-ie11 {
-	.product__wrapper {
-		width: 300px;
-
-		&:hover {
-			max-width: 300px;
-		}
-	}
-}
-
 .grid-sizer,
-.product_kit,
-.product_cat {
+.products_kit,
+.products_cat {
 	width: 100% !important;
 	background: $white;
 
@@ -19,7 +9,7 @@
 	}
 
 	@include respond-to(lg) {
-		width: 33.333334% !important;
+		width: 33.33334% !important;
 	}
 }
 
@@ -95,146 +85,6 @@
 
 	// .catalog__sort-box-active
 	&__sort-box-active {}
-}
-
-
-
-
-.product {
-	display: flex;
-	flex: 0 1 auto;
-	width: 300px;
-	margin: 11px 0;
-	padding: 0 11px;
-
-	&_kit {
-		height: 455px;
-
-		@include respond-to(sm) {
-			height: 435px;
-		}
-	}
-
-	&_cat {
-		height: 405px;
-
-		@include respond-to(sm) {
-			height: 405px;
-		}
-	}
-
-	// .product__wrapper
-	&__wrapper {
-		position: relative;
-		display: flex;
-		flex: 0 1 auto;
-		flex-direction: column;
-		background: $white;
-		padding: 5px 0 10px;
-		border-bottom: 1px solid $brand-color-primary;
-
-		&:hover {
-			z-index: 2;
-			position: absolute;
-			left: 0;
-			width: auto;
-			margin: 0 11px;
-
-			.product__desc {
-				display: block;
-			}
-		}
-
-		// .product__wrapper_kit
-		&_kit {
-			padding: 12px 8px;
-			border: 2px solid $brand-color-primary;
-			border-radius: 10px;
-		}
-	}
-
-	// .product__img-link
-	&__img-link {
-		display: block;
-		flex: 0 0 auto;
-		margin-bottom: 10px;
-	}
-
-	// .product__img
-	&__img {
-		width: 100%;
-		max-width: 100%;
-		border-radius: 8px;
-		object-fit: cover;
-	}
-
-	// .product__text
-	&__text {
-		display: flex;
-		flex-direction: column;
-		flex: 1 1 auto;
-	}
-
-	// .product__kit-count
-	&__kit-count {
-		color: $brand-color-primary;
-		font-size: 14px;
-		font-weight: 700;
-		margin-bottom: 13px;
-	}
-
-	// .product__name
-	&__name {
-		display: block;
-		font-size: 15px;
-		font-weight: 700;
-		margin-bottom: 10px;
-
-		@include respond-to(md) {
-			font-size: 16px;
-		}
-	}
-
-	// .product__desc
-	&__desc {
-		font-size: 15px;
-		margin-bottom: 10px;
-		display: none;
-
-		@include respond-to(md) {
-			font-size: 16px;
-		}
-	}
-
-	// .product__like
-	&__like {
-		display: flex;
-		color: $brand-color-primary;
-		font-size: 14px;
-		line-height: 1.1;
-		margin-bottom: 11px;
-	}
-
-	// .product__like-label
-	&__like-label {
-		padding-top: 1px;
-		margin-left: 5px;
-	}
-
-	// .product__buttons
-	&__buttons {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		.btn {
-			flex-grow: 1;
-		}
-
-		&>*:last-child {
-			padding: 0 14px 0 20px;
-		}
-	}
 }
 
 .catalog-footer {

@@ -1,0 +1,37 @@
+.bx-ie11 {
+	.products__wrapper {
+		width: 300px;
+
+		&:hover {
+			max-width: 299px;
+		}
+	}
+	.products__simple {
+		width: 210px;
+	}
+}
+
+
+//** Выбрать более удобный способ (bx-ie11 или :root) */
+
+
+
+_:-ms-fullscreen, :root .products__wrapper{
+	width: 300px;
+
+	&:hover {
+		max-width: 299px;
+	}
+}
+
+_:-ms-fullscreen, :root .products__simple{
+	width: 210px;
+}
+
+
+_:-ms-fullscreen, :root .filter {
+	max-width: 198px;
+}
+_:-ms-fullscreen, :root .catalog {
+	max-width: calc(100% - 198px);
+}

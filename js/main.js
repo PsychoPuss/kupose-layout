@@ -415,21 +415,21 @@ function initOwl() {
 	*/
 }
 function initMasonry() {
-	var elem_kit = document.querySelector('.catalog__items_kit');
+	let elem_kit = document.querySelector('.catalog__items_kit');
 	if (elem_kit) {
-		var msnry = new Masonry(elem_kit, {
-			// options
-			itemSelector: '.catalog__items_kit .product_kit',
+		new Masonry(elem_kit, {
+			itemSelector: '.catalog__items_kit .products_kit',
 			columnWidth: '.catalog__items_kit .grid-sizer',
 			horizontalOrder: true,
 			percentPosition: true,
 			stagger: 5,
 		});
+	}
 
-		var elem_product = document.querySelector('.catalog__items_product');
-		var msnry = new Masonry(elem_product, {
-			// options
-			itemSelector: '.catalog__items_product .product_cat',
+	let elem_product = document.querySelector('.catalog__items_product');
+	if (elem_product) {
+		new Masonry(elem_product, {
+			itemSelector: '.catalog__items_product .products_cat',
 			columnWidth: '.catalog__items_product .grid-sizer',
 			horizontalOrder: true,
 			percentPosition: true,

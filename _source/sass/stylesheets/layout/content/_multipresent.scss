@@ -1,0 +1,31 @@
+.multipresent {
+
+	// .multipresent__actions
+	&__actions {
+		margin-bottom: 23px;
+	}
+
+
+	// .multipresent__products
+	&__products {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -12px 30px;
+
+		.products {
+			flex: 0 1 100%;
+			@include respond-to(sm) {
+				flex: 0 1 50%;
+			}
+			@include respond-to(md) {
+				flex: 0 1 33.33334%;
+			}
+			@include respond-to(lg) {
+				flex: 0 1 25%;
+			}
+			@include respond-to(xl) {
+				flex: 0 1 20%;
+			}
+		}
+	}
+}

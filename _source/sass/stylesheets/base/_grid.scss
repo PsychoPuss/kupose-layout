@@ -1,12 +1,19 @@
 .content {
 	display: flex;
 	flex-direction: column;
+	flex-wrap: wrap;
 	padding-top: 35px;
 	margin-left: -15px;
 	margin-right: -15px;
 
 	@include respond-to(md) {
 		flex-direction: row;
+	}
+
+	// .content__col-main
+	&__col-main {
+		flex: 1 1 100%;
+		padding: 0 15px;
 	}
 
 	// .content__col-left
@@ -45,11 +52,5 @@
 		@include respond-to(xl) {
 			flex: 1 1 83%;
 		}
-	}
-
-	// .content__col-main
-	&__col-main {
-		flex: 1 1 100%;
-		padding: 0 15px;
 	}
 }

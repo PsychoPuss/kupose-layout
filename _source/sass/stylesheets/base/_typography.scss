@@ -1,7 +1,64 @@
 /**
  * Basic typography style for copy text
  */
+// headings
+%h1-heading {
+	font-size: 20px;
+	font-weight: 900;
+	color: $text-color;
+	@include respond-to(md) {
+		font-size: 24px;
+	}
+}
+%h2-heading {
+	font-size: 20px;
+	line-height: 1.3;
+	font-weight: 900;
+	color: $text-color;
+}
+%h3-heading {
+	font-size: 18px;
+	line-height: 1.1;
+	font-weight: 900;
+	color: $brand-color-primary;
+}
+
 body {
-  color: $text-color;
-  font: normal 100% / 1.4 $text-font-stack;
+	color: $text-color;
+	font: normal 100% / 1.4 $text-font-stack;
+}
+
+.text-content {
+	margin-bottom: 35px;
+	h1 {
+		@extend %h1-heading;
+		margin-bottom: 30px;
+	}
+	h2 {
+		@extend %h2-heading;
+		margin-bottom: 10px;
+	}
+	h3 {
+		@extend %h3-heading;
+		margin-bottom: 10px;
+	}
+
+	p {
+		line-height: 1.6;
+		margin-bottom: 30px;
+	}
+}
+
+
+
+.text-title {
+	@extend %h1-heading;
+	// .text-title_white
+	&_white {
+		color: $white;
+	}
+	// .text-title_catalog
+	&_catalog {
+		border-bottom: 1px solid $mid-grey;
+	}
 }
