@@ -416,24 +416,26 @@ function initOwl() {
 }
 function initMasonry() {
 	var elem_kit = document.querySelector('.catalog__items_kit');
-	var msnry = new Masonry(elem_kit, {
-		// options
-		itemSelector: '.catalog__items_kit .product_kit',
-		columnWidth: '.catalog__items_kit .grid-sizer',
-		horizontalOrder: true,
-		percentPosition: true,
-		stagger: 5,
-	});
+	if (elem_kit) {
+		var msnry = new Masonry(elem_kit, {
+			// options
+			itemSelector: '.catalog__items_kit .product_kit',
+			columnWidth: '.catalog__items_kit .grid-sizer',
+			horizontalOrder: true,
+			percentPosition: true,
+			stagger: 5,
+		});
 
-	var elem_product = document.querySelector('.catalog__items_product');
-	var msnry = new Masonry(elem_product, {
-		// options
-		itemSelector: '.catalog__items_product .product_cat',
-		columnWidth: '.catalog__items_product .grid-sizer',
-		horizontalOrder: true,
-		percentPosition: true,
-		stagger: 5,
-	});
+		var elem_product = document.querySelector('.catalog__items_product');
+		var msnry = new Masonry(elem_product, {
+			// options
+			itemSelector: '.catalog__items_product .product_cat',
+			columnWidth: '.catalog__items_product .grid-sizer',
+			horizontalOrder: true,
+			percentPosition: true,
+			stagger: 5,
+		});
+	}
 }
 document.addEventListener("DOMContentLoaded", function (event) {
 // Dynamic Adapt v.1
@@ -600,16 +602,18 @@ const btnFilter = document.querySelector('.filter__show-button .btn'),
 // slideDown = element => element.style.height = `${element.scrollHeight}px`,
 // slideUp = element => element.style.height = 0,
 
-btnFilter.onclick = function () {
-	this.classList.toggle('filter-opened');
-	if (this.classList.contains('filter-opened')) {
-		filterContainer.style.height = filterContainer.scrollHeight + 'px';
-		// slideDown(filterContainer);
-	} else {
-		filterContainer.style.height = 0;
-		// slideUp(filterContainer);
-	}
-};
+if (btnFilter) {
+	btnFilter.onclick = function () {
+		this.classList.toggle('filter-opened');
+		if (this.classList.contains('filter-opened')) {
+			filterContainer.style.height = filterContainer.scrollHeight + 'px';
+			// slideDown(filterContainer);
+		} else {
+			filterContainer.style.height = 0;
+			// slideUp(filterContainer);
+		}
+	};
+}
 
 
 //** nav mobile */

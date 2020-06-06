@@ -19,16 +19,18 @@ const btnFilter = document.querySelector('.filter__show-button .btn'),
 // slideDown = element => element.style.height = `${element.scrollHeight}px`,
 // slideUp = element => element.style.height = 0,
 
-btnFilter.onclick = function () {
-	this.classList.toggle('filter-opened');
-	if (this.classList.contains('filter-opened')) {
-		filterContainer.style.height = filterContainer.scrollHeight + 'px';
-		// slideDown(filterContainer);
-	} else {
-		filterContainer.style.height = 0;
-		// slideUp(filterContainer);
-	}
-};
+if (btnFilter) {
+	btnFilter.onclick = function () {
+		this.classList.toggle('filter-opened');
+		if (this.classList.contains('filter-opened')) {
+			filterContainer.style.height = filterContainer.scrollHeight + 'px';
+			// slideDown(filterContainer);
+		} else {
+			filterContainer.style.height = 0;
+			// slideUp(filterContainer);
+		}
+	};
+}
 
 
 //** nav mobile */
