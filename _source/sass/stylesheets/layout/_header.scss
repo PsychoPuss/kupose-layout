@@ -85,6 +85,12 @@
 			background-size: auto;
 		}
 	}
+	// .nav-info_low
+	&_low {
+		@include respond-to(md) {
+			height: 60px;
+		}
+	}
 }
 .nav {
 	position: relative; ///

@@ -3,16 +3,20 @@
 		position: relative;
 		width: 330px;
 	}
+
 	@include respond-to(xl) {
 		width: 375px;
 	}
+
 	// .search-form_closed
 	&_closed {
+
 		// .search-form__wrapper
 		.search-form__wrapper {
 			width: 0%;
 		}
 	}
+
 	// .search-form__wrapper
 	&__wrapper {
 		position: absolute;
@@ -23,10 +27,12 @@
 		overflow: hidden;
 		border-radius: 5px;
 		transition: width 0.2s;
+
 		@include respond-to(md) {
 			top: 11px;
 			right: 85px;
 		}
+
 		@include respond-to(lg) {
 			top: -19px;
 			right: -10px;
@@ -34,6 +40,103 @@
 		}
 	}
 }
+
+.form-label {
+	color: #002b53;
+	font-size: 14px;
+	line-height: 1.1;
+	padding-left: 23px;
+	position: relative;
+	margin: 0 0 13px;
+	cursor: pointer;
+	display: inline-block;
+	padding-top: 2px;
+
+	%hide-input {
+		// position: absolute !important;
+		// width: 1px;
+		// height: 1px;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+	}
+
+	%common-input-before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 15px;
+		height: 15px;
+		background: $light-grey;
+		border: 1px solid $dark-grey;
+		box-shadow: inset 0 3px 2px rgba($black, 0.1);
+		cursor: pointer;
+	}
+
+	%common-input-after {
+		content: '';
+		display: block;
+		position: absolute;
+		cursor: pointer;
+	}
+
+	// .form-label__checkbox
+	&__checkbox {
+		@extend %hide-input;
+
+		&::before {
+			@extend %common-input-before;
+			border-radius: 3px;
+		}
+
+		&:checked::after {
+			@extend %common-input-after;
+			width: 15px;
+			height: 15px;
+			top: -2px;
+			left: 3px;
+			background: url(../img/checkbox.svg) 0 0 no-repeat;
+			background-size: contain;
+		}
+	}
+
+	// .form-label__radio
+	&__radio {
+		@extend %hide-input;
+
+		&::before {
+			@extend %common-input-before;
+			border-radius: 50%;
+		}
+
+		&:checked::after {
+			@extend %common-input-after;
+			width: 7px;
+			height: 7px;
+			top: 4px;
+			left: 4px;
+			background: $text-color;
+			border-radius: 50%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // input для фильтра (фильтр не переверстывался, стили старые от первой версии сайта на решении)
 .input-group-field {
@@ -58,6 +161,7 @@
 	height: 45px;
 	line-height: 42px;
 	padding: 3px 15px 0;
+
 	// .form-input_search
 	&_search {
 		color: $search-color;
@@ -66,20 +170,22 @@
 		width: 100%;
 		height: 39px;
 		padding-right: 40px;
+
 		&::placeholder {
 			color: $search-color;
 		}
 	}
 }
 
-
 .form-button {
 	background: transparent;
 	border: 0;
 	padding: 0;
+
 	// .form-button_search
 	&_search {
 		right: 0;
+
 		@include respond-to(lg) {
 			position: absolute;
 			top: -10px;

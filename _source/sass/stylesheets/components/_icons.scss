@@ -95,21 +95,15 @@
 		transition: transform 0.2s;
 	}
 
-	// .svg-icon_center
-	&_center {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+	// .svg-icon__tripadvisor
+	&__tripadvisor {
+		width: 136px;
+		height: 26px;
 	}
 
-	// .svg-icon_rotate
-	&_rotate {
-		@include on-event() {
-			svg {
-				transform: rotate(360deg) translate(0, -2px) scale(1.3);
-			}
-		}
-	}
+
+
+
 
 	// .svg-icon_text-load-more
 	&_text-load-more {
@@ -128,11 +122,30 @@
 		}
 	}
 
+	// .svg-icon_center
+	&_center {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// .svg-icon_rotate
+	&_rotate {
+		@include on-event() {
+			svg {
+				transform: rotate(360deg) translate(0, -2px) scale(1.3);
+			}
+		}
+	}
 }
+
+
 
 .svg-icon-white {
 	fill: $white;
 }
+
+
 
 .svg-icon-btn {
 	position: relative;
@@ -154,6 +167,8 @@
 		margin-bottom: -5px;
 	}
 }
+
+
 
 .cart-counter {
 	display: block;

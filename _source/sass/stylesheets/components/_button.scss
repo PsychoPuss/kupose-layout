@@ -33,6 +33,13 @@
 		width: 100%;
 		max-width: 260px;
 	}
+	// .btn_medium
+	&_medium {
+		width: 100%;
+		@include respond-to(sm) {
+			width: 178px;
+		}
+	}
 	// .btn_xs
 	&_xs {
 		line-height: 30px;
@@ -66,4 +73,13 @@
 	&_disabled {
 		background: $dark-grey;
 	}
+
+	// .btn_card
+	&_card {
+		width: 100%;
+		@include respond-to(md) {
+			width: 178px;
+		}
+	}
+
 }

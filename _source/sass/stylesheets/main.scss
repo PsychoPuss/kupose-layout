@@ -2,46 +2,49 @@
 
 // 1. Configuration and helpers
 @import 'abstracts/variables',
-		'abstracts/functions',
-		'abstracts/mixins';
+'abstracts/functions',
+'abstracts/mixins';
 
 // 2. Vendors
 @import 'vendors/normalize',
-		'vendors/reset';
+'vendors/reset';
 
 // 3. Base stuff
 @import 'base/base',
-		'base/fonts',
-		'base/grid',
-		'base/typography',
-		'base/helpers';
+'base/fonts',
+'base/grid',
+'base/typography',
+'base/helpers';
 
 // 4. Layout-related sections
 @import 'layout/header',
-		'layout/nav-catalog',
-		'layout/nav-mobile',
-		'layout/breadcrumbs',
-		'layout/content/common_elements',
-		'layout/content/section_leaders',
-		'layout/content/section_for-whom',
-		'layout/content/section_about',
-		'layout/content/section_present',
-		'layout/content/section_pay-systems',
-		'layout/content/catalog',
-		'layout/content/products-list',
-		'layout/content/multipresent',
-		'layout/content/filter',
-		'layout/footer',
-		'layout/ie11';
+'layout/nav-catalog',
+'layout/nav-mobile',
+'layout/breadcrumbs',
+'layout/content/common_elements',
+'layout/content/section_leaders',
+'layout/content/section_for-whom',
+'layout/content/section_about',
+'layout/content/section_present',
+'layout/content/section_pay-systems',
+'layout/content/catalog',
+'layout/content/products-list',
+'layout/content/multipresent',
+'layout/content/product-card',
+'layout/footer',
+'layout/ie11';
 
 // 4.5. Vendors frameworks
 @import 'vendors/owl-carousel/owl.carousel';
+@import 'vendors/fancybox/jquery.fancybox';
 
 // 5. Components
 @import 'components/icons',
-		'components/form',
-		'components/button',
-		'components/carousel';
+'components/form',
+'components/button',
+'components/tabs',
+'components/filter',
+'components/carousel';
 
 // 6. Page-specific styles
 @import 'pages/home';

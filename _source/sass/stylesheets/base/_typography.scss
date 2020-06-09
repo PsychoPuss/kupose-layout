@@ -22,6 +22,14 @@
 	font-weight: 900;
 	color: $brand-color-primary;
 }
+// h4 fz16
+
+%h5-heading {
+	font-size: 14px;
+	line-height: 1.1;
+	font-weight: 700;
+	color: $brand-color-primary;
+}
 
 body {
 	color: $text-color;
@@ -43,9 +51,16 @@ body {
 		margin-bottom: 10px;
 	}
 
+// h4 fz16
+
+	h5 {
+		@extend %h5-heading;
+		margin-bottom: 7px;
+	}
+
 	p {
 		line-height: 1.6;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
 }
 
