@@ -1,5 +1,6 @@
 .for-whom {
 	padding: 37px 0;
+
 	// .owl-item {
 	// 	// width: 230px !important;
 	// }
@@ -7,18 +8,26 @@
 	&__carousel {
 		width: 100vw;
 		margin-top: 10px;
+
 		@include respond-to(xl) {
 			width: calc(100vw - (100vw - 1180px) / 2);
 		}
+
+		.owl-stage-outer {
+			overflow: visible !important;
+		}
 	}
+
 	// .for-whom__carousel-item
 	&__carousel-item {}
+
 	// .for-whom__image-wrapper
 	&__image-wrapper {
 		width: 230px;
 		height: 230px;
 		margin-bottom: 17px;
 	}
+
 	// .for-whom__image
 	&__image {
 		position: relative;
@@ -26,6 +35,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
 		&::before {
 			content: '';
 			display: block;
@@ -38,6 +48,7 @@
 		}
 	}
 }
+
 // .owl-stage {
 // 	// display: box !important;
 // 	// width: calc(100vw - (100vw - 1180px) / 2) !important;

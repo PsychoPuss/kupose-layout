@@ -16,6 +16,7 @@ let breakpoints = {
 function initOwl() {
 	let $mainSlider = $('.main-carousel>.owl-carousel');
 	let $whomSlider = $('.for-whom__carousel>.owl-carousel');
+	let $productSlider = $('.product__carousel>.owl-carousel');
 	// $mainBanner = $('.main-banner'),
 	// $mainNews = $('.main-news-carousel'),
 	// $mainBrand = $('.main-brand-carousel'),
@@ -56,6 +57,19 @@ function initOwl() {
 				navText: [],
 			};
 		$whomSlider.owlCarousel(params);
+	}
+
+	if ($productSlider.length) {
+		let itemLength = $productSlider.find('.product__carousel-item').length,
+			params = {
+				margin: 0,
+				loop: false,
+				dots: false,
+				autoWidth: true,
+				items: 1,
+				navText: [],
+			};
+		$productSlider.owlCarousel(params);
 	}
 	/*
 		if ($mainBanner.length) {

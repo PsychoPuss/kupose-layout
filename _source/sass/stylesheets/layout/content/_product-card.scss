@@ -174,19 +174,49 @@
 		justify-content: space-between;
 		align-items: flex-end;
 		margin: 11px 0 23px;
+
+		// .product__buy-wrapper_kit
+		&_kit {
+			border-bottom: 1px solid $mid-grey;
+			padding-bottom: 10px;
+		}
 	}
 
 	// .product__cert-type
 	&__cert-type {
 		margin: 0 5px 3px 0;
 	}
-
-	// .product__cert-title
-	&__cert-title {
+	// .product__cert-type-title
+	&__cert-type-title {
 		display: inline-block;
 		margin-bottom: 9px;
 		font-size: 14px;
 		font-weight: 700;
+	}
+
+	// .product__cert-title
+	&__cert-title {
+		font-size: 20px;
+		line-height: 1.2;
+		flex-basis: 100%;
+		margin-bottom: 50px;
+
+		@include respond-to(md) {
+			padding-right: 50%;
+		}
+
+		@include respond-to(lg) {
+			max-width: 250px;
+			font-size: 16px;
+			margin-bottom: 5px;
+			padding: 0;
+		}
+
+		@include respond-to(xl) {
+			max-width: 370px;
+			font-size: 20px;
+			margin-bottom: 3px;
+		}
 	}
 
 	// .product__buy
@@ -195,7 +225,7 @@
 		justify-content: flex-end;
 		flex-basis: 100%;
 		flex-wrap: wrap;
-		margin-top: 25px;
+		margin-top: 40px;
 
 		@include respond-to(lg) {
 			flex-basis: auto;
@@ -205,18 +235,55 @@
 		@include respond-to(xl) {
 			margin-top: 0;
 		}
+
+		// .product__buy_kit
+		&_kit {
+			@include respond-to(md) {
+				flex-basis: auto;
+				flex-wrap: nowrap;
+			}
+		}
 	}
 
 	// .product__description
 	&__description {
 		border-top: 1px solid $mid-grey;
 		padding-top: 50px;
+
+		// .product__description_kit
+		&_kit {
+			border: 0;
+			padding-top: 30px;
+		}
 	}
 
 	// .product__bottom-wrapper
 	&__bottom-wrapper {
 		margin: 77px 0 90px;
 	}
+
+	// .product__carousel
+	&__carousel {
+		margin: 0 -11px;
+		width: 100vw;
+		margin-top: 10px;
+		@include respond-to(xl) {
+			width: calc(100vw - (100vw - 1180px) / 2);
+		}
+
+		.owl-stage-outer {
+			overflow: visible !important;
+		}
+	}
+
+	// .product__carousel-item
+	&__carousel-item {}
+}
+
+.rating-title {
+	font-size: 14px;
+	color: $brand-color-primary;
+	margin: 9px 0 -7px;
 }
 
 .rating {
@@ -260,6 +327,7 @@
 	// .product-place__address
 	&__address {
 		margin-bottom: 20px;
+
 		@include respond-to(md) {
 			flex: 1 1 45%;
 		}
@@ -268,12 +336,14 @@
 	// .product-place__map
 	&__map {
 		margin: 0 -15px;
+
 		@include respond-to(md) {
 			flex: 1 1 55%;
 			margin: 0;
 			border: 2px solid $brand-color-primary;
 			border-radius: 10px;
 		}
+
 		// TODO убрать!
 		img {
 			@include respond-to(md) {
@@ -283,10 +353,18 @@
 	}
 }
 
+.product-reviews-title {
+	font-size: 24px;
+	line-height: 1.2;
+	font-weight: 700;
+	margin-bottom: 35px;
+}
+
 .product-reviews {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -15px;
+
 	@include respond-to(md) {
 		flex-wrap: nowrap;
 	}
@@ -297,12 +375,16 @@
 		margin: 40px 0 16px;
 	}
 }
+
 .product-review {
-	flex: 1	1 100%;
+	flex: 1 1 100%;
+
 	@include respond-to(md) {
-		flex: 1	1 33.33334%;
+		flex: 1 1 33.33334%;
 	}
+
 	padding: 0 15px 30px;
+
 	// .product-review__rating-wrap
 	&__rating-wrap {
 		display: flex;
@@ -311,34 +393,42 @@
 		color: $brand-color-primary;
 		margin-bottom: 15px;
 	}
+
 	// .product-review__rating
 	&__rating {
 		display: flex;
 		flex-wrap: wrap;
 	}
+
 	// .product-review__name
 	&__name {
 		font-weight: 900;
 		margin-right: 7px;
 		flex: 1 1 100%;
+
 		@include respond-to(sm) {
 			flex-basis: auto;
 		}
+
 		@include respond-to(md) {
 			flex-basis: 100%;
 		}
+
 		@include respond-to(lg) {
 			flex-basis: auto;
 		}
 	}
+
 	// .product-review__stars
 	&__stars {
 		height: 21px;
 		margin-left: -2px;
 		background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIxIDIxIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzYwIC0yODYpIj48cmVjdCB3aWR0aD0iMjEiIGhlaWdodD0iMjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM2MCAyODYpIiBmaWxsPSJub25lIi8+PHBhdGggZD0iTTguOTQ1Ljk3M2wxLjcyNiwzLjM4MmExLjUsMS41LDAsMCwwLDEuMS44bDMuNzUuNkEuNS41LDAsMCwxLDE1LjgsNi42TDEzLjExNCw5LjI4NGExLjUsMS41LDAsMCwwLS40MiwxLjI5NGwuNTkyLDMuNzVhLjUuNSwwLDAsMS0uNzIxLjUyM0w5LjE4LDEzLjEzYTEuNSwxLjUsMCwwLDAtMS4zNiwwTDQuNDM2LDE0Ljg1MWEuNS41LDAsMCwxLS43MjEtLjUyM2wuNTkyLTMuNzVhMS41LDEuNSwwLDAsMC0uNDItMS4yOTRMMS4yLDYuNmEuNS41LDAsMCwxLC4yNzUtLjg0N2wzLjc1LS42YTEuNSwxLjUsMCwwLDAsMS4xLS44TDguMDU1Ljk3M0EuNS41LDAsMCwxLDguOTQ1Ljk3M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM2MS45NDMgMjg4LjMpIiBmaWxsPSJub25lIiBzdHJva2U9IiNlMzczM2UiIHN0cm9rZS13aWR0aD0iMSIvPjwvZz48L3N2Zz4=) 0 0 repeat-x;
 	}
+
 	// .product-review__date
 	&__date {}
+
 	// .product-review__img
 	&__img {
 		margin-left: auto;
@@ -346,12 +436,14 @@
 		border-radius: 10px;
 		margin-bottom: 20px;
 	}
+
 	// .product-review__title
 	&__title {
 		font-size: 18px;
 		font-weight: 700;
 		margin-bottom: 12px;
 	}
+
 	// .product-review__text
 	&__text {
 		line-height: 1.5;
