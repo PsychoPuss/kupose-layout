@@ -1,0 +1,118 @@
+.activate {
+
+	// .activate_button
+	&_button {}
+
+	// .activate__form-wrap
+	&__form-wrap {
+		padding-top: 30px;
+	}
+
+	// .activate__step1
+	&__step1 {
+		margin-bottom: 50px;
+	}
+
+	// .activate__step2
+	&__step2 {
+		margin-bottom: 50px;
+	}
+
+	// .activate__presents
+	&__presents {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -11px;
+	}
+
+	// .activate__step3
+	&__step3 {
+		margin-bottom: 65px;
+	}
+
+	// .activate__date-title
+	&__date-title {
+		font-size: 18px;
+		margin-bottom: 5px;
+	}
+
+	// .activate__date-time
+	&__date-time {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 10px;
+	}
+
+	// .activate__date
+	&__date {
+		width: 117px;
+	}
+	// .activate__time
+	&__time {
+		flex: 1 1 100%;
+		@include respond-to(sm) {
+			max-width: 336px;
+		}
+	}
+
+
+	// .activate__date-note
+	&__date-note {
+		color: $brand-color-primary;
+		margin-bottom: 26px;
+	}
+
+	// .activate__checkboxes
+	&__checkboxes {
+		margin-bottom: 20px;
+	}
+
+	// .activate__carousel
+	&__carousel {
+		margin: 0 -11px;
+		width: 100vw;
+		margin-top: 10px;
+
+		@include respond-to(xl) {
+			width: calc(100vw - (100vw - 1180px) / 2);
+		}
+
+		.owl-stage {
+			display: flex;
+		}
+
+		.owl-stage-outer {
+			overflow: visible !important;
+		}
+	}
+
+	// .activate__carousel-item
+	&__carousel-item {
+		height: 100%;
+	}
+}
+
+
+
+.activate-example {
+	margin-top: 30px;
+
+	// .activate-example__title
+	&__title {
+		color: $brand-color-primary;
+	}
+
+	// .activate-example__image
+	&__image {
+		width: 100%;
+		max-width: 450px;
+		border-radius: 10px;
+	}
+}
+
+.carousel-activate {
+	width: 268px;
+	height: 100%;
+	box-sizing: content-box;
+}

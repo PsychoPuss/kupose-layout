@@ -12,6 +12,10 @@ initMasonry();
 initFancybox();
 
 
+//** init datepicker */
+initDatepicker()
+
+
 //** toggle filter on mobiles */
 const btnFilter = document.querySelector('.filter__show-button .btn'),
 	filterContainer = document.getElementById('catalog-filter-wrapper');
@@ -90,7 +94,10 @@ function closeSearch(e) {
 
 
 //** switcher toggle */
-let switcherOption = document.querySelectorAll('.cert-switcher__option');
+
+// TODO
+// карточка товара; надо установить сессию через аякс и прочитать ее в корзине
+let switcherOption = document.querySelectorAll('.switcher__option');
 
 for (let i = 0; i < switcherOption.length; i++) {
 	let self = switcherOption[i];
@@ -104,6 +111,15 @@ function toggleSwitcher() {
 		this.classList.toggle('switcher-selected');
 	}
 }
+
+// TODO
+// активация купона; заполнить значение в скрытый инпут
+
+// TODO
+// корзина; могут быть несколько товаров, переключать у обоих с показом фансибокса
+
+
+
 
 
 //** tabs toggle */
@@ -128,7 +144,9 @@ function toggleTab(e) {
 	document.getElementById(id).classList.add('tabs-content__item_active');
 }
 
-document.querySelector('.tabs-triggers__item').click();
+if (tabTriggers.length > 0) {
+	document.querySelector('.tabs-triggers__item').click()
+};
 
 
 //** product gallery images toggle */

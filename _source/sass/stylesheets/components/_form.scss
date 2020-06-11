@@ -1,3 +1,119 @@
+.form {
+	// margin-bottom: 30px;
+	// .form_horisontal
+	&_horisontal {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.fieldset {
+	width: 100%;
+	max-width: 475px;
+	padding: 0;
+	border: 0;
+	margin-bottom: 20px;
+	@include respond-to(md) {
+		margin-right: 30px;
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+%common-fields {
+	color: $text-color;
+	font-size: 18px;
+	background: $light-grey;
+	box-shadow: inset 0 3px 4px rgba($black, 0.2);
+	border-radius: 5px;
+	border: 1px solid $dark-grey;
+	width: 100%;
+	height: 45px;
+	line-height: 42px;
+	padding: 3px 15px 0;
+	margin-bottom: 10px;
+}
+
+.form-input {
+	@extend %common-fields;
+
+	// .form-input_search
+	&_search {
+		color: $search-color;
+		font-size: 14px;
+		line-height: 36px;
+		width: 100%;
+		height: 39px;
+		padding-right: 40px;
+		background: $white;
+		border: 0;
+		margin: 0;
+
+		&::placeholder {
+			color: $search-color;
+		}
+	}
+
+	// .form-input_small
+	&_small {
+		height: 36px;
+	}
+
+	// .form-input_date
+	&_date {
+		font-size: 14px;
+		background: $mid-grey;
+		border-width: 2px;
+		box-shadow: inset 2px 2px 4px rgba($black, 0.15);
+	}
+
+	// .form-input_nomargin
+	&_nomargin {
+		margin: 0;
+	}
+}
+
+.form-textarea {
+	@extend %common-fields;
+	line-height: 1.2;
+	height: 110px;
+	padding-top: 13px;
+	resize: none;
+}
+
+.form-button {
+	background: transparent;
+	border: 0;
+	padding: 0;
+
+	// .form-button_search
+	&_search {
+		right: 0;
+
+		@include respond-to(lg) {
+			position: absolute;
+			top: -10px;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .search-form {
 	@include respond-to(lg) {
 		position: relative;
@@ -44,10 +160,9 @@
 .form-label {
 	color: #002b53;
 	font-size: 14px;
-	line-height: 1.1;
-	padding-left: 23px;
+	padding-left: 25px;
 	position: relative;
-	margin: 0 0 13px;
+	margin: 0 0 9px;
 	cursor: pointer;
 	display: inline-block;
 	padding-top: 2px;
@@ -60,13 +175,14 @@
 		height: 0;
 		overflow: hidden;
 		clip: rect(0, 0, 0, 0);
+		margin: 0;
 	}
 
 	%common-input-before {
 		content: '';
 		display: block;
 		position: absolute;
-		top: 0;
+		top: 2px;
 		left: 0;
 		width: 15px;
 		height: 15px;
@@ -96,7 +212,7 @@
 			@extend %common-input-after;
 			width: 15px;
 			height: 15px;
-			top: -2px;
+			top: 0;
 			left: 3px;
 			background: url(../img/checkbox.svg) 0 0 no-repeat;
 			background-size: contain;
@@ -116,27 +232,13 @@
 			@extend %common-input-after;
 			width: 7px;
 			height: 7px;
-			top: 4px;
+			top: 6px;
 			left: 4px;
 			background: $text-color;
 			border-radius: 50%;
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // input для фильтра (фильтр не переверстывался, стили старые от первой версии сайта на решении)
 .input-group-field {
@@ -150,45 +252,4 @@
 	height: 25px;
 	line-height: 24px;
 	padding: 0 5px;
-}
-
-.form-input {
-	font-size: 18px;
-	background: $white;
-	box-shadow: inset 0 3px 4px rgba($black, 0.2);
-	border-radius: 5px;
-	border: 0;
-	height: 45px;
-	line-height: 42px;
-	padding: 3px 15px 0;
-
-	// .form-input_search
-	&_search {
-		color: $search-color;
-		font-size: 14px;
-		line-height: 36px;
-		width: 100%;
-		height: 39px;
-		padding-right: 40px;
-
-		&::placeholder {
-			color: $search-color;
-		}
-	}
-}
-
-.form-button {
-	background: transparent;
-	border: 0;
-	padding: 0;
-
-	// .form-button_search
-	&_search {
-		right: 0;
-
-		@include respond-to(lg) {
-			position: absolute;
-			top: -10px;
-		}
-	}
 }

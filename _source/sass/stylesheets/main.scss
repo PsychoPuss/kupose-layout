@@ -31,12 +31,14 @@
 'layout/content/products-list',
 'layout/content/multipresent',
 'layout/content/product-card',
+'layout/content/activate',
 'layout/footer',
 'layout/ie11';
 
 // 4.5. Vendors frameworks
-@import 'vendors/owl-carousel/owl.carousel';
-@import 'vendors/fancybox/jquery.fancybox';
+@import 'vendors/owl-carousel/owl.carousel',
+'vendors/fancybox/jquery.fancybox',
+'vendors/air-datepicker/datepicker';
 
 // 5. Components
 @import 'components/icons',

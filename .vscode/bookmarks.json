@@ -3,7 +3,17 @@
 		"path": "$ROOTPATH$\\_source\\sass\\stylesheets\\layout\\content\\_products-list.scss",
 		"bookmarks": [
 			{
-				"line": 31,
+				"line": 44,
+				"column": 10,
+				"label": ""
+			},
+			{
+				"line": 145,
+				"column": 19,
+				"label": ""
+			},
+			{
+				"line": 185,
 				"column": 10,
 				"label": ""
 			}

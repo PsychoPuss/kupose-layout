@@ -17,7 +17,7 @@ function initOwl() {
 	let $mainSlider = $('.main-carousel>.owl-carousel');
 	let $whomSlider = $('.for-whom__carousel>.owl-carousel');
 	let $productSlider = $('.product__carousel>.owl-carousel');
-	// $mainBanner = $('.main-banner'),
+	let $activateSlider = $('.activate__carousel>.owl-carousel');
 	// $mainNews = $('.main-news-carousel'),
 	// $mainBrand = $('.main-brand-carousel'),
 	// $productPreview = $('.product-slider'),
@@ -70,6 +70,19 @@ function initOwl() {
 				navText: [],
 			};
 		$productSlider.owlCarousel(params);
+	}
+
+	if ($activateSlider.length) {
+		let itemLength = $activateSlider.find('.activate__carousel-item').length,
+			params = {
+				margin: 0,
+				loop: false,
+				dots: false,
+				autoWidth: true,
+				items: 1,
+				navText: [],
+			};
+		$activateSlider.owlCarousel(params);
 	}
 	/*
 		if ($mainBanner.length) {

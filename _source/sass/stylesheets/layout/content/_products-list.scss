@@ -5,6 +5,14 @@
 	margin: 11px 0;
 	padding: 0 11px;
 
+	// .products_small
+	&_small {
+		// width: 25%;
+		// width: auto;
+		// flex: 0 1 25%;
+	}
+
+	// .products_kit
 	&_kit {
 		height: 455px;
 
@@ -13,6 +21,7 @@
 		}
 	}
 
+	// .products_cat 
 	&_cat {
 		height: 405px;
 
@@ -30,6 +39,10 @@
 		background: $white;
 		padding: 5px 0 10px;
 		border-bottom: 1px solid $brand-color-primary;
+
+		.products__desc {
+			display: none;
+		}
 
 		&:hover {
 			z-index: 2;
@@ -130,7 +143,6 @@
 	&__desc {
 		font-size: 15px;
 		padding-bottom: 10px;
-		display: none;
 		background: $white;
 
 		@include respond-to(md) {
@@ -168,4 +180,9 @@
 			padding: 0 14px 0 20px;
 		}
 	}
+}
+
+.carousel-kit {
+	height: 375px;
+	background: $white;
 }

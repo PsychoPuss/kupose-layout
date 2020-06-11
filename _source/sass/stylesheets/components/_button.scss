@@ -31,7 +31,9 @@
 	// .btn_long
 	&_long {
 		width: 100%;
-		max-width: 260px;
+		@include respond-to(sm) {
+			max-width: 260px;
+		}
 	}
 	// .btn_medium
 	&_medium {

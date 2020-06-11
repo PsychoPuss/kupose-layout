@@ -50,16 +50,18 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-		//.prices-wrapper_card
-		&_card {
-			flex-basis: 100%;
-			justify-content: center;
-			margin-bottom: 20px;
-			@include respond-to(md) {
-				flex-basis: auto;
-				margin-bottom: 0;
-			}
+
+	//.prices-wrapper_card
+	&_card {
+		flex-basis: 100%;
+		justify-content: center;
+		margin-bottom: 20px;
+
+		@include respond-to(md) {
+			flex-basis: auto;
+			margin-bottom: 0;
 		}
+	}
 }
 
 .price {
@@ -125,6 +127,7 @@
 			margin-left: 25px;
 		}
 	}
+
 	// .price-old_card
 	&_card {
 		margin-right: 10px;
@@ -238,10 +241,11 @@
 }
 
 //** Switcher */
-.cert-switcher {
+.switcher {
 	display: flex;
 	align-items: center;
-	width: 230px;
+	justify-content: space-around;
+	min-width: 230px;
 	height: 36px;
 	padding: 0 1px;
 	background: $mid-grey;
@@ -250,62 +254,31 @@
 	box-shadow: inset 2px 2px 4px rgba($black, 0.15);
 	cursor: pointer;
 
-	// .cert-switcher__option
+	// .switcher__option
 	&__option {
-		flex: 0 0 50%;
+		width: 100%;
 		color: $dark-grey;
-		font-size: 14px;
-		line-height: 30px;
+		font-size: 12px;
+		line-height: 27px;
+		padding: 3px 5px 0;
+		white-space: nowrap;
 		text-align: center;
 		transition: 0.1s;
+
+		@include respond-to(sm) {
+			font-size: 14px;
+		}
 	}
 }
 
 .switcher-selected {
 	color: $white;
-	font-size: 16px;
+	font-size: 12px;
 	font-weight: 700;
 	background: $brand-color-primary;
 	border-radius: 5px;
-}
 
-
-//** Switcher */
-/* .cert-switcher {
-	display: flex;
-	align-items: center;
-	width: 230px;
-	height: 36px;
-	padding: 0 1px;
-	background: $mid-grey;
-	border: 2px solid $dark-grey;
-	border-radius: 5px;
-	box-shadow: inset 2px 2px 4px rgba($black, 0.15);
-	cursor: pointer;
-
-	%switcher-option {
-		flex: 0 0 50%;
-		color: $dark-grey;
+	@include respond-to(sm) {
 		font-size: 14px;
-		line-height: 30px;
-		text-align: center;
-		transition: 0.1s;
-	}
-
-	// .cert-switcher__left
-	&__left {
-		@extend %switcher-option;
-	}
-	// .cert-switcher__right
-	&__right {
-		@extend %switcher-option;
 	}
 }
-
-.switcher-selected {
-	color: $white !important;
-	font-size: 16px;
-	font-weight: 700;
-	background: $brand-color-primary;
-	border-radius: 5px;
-} */
