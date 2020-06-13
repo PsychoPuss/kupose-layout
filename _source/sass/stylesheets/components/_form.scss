@@ -58,15 +58,15 @@
 
 	// .form-input_small
 	&_small {
-		height: 36px;
+		height: 36px !important;
 	}
 
 	// .form-input_date
 	&_date {
-		font-size: 14px;
-		background: $mid-grey;
-		border-width: 2px;
-		box-shadow: inset 2px 2px 4px rgba($black, 0.15);
+		font-size: 14px !important;
+		background: $mid-grey !important;
+		border: 2px solid $dark-grey !important;
+		box-shadow: inset 2px 2px 4px rgba($black, 0.15) !important;
 	}
 
 	// .form-input_nomargin
@@ -167,6 +167,11 @@
 	display: inline-block;
 	padding-top: 2px;
 
+	// .form-label_orange
+	&_orange {
+		color: $brand-color-primary;
+	}
+
 	%hide-input {
 		// position: absolute !important;
 		// width: 1px;
@@ -236,6 +241,14 @@
 			left: 4px;
 			background: $text-color;
 			border-radius: 50%;
+		}
+
+		// .form-label__radio_orange
+		&_orange {
+			color: $brand-color-primary;
+			&:checked::after {
+				background: $brand-color-primary;
+			}
 		}
 	}
 }

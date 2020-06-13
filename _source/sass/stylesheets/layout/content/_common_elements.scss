@@ -254,6 +254,11 @@
 	box-shadow: inset 2px 2px 4px rgba($black, 0.15);
 	cursor: pointer;
 
+	// .switcher_cert-type
+	&_cert-type {
+		width: 230px;
+	}
+	
 	// .switcher__option
 	&__option {
 		width: 100%;

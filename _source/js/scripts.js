@@ -97,14 +97,14 @@ function closeSearch(e) {
 
 // TODO
 // карточка товара; надо установить сессию через аякс и прочитать ее в корзине
-let switcherOption = document.querySelectorAll('.switcher__option');
+let switcherOptionProd = document.querySelectorAll('.product__cert-type .switcher__option');
 
-for (let i = 0; i < switcherOption.length; i++) {
-	let self = switcherOption[i];
-	self.addEventListener('click', toggleSwitcher);
+for (let i = 0; i < switcherOptionProd.length; i++) {
+	let self = switcherOptionProd[i];
+	self.addEventListener('click', toggleSwitcherProd);
 }
 
-function toggleSwitcher() {
+function toggleSwitcherProd() {
 	let switcherActive = document.querySelector('.switcher-selected');
 	if (!this.classList.contains('switcher-selected')) {
 		switcherActive.classList.remove('switcher-selected');
@@ -112,12 +112,75 @@ function toggleSwitcher() {
 	}
 }
 
-// TODO
-// активация купона; заполнить значение в скрытый инпут
+// выбор времени; заполнить значение в hidden
+let switcherOptionTime = document.querySelectorAll('.activate__time .switcher__option');
 
-// TODO
-// корзина; могут быть несколько товаров, переключать у обоих с показом фансибокса
+for (let i = 0; i < switcherOptionTime.length; i++) {
+	let self = switcherOptionTime[i];
+	self.addEventListener('click', toggleSwitcherTime);
+}
 
+function toggleSwitcherTime() {
+	let switcherTime = document.querySelector('.activate__time .switcher-selected'),
+		switcherCartPage = document.querySelector('input[name=time]'),
+		switcherActivatePage = document.querySelector('input[name=ORDER_PROP_14]');
+
+	if (switcherCartPage)
+		switcherCartPage.value = this.textContent;
+
+	if (switcherActivatePage)
+		switcherActivatePage.value = this.textContent;
+
+	if (!this.classList.contains('switcher-selected')) {
+		switcherTime.classList.remove('switcher-selected');
+		this.classList.toggle('switcher-selected');
+	}
+}
+
+// список товаров в корзине; могут быть несколько товаров, переключать у обоих; уточнить по показу фансибокса
+let switcherOptionCart = document.querySelectorAll('.cart__cert-type .switcher__option');
+
+for (let i = 0; i < switcherOptionCart.length; i++) {
+	let self = switcherOptionCart[i];
+	self.addEventListener('click', toggleSwitcherCart);
+}
+
+function toggleSwitcherCart(e) {
+	let switchers = document.querySelectorAll('.cart__cert-type .switcher__option'),
+		switchersActive = document.querySelectorAll('.cart__cert-type .switcher-selected'),
+		chooseLink = document.querySelectorAll('.cart__cert-type .choose-pack'),
+		selects = document.querySelectorAll('.item-type-select-hide');
+
+	for (let i = 0; i < chooseLink.length; i++) {
+		let self = chooseLink[i];
+		if (e.target.dataset.type == '1') {
+			self.textContent = 'Выберите дизайн сертификата';
+		} else {
+			self.textContent = 'Выберите дизайн конверта';
+		}
+	}
+
+	for (let i = 0; i < switchersActive.length; i++) {
+		let self = switchersActive[i];
+		self.classList.remove('switcher-selected');
+	}
+
+	for (let i = 0; i < switchers.length; i++) {
+		let self = switchers[i];
+		if (self.dataset.type == e.target.dataset.type) {
+			self.classList.add('switcher-selected');
+		}
+	}
+
+	// установим всем старым селектам выбранную опцию
+	for (let i = 0; i < selects.length; i++) {
+		let self = selects[i];
+		self.value = e.target.dataset.type;
+
+		// и передадим в старый jquery
+		$(self).change();
+	}
+}
 
 
 

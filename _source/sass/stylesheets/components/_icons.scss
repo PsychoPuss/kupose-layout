@@ -87,6 +87,13 @@
 		fill: $brand-color-primary;
 	}
 
+	// .svg-icon__angle-down-wide
+	&__angle-down-wide {
+		width: 13px;
+		height: 6px;
+		stroke: $text-color;
+	}
+
 	// .svg-icon__load-more
 	&__load-more {
 		width: 30px;
@@ -99,6 +106,13 @@
 	&__tripadvisor {
 		width: 136px;
 		height: 26px;
+	}
+
+	// .svg-icon__close
+	&__close {
+		width: 15px;
+		height: 15px;
+		stroke: $text-color;
 	}
 
 
