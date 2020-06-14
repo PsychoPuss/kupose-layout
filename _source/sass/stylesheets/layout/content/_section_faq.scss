@@ -1,0 +1,32 @@
+.faq {
+	background: $light-grey;
+	padding: 60px 0;
+	display: flex;
+	justify-content: center;
+}
+
+.accordion {
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 auto;
+	margin: 0 15px;
+	width: auto;
+	max-width: 944px;
+
+	&>.text-title {
+		margin-bottom: 10px;
+	}
+
+	// .accordion__content-wrapper
+	&__content-wrapper {
+		max-height: 0;
+		overflow: hidden;
+		transition: all 0.2s ease-out;
+	}
+	// .accordion__content
+	&__content {
+		display: flex;
+		background: $white;
+		padding: 20px 20px 0;
+	}
+}

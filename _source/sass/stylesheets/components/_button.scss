@@ -16,42 +16,50 @@
 	border-radius: 3px;
 	white-space: nowrap;
 	transition: all 0.25s ease;
+
 	@include on-event {
 		color: $white;
 		text-decoration: none;
 	}
+
 	// .btn_normal
 	&_normal {
 		font-weight: 400;
 	}
+
 	// .btn_wide
 	&_wide {
 		width: 100%;
 	}
+
 	// .btn_long
 	&_long {
 		width: 100%;
+
 		@include respond-to(sm) {
 			max-width: 260px;
 		}
 	}
+
 	// .btn_medium
 	&_medium {
 		width: 100%;
+
 		@include respond-to(sm) {
 			width: 178px;
 		}
 	}
+
 	// .btn_xs
 	&_xs {
 		line-height: 30px;
 	}
+
 	// .btn_sm
 	&_sm {
 		line-height: 33px;
 	}
-	// .btn_md
-	&_md {}
+
 	// .btn_lg
 	&_lg {
 		line-height: 45px;
@@ -60,17 +68,21 @@
 	// .btn_primary
 	&_primary {
 		background: $brand-color-primary;
+
 		@include on-event {
 			background: $brand-color-primary-darken;
 		}
 	}
+
 	// .btn_secondary
 	&_secondary {
 		background: $brand-color-secondary;
+
 		@include on-event {
 			background: $brand-color-secondary-darken;
 		}
 	}
+
 	// .btn_disabled
 	&_disabled {
 		background: $dark-grey;
@@ -79,9 +91,30 @@
 	// .btn_card
 	&_card {
 		width: 100%;
+
 		@include respond-to(md) {
 			width: 178px;
 		}
 	}
 
+	// .btn_accordion
+	&_accordion {
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		line-height: 1.2;
+		font-weight: 400;
+		white-space: normal;
+		text-align: left;
+		min-height: 45px;
+		padding: 11px 10px 9px;
+		margin-bottom: 2px;
+		box-shadow: none;
+		border-radius: 5px;
+
+		@include respond-to(sm) {
+			font-size: 18px;
+			padding: 21px 35px 16px;
+		}
+	}
 }

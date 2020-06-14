@@ -6,22 +6,26 @@
 	font-size: 20px;
 	font-weight: 900;
 	color: $text-color;
+
 	@include respond-to(md) {
 		font-size: 24px;
 	}
 }
+
 %h2-heading {
 	font-size: 20px;
 	line-height: 1.3;
 	font-weight: 900;
 	color: $text-color;
 }
+
 %h3-heading {
 	font-size: 18px;
 	line-height: 1.1;
 	font-weight: 900;
 	color: $brand-color-primary;
 }
+
 // h4 fz16
 
 %h5-heading {
@@ -37,21 +41,33 @@ body {
 }
 
 .text-content {
-	margin-bottom: 35px;
+	margin-bottom: 30px;
+
+	// .text-content_mb0
+	&_mb0 {
+		margin-bottom: 0;
+	}
+
+	a {
+		@extend %text-links;
+	}
+
 	h1 {
 		@extend %h1-heading;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
+
 	h2 {
 		@extend %h2-heading;
 		margin-bottom: 10px;
 	}
+
 	h3 {
 		@extend %h3-heading;
 		margin-bottom: 10px;
 	}
 
-// h4 fz16
+	// h4 fz16
 
 	h5 {
 		@extend %h5-heading;
@@ -62,16 +78,35 @@ body {
 		line-height: 1.6;
 		margin-bottom: 20px;
 	}
+
+	ul,
+	ol {
+		margin-bottom: 20px;
+		display: block;
+		list-style-type: disc;
+		padding-left: 20px;
+
+		li {
+			padding-left: 5px;
+			margin-bottom: 5px;
+		}
+	}
+
+	ol {
+		list-style-type: decimal;
+	}
 }
 
 
 
 .text-title {
 	@extend %h1-heading;
+
 	// .text-title_white
 	&_white {
 		color: $white;
 	}
+
 	// .text-title_catalog
 	&_catalog {
 		border-bottom: 1px solid $mid-grey;

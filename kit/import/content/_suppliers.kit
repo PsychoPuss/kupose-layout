@@ -1,0 +1,104 @@
+<aside class="content__col-left aside-menu">
+	<ul class="aside-menu__items">
+		<li><a href="howto.html" class="aside-menu__link">Как это работает</a></li>
+		<li><a href="about.html" class="aside-menu__link">О нас</a></li>
+		<li><a href="shipping-and-payment.html" class="aside-menu__link">Доставка и оплата</a></li>
+		<li><a href="contacts.html" class="aside-menu__link">Контакты</a></li>
+		<li><a href="" class="aside-menu__link">Отзывы</a></li>
+		<li><a href="suppliers.html" class="aside-menu__link aside-menu__link_active">Партнёрам</a></li>
+	</ul>
+</aside>
+<div class="content__col-right">
+	<div class="contacts">
+		<div class="text-content">
+			<p>
+				Станьте нашим партнером — получите стабильный поток клиентов в Ваш бизнес. Укажите Ваши контакты и адрес вашего сайта в форме ниже.
+			</p>
+		</div>
+		<div class="contacts__info">
+			<div class="contacts__address">
+				<div class="contacts__address-wrapper">
+					<div class="contacts-block">
+						Телефон:<br>
+						<a href="tel:+74951503877">+7 (495) 150-38-77</a>
+					</div>
+					<div class="contacts-block">
+						Адрес:<br>
+						142460, Московская обл, Ногинский р-н, р.п.им.Воровского, ул.Воровского, д.10, корп.1, офис 45
+					</div>
+					<div class="contacts-block">
+						Email:<br>
+						<a href="mailto:info@kupose.ru">info@kupose.ru</a>
+					</div>
+					<div class="contacts-block">
+						Режим работы:<br>
+						Ежедневно, с 8:00 до 22:00
+					</div>
+				</div>
+			</div>
+
+			<!-- ./local/templates/bitlate_sport/components/bitlate/main.feedback/partners/template.php: -->
+			<form action="/company/contacts/" id="main-feedback-form" method="POST" class="form contacts__form" data-ajax="/nl_ajax/main_feedback.php" novalidate="novalidate">
+				<input type="hidden" name="sessid" id="sessid" value="490725466fcc517a6686f7efd6a387db">
+				<div class="contacts__form-wrapper">
+					<div class="contacts__form-col">
+						<input type="text" name="user_name" placeholder="Имя" value="" class="form-input">
+						<input type="text" name="user_phone" placeholder="Телефон" value="" class="form-input">
+						<input type="text" name="user_site" placeholder="Сайт" value="" class="form-input">
+						<div class="captcha">
+							<div class="captcha__col">
+								<input type="text" name="captcha_word" placeholder="Код с картинки" class="form-input">
+								<input type="hidden" name="captcha_sid" value="0f1227ea15c589fdd7a9e2fa5b1d57df">
+							</div>
+							<div class="captcha__col">
+								<img src="https://kupose.ru/bitrix/tools/captcha.php?captcha_sid=0f1227ea15c589fdd7a9e2fa5b1d57df" alt="CAPTCHA" class="photo captcha__img">
+							</div>
+						</div>
+					</div>
+					<div class="contacts__form-col">
+						<textarea name="MESSAGE" placeholder="Текст сообщения" class="form-textarea form-textarea_contacts"></textarea>
+					</div>
+				</div>
+				<input type="hidden" name="PARAMS_HASH" value="e63ad70c4e29b48a37d7563e23b06584">
+				<input type="hidden" name="submit" value="submit">
+				<button type="submit" class="btn btn_medium btn_lg btn_secondary a-contacts-accept">Отправить</button>
+				<br>
+				<label class="form-label">
+					<input type="checkbox" class="form-label__checkbox" value="Y" name="checkbox_rules"><span class="js-order-confirm-text">Нажимая на кнопку "Отправить", я даю свое согласие на обработку персональных данных в соответствии с указанными условиями в <a href="/company/pd.php" target="_blank" class="service">Положении о защите персональных данных</a>.</span>
+				</label>
+			</form>
+
+
+			<!-- оригинал формы: -->
+<!-- 
+			<form action="/info/suppliers/" id="main-feedback-form-partners" method="POST" class="form" data-ajax="/nl_ajax/main_feedback_partners.php" novalidate="novalidate">
+				<input type="hidden" name="sessid" id="sessid" value="fd9f713233a190365927a4904aa30c06">
+				<div class="row">
+					<div class="column xxlarge-6">
+						<input type="text" name="user_name" placeholder="Имя" value="" class="">
+						<input type="text" name="user_phone" placeholder="Телефон" value="" class="">
+						<input type="text" name="user_site" placeholder="Сайт" value="" class="">
+						<div class="table-container captha-block">
+							<div class="table-item"><input type="text" name="captcha_word" placeholder="Код с картинки" class=""></div>
+							<input type="hidden" name="captcha_sid" value="0ee9cf91b28aaa2482f47771b6afba08">
+							<div class="table-item captha"><img src="/bitrix/tools/captcha.php?captcha_sid=0ee9cf91b28aaa2482f47771b6afba08" width="126" height="38" alt="CAPTCHA" class="photo"></div>
+						</div>
+					</div>
+					<div class="column xxlarge-6">
+						<textarea name="MESSAGE" placeholder="Текст сообщения" class=""></textarea>
+					</div>
+				</div>
+				<input type="hidden" name="PARAMS_HASH" value="779d27f7ff204f75a80ecc03d95403f6">
+				<input type="hidden" name="submit" value="submit">
+				<button type="submit" class="button float-right a-contacts-accept">Отправить</button>
+			</form>
+			<fieldset class="new-checkbox-accept column m-t-10">
+				<label>
+					<input type="checkbox" value="Y" name="checkbox_rules">
+					<span>Нажимая на кнопку "Отправить", я даю свое согласие на обработку персональных данных в соответствии с указанными условиями в <a href="/company/pd.php" target="_blank">Положении о защите персональных данных</a>.</span>
+				</label>
+			</fieldset>
+-->
+		</div>
+	</div>
+</div>

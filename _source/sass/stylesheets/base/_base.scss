@@ -31,6 +31,15 @@ body {
 /**
  * Basic styles for links
  */
+%text-links {
+	color: $href-color;
+	border-bottom: 1px solid $href-color;
+	@include on-event {
+		color: $brand-color-primary;
+		border-bottom-color: $brand-color-primary;
+	}
+}
+
 a {
 	color: $light-blue;
 	text-decoration: none;
@@ -40,5 +49,8 @@ a {
 		color: $brand-color-primary;
 		text-decoration: none;
 		// border-bottom: 1px solid $brand-color-primary;
+	}
+	&.service {
+		@extend %text-links;
 	}
 }

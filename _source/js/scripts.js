@@ -183,8 +183,6 @@ function toggleSwitcherCart(e) {
 }
 
 
-
-
 //** tabs toggle */
 let tabTriggers = document.querySelectorAll('.tabs-triggers__item'),
 	tabContents = document.querySelectorAll('.tabs-content__item');
@@ -236,6 +234,26 @@ function togglePreview(e) {
 	mainImage.setAttribute('src', image);
 	mainImageBg.style.backgroundImage = 'url(' + image + ')';
 	mainImageBg.dataset.fancyboxIndex = index;
+}
+
+
+//** accordion */
+let accordion = document.querySelectorAll('.btn_accordion');
+
+for (let i = 0; i < accordion.length; i++) {
+	let self = accordion[i];
+	self.addEventListener('click', toggleAccordion);
+}
+
+function toggleAccordion(e) {
+	e.preventDefault();
+	this.classList.toggle('btn_accordion-active');
+	var content = this.nextElementSibling;
+	if (content.style.maxHeight) {
+		content.style.maxHeight = null;
+	} else {
+		content.style.maxHeight = content.scrollHeight + "px";
+	}
 }
 
 
