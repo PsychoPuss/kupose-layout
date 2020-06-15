@@ -24,7 +24,7 @@
 		right: 20px;
 		bottom: 15px;
 		@include respond-to(md) {
-			padding: 7px 16px;
+			padding: 7px 14px 7px 16px;
 			right: 50px;
 			bottom: 30px;
 			background: rgba($text-color, 0.5);

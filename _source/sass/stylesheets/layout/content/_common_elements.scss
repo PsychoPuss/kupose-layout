@@ -290,11 +290,14 @@
 		width: 100%;
 		color: $dark-grey;
 		font-size: 14px;
-		line-height: 27px;
-		padding: 3px 5px 0;
+		height: 30px;
+		padding: 5px 5px 0;
 		white-space: nowrap;
 		text-align: center;
 		transition: 0.1s;
+		@include respond-to(lg) {
+			padding-top: 6px;
+		}
 	}
 }
 

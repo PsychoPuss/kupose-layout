@@ -45,6 +45,7 @@
 	}
 	.owl-dots {
 		display: flex;
+		height: 13px;
 		-webkit-tap-highlight-color: transparent;
 		.owl-dot {
 			display: inline-block;
@@ -70,10 +71,10 @@
 				}
 			}
 			&:first-child span {
-				margin-left: 0;
+				// margin-left: 0;
 			}
 			&:last-child span {
-				margin-right: 0;
+				// margin-right: 0;
 			}
 		}
 	}
