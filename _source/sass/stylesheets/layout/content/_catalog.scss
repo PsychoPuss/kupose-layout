@@ -23,7 +23,7 @@
 
 		.filter-opened {
 			svg {
-				transform: rotate(180deg) translate(0, -1px);
+				transform: scaleY(-1);
 			}
 		}
 

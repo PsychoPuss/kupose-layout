@@ -88,26 +88,6 @@
 		fill: none;
 	}
 
-	// .svg-icon__angle-down-accordion
-	&__angle-down-accordion {
-		display: none;
-		width: 30px;
-		height: 15px;
-		stroke: $white;
-		fill: none;
-		margin-top: -6px;
-		margin-right: 20px;
-		flex: 0 0 auto;
-
-		@include respond-to(sm) {
-			display: block;
-		}
-
-		.btn_accordion-active & {
-			transform: scaleY(-1);
-		}
-	}
-
 	// .svg-icon__angle-down-wide
 	&__angle-down-wide {
 		width: 13px;
@@ -198,8 +178,29 @@
 	&_angle-down {
 		width: 19px;
 		height: 20px;
-		fill: $white;
+		stroke: $white;
+		fill: none;
 		margin-bottom: -5px;
+	}
+
+	// .svg-icon-btn_angle-down-accordion
+	&__angle-down-accordion {
+		display: none;
+		width: 30px;
+		height: 15px;
+		stroke: $white;
+		fill: none;
+		margin-top: -6px;
+		margin-right: 20px;
+		flex: 0 0 auto;
+
+		@include respond-to(sm) {
+			display: block;
+		}
+
+		.btn_accordion-active & {
+			transform: scaleY(-1);
+		}
 	}
 }
 
