@@ -289,27 +289,19 @@
 	&__option {
 		width: 100%;
 		color: $dark-grey;
-		font-size: 13px;
+		font-size: 14px;
 		line-height: 27px;
 		padding: 3px 5px 0;
 		white-space: nowrap;
 		text-align: center;
 		transition: 0.1s;
-
-		@include respond-to(sm) {
-			font-size: 14px;
-		}
 	}
 }
 
 .switcher-selected {
 	color: $white;
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: 700;
 	background: $brand-color-primary;
 	border-radius: 5px;
-
-	@include respond-to(sm) {
-		font-size: 14px;
-	}
 }

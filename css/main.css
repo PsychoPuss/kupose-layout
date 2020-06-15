@@ -1615,7 +1615,7 @@ html.overlay-mobile-menu::before {
 .switcher__option {
 	width: 100%;
 	color: darkgray;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 27px;
 	padding: 3px 5px 0;
 	white-space: nowrap;
@@ -1624,23 +1624,13 @@ html.overlay-mobile-menu::before {
 	-o-transition: 0.1s;
 	transition: 0.1s;
 }
-@media (min-width: 425px) {
-	.switcher__option {
-		font-size: 14px;
-	}
-}
 
 .switcher-selected {
 	color: #fff;
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: 700;
 	background: #e3733e;
 	border-radius: 5px;
-}
-@media (min-width: 425px) {
-	.switcher-selected {
-		font-size: 14px;
-	}
 }
 
 .leaders {
