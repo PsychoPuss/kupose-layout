@@ -1,5 +1,6 @@
 .contacts-block {
 	margin-bottom: 20px;
+
 	&:last-child {
 		margin-bottom: 0;
 	}
@@ -7,6 +8,7 @@
 	.footer__col & {
 		a {
 			color: $white;
+
 			@include on-event {
 				color: $brand-color-primary;
 			}
@@ -211,6 +213,14 @@
 	display: inline;
 	position: relative;
 
+	// .tooltip__title
+	&__title {
+		display: inline-block;
+		margin-bottom: 9px;
+		font-size: 14px;
+		font-weight: 700;
+	}
+
 	// .tooltip__label
 	&__label {
 		cursor: pointer;
@@ -218,23 +228,30 @@
 		width: 18px;
 		height: 18px;
 		color: $dark-grey;
+		font-size: 17px;
 		font-weight: 700;
-		line-height: 18px;
+		line-height: 1.1;
 		text-align: center;
 		background: $mid-grey;
 		border: 1px solid $dark-grey;
 		border-radius: 50%;
+
+		@include on-event {
+			+.tooltip__text {
+				opacity: 1;
+				z-index: 6;
+			}
+		}
 	}
 
 	// .tooltip__text
 	&__text {
 		opacity: 0;
 		z-index: -1;
-		width: 320px;
+		width: 100vw;
 		position: absolute;
 		bottom: 20px;
-		left: 50%;
-		margin-left: -160px;
+		left: -15px;
 		padding: 24px 19px;
 		line-height: 1.5;
 		background: $white;
@@ -244,14 +261,7 @@
 
 		@include respond-to(sm) {
 			width: 400px;
-			margin-left: -200px;
-		}
-	}
-
-	@include on-event {
-		.tooltip__text {
-			opacity: 1;
-			z-index: 6;
+			left: 0;
 		}
 	}
 }
@@ -274,12 +284,12 @@
 	&_cert-type {
 		width: 230px;
 	}
-	
+
 	// .switcher__option
 	&__option {
 		width: 100%;
 		color: $dark-grey;
-		font-size: 12px;
+		font-size: 13px;
 		line-height: 27px;
 		padding: 3px 5px 0;
 		white-space: nowrap;
@@ -294,7 +304,7 @@
 
 .switcher-selected {
 	color: $white;
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: 700;
 	background: $brand-color-primary;
 	border-radius: 5px;

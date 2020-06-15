@@ -186,13 +186,6 @@
 	&__cert-type {
 		margin: 0 5px 3px 0;
 	}
-	// .product__cert-type-title
-	&__cert-type-title {
-		display: inline-block;
-		margin-bottom: 9px;
-		font-size: 14px;
-		font-weight: 700;
-	}
 
 	// .product__cert-title
 	&__cert-title {
@@ -267,6 +260,7 @@
 		margin: 0 -11px;
 		width: 100vw;
 		margin-top: 10px;
+
 		@include respond-to(xl) {
 			width: calc(100vw - (100vw - 1180px) / 2);
 		}

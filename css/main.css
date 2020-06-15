@@ -1543,27 +1543,37 @@ html.overlay-mobile-menu::before {
 	display: inline;
 	position: relative;
 }
+.tooltip__title {
+	display: inline-block;
+	margin-bottom: 9px;
+	font-size: 14px;
+	font-weight: 700;
+}
 .tooltip__label {
 	cursor: pointer;
 	display: inline-block;
 	width: 18px;
 	height: 18px;
 	color: darkgray;
+	font-size: 17px;
 	font-weight: 700;
-	line-height: 18px;
+	line-height: 1.1;
 	text-align: center;
 	background: #dddddd;
 	border: 1px solid darkgray;
 	border-radius: 50%;
 }
+.tooltip__label:hover + .tooltip__text, .tooltip__label:active + .tooltip__text, .tooltip__label:focus + .tooltip__text {
+	opacity: 1;
+	z-index: 6;
+}
 .tooltip__text {
 	opacity: 0;
 	z-index: -1;
-	width: 320px;
+	width: 100vw;
 	position: absolute;
 	bottom: 20px;
-	left: 50%;
-	margin-left: -160px;
+	left: -15px;
 	padding: 24px 19px;
 	line-height: 1.5;
 	background: #fff;
@@ -1576,12 +1586,8 @@ html.overlay-mobile-menu::before {
 @media (min-width: 425px) {
 	.tooltip__text {
 		width: 400px;
-		margin-left: -200px;
+		left: 0;
 	}
-}
-.tooltip:hover .tooltip__text, .tooltip:active .tooltip__text, .tooltip:focus .tooltip__text {
-	opacity: 1;
-	z-index: 6;
 }
 
 .switcher {
@@ -1609,7 +1615,7 @@ html.overlay-mobile-menu::before {
 .switcher__option {
 	width: 100%;
 	color: darkgray;
-	font-size: 12px;
+	font-size: 13px;
 	line-height: 27px;
 	padding: 3px 5px 0;
 	white-space: nowrap;
@@ -1626,7 +1632,7 @@ html.overlay-mobile-menu::before {
 
 .switcher-selected {
 	color: #fff;
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: 700;
 	background: #e3733e;
 	border-radius: 5px;
@@ -2615,12 +2621,6 @@ html.overlay-mobile-menu::before {
 }
 .product__cert-type {
 	margin: 0 5px 3px 0;
-}
-.product__cert-type-title {
-	display: inline-block;
-	margin-bottom: 9px;
-	font-size: 14px;
-	font-weight: 700;
 }
 .product__cert-title {
 	font-size: 20px;
