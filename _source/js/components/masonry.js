@@ -1,3 +1,4 @@
+/* Masonry init */
 function initMasonry() {
 	let elem_kit = document.querySelector('.catalog__items_kit');
 	if (elem_kit) {

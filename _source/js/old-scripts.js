@@ -1,3 +1,23 @@
+/* old common (site.js) */
+function updateAdd2Basket() {
+	$('.add2cart span').html(NL_ADD_TO_BASKET_BUTTON);
+	$('.add2cart').attr('href', 'javascript:;');
+	$('.add2cart').removeClass('in_basket');
+	if ($('.add2cart').length > 0 && $('.basket_products div').length > 0) {
+		$('.basket_products div').each(function () {
+			var productId = $(this).attr('data-product-id');
+			$('.add2cart[data-product-id=' + productId + '] span').html(NL_ADD_TO_BASKET);
+			$('.add2cart[data-product-id=' + productId + ']').attr('href', NL_ADD_TO_BASKET_URL);
+			$('.add2cart[data-product-id=' + productId + ']').addClass('in_basket');
+		});
+	}
+}
+
+
+
+
+
+/* old cart*/
 $(document).ready(function () {
 
 	$("body").on("click", ".js-main-view", function () {
