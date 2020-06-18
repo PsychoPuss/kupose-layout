@@ -1,5 +1,46 @@
+/* old main.js перенесены некоторые стили, остальные в main-old.js */
+$(document).ready(function () {
+
+	// fancybox inits
+	$('.fancybox:not([disabled],.disabled)').fancybox({
+		closeExisting: true
+	});
+
+	$(document).on('click', '.fancybox-cancel', function (e) {
+		$.fancybox.close();
+		e.preventDefault();
+	});
+
+	$(document).on('click', '.preview-button', function (e) {
+		var $self = $(this);
+		$.fancybox({
+			type: 'ajax',
+			href: $self.attr('data-href'),
+		});
+		e.preventDefault();
+	});
+
+	// scroll to top
+	var $scrollUpDown = $(".footer__scroll-up");
+	$scrollUpDown.click(function () {
+		$("body, html").animate({
+			scrollTop: 0
+		}, 200);
+	});
+	$(window).scroll(function () {
+		scrTop = window.pageYOffset;
+		if (scrTop > 250) {
+			$scrollUpDown.fadeIn();
+		} else {
+			$scrollUpDown.fadeOut();
+		}
+	});
+});
+
+
+
 /* old common (site.js) */
-function updateAdd2Basket() {
+/* function updateAdd2Basket() {
 	$('.add2cart span').html(NL_ADD_TO_BASKET_BUTTON);
 	$('.add2cart').attr('href', 'javascript:;');
 	$('.add2cart').removeClass('in_basket');
@@ -13,11 +54,33 @@ function updateAdd2Basket() {
 	}
 }
 
+if (window.frameCacheVars !== undefined) {
+	BX.addCustomEvent("onFrameDataReceived", function (json) {
+		console.log('bx_personal_menu .dropdown-pane');
+		// $('#bx_personal_menu .dropdown-pane').foundation();
+
+		// loadLiked();
+		// updateAdd2Basket();
+		// updateAdd2Liked();
+		// updateAdd2Compare();
+		// if (!!BX.UserConsent) {
+		// 	BX.UserConsent.loadFromForms();
+		// }
+	});
+} else {
+	$(document).ready(function () {
+		// loadLiked();
+		// updateAdd2Basket();
+		// updateAdd2Liked();
+		// updateAdd2Compare();
+	});
+} */
 
 
 
 
-/* old cart*/
+
+/* old cart (/bitlate_sport/js/scripts.js)*/
 $(document).ready(function () {
 
 	$("body").on("click", ".js-main-view", function () {

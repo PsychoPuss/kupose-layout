@@ -83,6 +83,15 @@
 		}
 	}
 
+	// .btn_grey
+	&_grey {
+		background: $dark-grey;
+
+		@include on-event {
+			background: darken($dark-grey, 10%);
+		}
+	}
+
 	// .btn_disabled
 	&_disabled {
 		background: $dark-grey;

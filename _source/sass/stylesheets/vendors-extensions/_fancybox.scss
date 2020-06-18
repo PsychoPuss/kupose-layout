@@ -1,0 +1,90 @@
+//** fancyboxes */
+.fancybox-block {
+	display: none;
+}
+
+.fancybox-content {
+	padding: 20px 20px 0;
+}
+
+.fancybox-block-caption {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 900;
+	margin-bottom: 30px;
+}
+
+.fancybox-block-login,
+.fancybox-block-forgot,
+.fancybox-block-registration {
+	width: 450px;
+}
+
+.fancybox-block-wrap {
+	margin-bottom: 35px;
+}
+
+.fancybox-col {
+	padding: 0 15px;
+}
+
+.fancybox-flex {
+	display: flex;
+}
+
+.fancybox-inner-link {
+	@extend %text-links-dashed;
+	line-height: 1;
+	display: inline-block;
+}
+
+.fancybox-center {
+	text-align: center;
+}
+
+.fancybox-mb {
+	margin-bottom: 10px;
+}
+
+.fancybox-response {
+	color: $brand-color-primary;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+// cart
+.cart-pack-popup {
+	display: flex;
+	flex-wrap: wrap;
+	width: auto;
+	max-width: 850px;
+	margin: 0 -15px;
+}
+
+.cart-pack-popup .pack {
+	text-align: center;
+	flex-basis: 100%;
+	padding: 20px 15px;
+
+	@include respond-to(md) {
+		flex-basis: 50%;
+	}
+}
+
+.cart-pack-popup .image img {
+	height: auto;
+	margin: 0 auto 20px;
+	width: 100%;
+	max-width: 380px;
+}
+
+.cart-pack-popup .title {
+	margin-bottom: 10px;
+}
+
+.cart-pack-popup .price {
+	color: $brand-color-primary;
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 10px;
+}

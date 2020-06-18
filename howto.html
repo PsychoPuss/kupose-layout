@@ -39,19 +39,29 @@
 					</a>
 				</div>
 				<div class="header__icons">
-					<a href="" class="svg-icon">
-						<svg class="svg-icon__cart svg-icon__cart_ltblue">
-							<use xlink:href="#icon-cart"></use>
-						</svg>
-						<div class="cart-counter">
-							<div class="cart-counter_items">1</div>
+					<div class="header__icon" id="bx_cart_block">
+						<a href="" class="svg-icon">
+							<svg class="svg-icon__cart svg-icon__cart_ltblue">
+								<use xlink:href="#icon-cart"></use>
+							</svg>
+							<div class="cart-counter">
+								<div class="cart-counter_items">1</div>
+							</div>
+						</a>
+					</div>
+					<div class="header__icon header__icon_profile" id="bx_personal_menu">
+						<a href="#login" class="svg-icon fancybox show-dropdown" title="Личный кабинет">
+							<svg class="svg-icon__profile">
+								<use xlink:href="#icon-profile"></use>
+							</svg>
+						</a>
+						<div class="dropdown dropdown_profile">
+							<ul class="dropdown-inner">
+								<li><a href="">Личный кабинет</a></li>
+								<li><a href="">Выйти</a></li>
+							</ul>
 						</div>
-					</a>
-					<a href="" class="svg-icon">
-						<svg class="svg-icon__profile">
-							<use xlink:href="#icon-profile"></use>
-						</svg>
-					</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -408,6 +418,128 @@
 			</div>
 		</div>
 	</footer>
+<div id="bx_fancybox_blocks">
+	<div class="login-block">
+		<div id="login" class="fancybox-block fancybox-block-login">
+			<div class="fancybox-block-caption">Вход</div>
+
+			<!-- <div class="callout fancybox-response fancybox-center success" data-closable="">
+				Неверный логин или пароль.<br> </div>-->
+
+			<div class="fancybox-block-wrap">
+				<script>
+					// $(document).ready(function () {
+					// 	initValidate("#login form");
+					// })
+
+				</script>
+				<form name="form_auth" method="post" target="_top" action="/?login=yes" class="form" data-ajax="/nl_ajax/login.php">
+					<input type="hidden" name="static" value="N">
+					<input type="hidden" name="AUTH_FORM" value="Y">
+					<input type="hidden" name="TYPE" value="AUTH">
+					<input type="hidden" name="backurl" value="/">
+					<fieldset class="fieldset">
+						<input type="text" class="form-input" name="USER_LOGIN" maxlength="255" value="" placeholder="Email">
+						<input type="password" class="form-input" name="USER_PASSWORD" maxlength="255" autocomplete="off" placeholder="Пароль">
+					</fieldset>
+					<a href="#forgot" class="forgot fancybox fancybox-inner-link fancybox-mb">Забыли?</a>
+					<input type="hidden" name="Login" value="Войти">
+					<button type="submit" class="btn btn_wide btn_lg btn_secondary">Войти</button>
+				</form>
+			</div>
+			<div class="fancybox-block-wrap">
+				<h4 class="fancybox-center fancybox-mb">У Вас нет аккаунта?</h4>
+				<a href="#registration" data-href="/?register=yes" data-static="registration" class="btn btn_wide btn_lg btn_grey fancybox show-static">Зарегистрироваться</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="login-block">
+		<div id="forgot" class="fancybox-block fancybox-block-forgot">
+			<div class="fancybox-block-caption">Восстановить пароль</div>
+
+			<!-- <div class="callout fancybox-response fancybox-center success" data-closable="">
+				Профиль пользователя не найден.<br> </div> -->
+
+			<div class="fancybox-block-wrap">
+				<script>
+					// $(document).ready(function () {
+					// 	initValidate("#forgot form");
+					// })
+
+				</script>
+				<form name="bform" method="post" target="_top" action="/catalog/?forgot_password=yes" class="form" data-ajax="/nl_ajax/forgotpasswd.php">
+					<input type="hidden" name="backurl" value="/catalog/">
+					<input type="hidden" name="AUTH_FORM" value="Y">
+					<input type="hidden" name="TYPE" value="SEND_PWD">
+					<input type="hidden" name="USER_LOGIN" maxlength="50" value="" placeholder="Логин:">
+					<input type="text" class="form-input" name="USER_EMAIL" maxlength="255" placeholder="Email">
+					<input type="hidden" name="send_account_info" value="Отправить новый пароль">
+					<button type="submit" class="btn btn_wide btn_lg btn_secondary">Отправить новый пароль</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="login-block">
+		<div id="registration" class="fancybox-block fancybox-block-registration">
+			<div class="fancybox-block-caption">Регистрация</div>
+
+			<!-- <div class="callout fancybox-response fancybox-center success" data-closable="">
+				AUTH_EMAIL_SENT<br> </div> -->
+
+			<noindex>
+				<div class="fancybox-block-wrap">
+					<script>
+						// $(document).ready(function () {
+						// 	initValidate("#registration form");
+						// })
+
+					</script>
+					<form name="bform" method="post" action="/catalog/?register=yes" class="form" data-ajax="/nl_ajax/registration.php">
+						<input type="hidden" name="static" value="N">
+						<input type="hidden" name="AUTH_FORM" value="Y">
+						<input type="hidden" name="TYPE" value="REGISTRATION">
+						<input type="hidden" name="USER_LAST_NAME" value="">
+						<input type="hidden" name="USER_NAME" maxlength="50" value="">
+						<input type="hidden" name="USER_EMAIL" value="">
+						<fieldset class="fieldset">
+							<input type="text" class="form-input" name="USER_FULL_NAME" maxlength="50" value="" placeholder="Фамилия, Имя">
+							<input type="text" class="form-input" name="USER_LOGIN" maxlength="50" value="" placeholder="Email">
+							<input type="password" class="form-input" name="USER_PASSWORD" maxlength="50" value="" placeholder="Пароль" autocomplete="off">
+							<input type="password" class="form-input" name="USER_CONFIRM_PASSWORD" class="confirm_password" maxlength="50" value="" placeholder="Повторите пароль" autocomplete="off">
+						</fieldset>
+						<input type="hidden" name="Register" value="Зарегистрироваться">
+						<button type="submit" class="btn btn_wide btn_lg btn_secondary">Зарегистрироваться</button>
+					</form>
+				</div>
+				<div class="fancybox-block-wrap">
+					<h4 class="fancybox-center fancybox-mb">У Вас нет уже есть аккаунт?</h4>
+					<a href="#login" data-href="/catalog/?login=yes" data-static="login" class="btn btn_wide btn_lg btn_grey fancybox show-static">Войти</a>
+				</div>
+			</noindex>
+		</div>
+	</div>
+
+	<div id="popup_added_to_cart" class="fancybox-block big">
+		<div class="fancybox-block-caption">
+			Товар добавлен в корзину
+		</div>
+		<div class="fancybox-block-wrap">
+			<div class="fancybox-flex">
+				<div class="fancybox-col"><a href="javascript:void(0)" class="btn btn_wide btn_lg btn_secondary js-close-popup">Продолжить покупки</a></div>
+				<div class="fancybox-col"><a href="/personal/order/make/" class="btn btn_wide btn_lg btn_secondary">Перейти в корзину</a></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="cart_pack_popup" class="fancybox-block big">
+		<div class="fancybox-block-caption">Выберите упаковку</div>
+		<div class="fancybox-block-wrap">
+			<div class="cart-pack-popup" data-item=""></div>
+		</div>
+	</div>
+</div>
 	<!-- svg sprite -->
 	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
 		<!-- headerlogo -->

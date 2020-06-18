@@ -41,14 +41,13 @@
 		width: 20px;
 		height: 23px;
 		fill: $light-blue;
-		margin-left: 35px;
 	}
 
 	// .svg-icon__search
 	&__search {
 		width: 20px;
 		height: 20px;
-		fill: $search-color;
+		fill: $brand-color-primary;
 		transition: fill 0.2s;
 	}
 
@@ -201,6 +200,17 @@
 		.btn_accordion-active & {
 			transform: scaleY(-1);
 		}
+	}
+
+	// .svg-icon-btn_angle-scroll-up
+	&__angle-scroll-up {
+		display: block;
+		margin: 15px auto 0;
+		width: 30px;
+		height: 15px;
+		stroke: $white;
+		fill: none;
+		transform: scale(0.9) scaleY(-1);
 	}
 }
 

@@ -13,7 +13,7 @@
 	max-width: 475px;
 	padding: 0;
 	border: 0;
-	margin-bottom: 20px;
+	margin: 0 0 20px;
 
 	@include respond-to(md) {
 		margin-right: 30px;
@@ -40,9 +40,13 @@
 .form-input {
 	@extend %common-fields;
 
+	&.error {
+		border: 1px solid $brand-color-secondary;
+	}
+
 	// .form-input_search
 	&_search {
-		color: $search-color;
+		color: $brand-color-primary;
 		font-size: 14px;
 		width: 100%;
 		height: 39px;
@@ -52,7 +56,7 @@
 		margin: 0;
 
 		&::placeholder {
-			color: $search-color;
+			color: $brand-color-primary;
 		}
 	}
 
@@ -146,6 +150,77 @@
 		}
 	}
 }
+
+.search-results {
+	position: absolute;
+	left: 10px;
+	top: 20px;
+	z-index: 9;
+	width: 100%;
+	min-width: 300px;
+
+	// .search-results__items
+	&__items {
+		padding: 10px 0 15px;
+		border-bottom: 1px solid $light-grey;
+
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+
+	// .search-results__item
+	&__item {
+		margin-bottom: 25px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	// .search-results__wrapper
+	&__wrapper {
+		display: flex;
+	}
+
+	// .search-results__preview
+	&__preview {
+		flex: 0 0 auto;
+	}
+
+	// .search-results__name
+	&__name {
+		line-height: 1.1;
+		flex: 1 1 auto;
+		margin-left: 10px;
+	}
+
+	// .search-results__price
+	&__price {
+		display: block;
+		margin-top: 8px;
+		color: $brand-color-primary !important;
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+	// .search-results__all
+	&__all {
+		@extend %text-links-dashed;
+		display: inline-block;
+		font-size: 15px;
+		line-height: 1;
+		margin: 15px 0 7px;
+	}
+}
+
+.search-results-title {
+	font-weight: 700;
+	margin-bottom: 10px;
+}
+
+
+
 
 .form-label {
 	color: #002b53;

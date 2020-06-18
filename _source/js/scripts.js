@@ -89,6 +89,7 @@ function closeSearch(e) {
 		searchInput.blur();
 		searchForm.classList.add('search-form_closed');
 		searchSvg.classList.add('svg-icon-white');
+		document.getElementById('search-dropdown').innerHTML = '';
 	}
 }
 
