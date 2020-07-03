@@ -5,12 +5,11 @@ function getCookie(name) {
 	return matches ? decodeURIComponent(matches[1]) : undefined;
 }
 
-function setCookie(name, value, options = {}) {
+function setCookie(name, value) {
 
-	options = {
+	let options = {
 		path: '/',
 		// при необходимости добавьте другие значения по умолчанию
-		...options
 	};
 
 	if (options.expires instanceof Date) {

@@ -1,1 +1,103 @@
+.cart-container-order {
+	width: 100%;
+	padding: 0 15px;
+}
 
+.fancybox-block-caption {
+	span {
+		display: block;
+		font-size: 15px;
+		font-weight: 400;
+	}
+}
+
+.price-block {
+	display: block;
+	margin-top: 3px;
+}
+
+.product-list-mini {
+	li {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 15px;
+
+		@include respond-to(sm) {
+			flex-wrap: nowrap;
+		}
+	}
+}
+
+.product-list-mini-preview {
+	min-width: 110px;
+	margin-right: 20px;
+	margin-bottom: 15px;
+}
+
+.product-list-mini-desc {
+	display: block;
+}
+
+.product-list-mini-details {
+	display: block;
+	color: $brand-color-primary;
+	font-size: 14px;
+}
+
+.sale-paysystem-button-container {
+	.btn {
+		@extend .btn_primary
+	}
+}
+
+.profile-column-container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 60px;
+	min-height: 22vh;
+}
+
+.profile-column-item {
+	padding: 0 15px;
+	width: 100%;
+
+	@include respond-to(md) {
+		width: 50%;
+	}
+}
+
+.profile-block-caption {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 20px 0 30px;
+
+	svg {
+		display: none !important;
+	}
+}
+
+.profile-block-wrap {
+	text-align: left;
+
+	th {
+		padding-right: 10px;
+	}
+}
+
+.profile-table-button {
+	margin-top: 20px;
+}
+
+.profile-block-list {
+	li {
+		margin-bottom: 15px;
+	}
+}
+
+.callout.success {
+	margin-bottom: 10px;
+	text-align: center;
+	color: $brand-color-primary;
+}

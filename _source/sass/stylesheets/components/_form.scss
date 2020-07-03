@@ -373,3 +373,9 @@
 		color: $brand-color-primary;
 	}
 }
+
+input, textarea {
+	&.error {
+		border: 1px solid $brand-color-secondary !important;
+	}
+}

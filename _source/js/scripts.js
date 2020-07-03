@@ -291,14 +291,15 @@ function togglePreview(e) {
 
 	if (e.target.closest('a').classList.contains('img-preview-link_video')) {
 		e.target.closest('a').querySelector('.img-preview').classList.add('img-preview_active');
-		let iframe = e.target.closest('a').getElementsByTagName('iframe');
+		let iframe = e.target.closest('a').querySelector('iframe');
 		mainImageBg.style.display = 'none';
 		mainVideo.style.display = 'block';
-		mainVideo.innerHTML = iframe[0].outerHTML;
+		mainVideo.innerHTML = iframe.outerHTML;
 	} else {
 		e.target.classList.add('img-preview_active');
-		mainImageBg.style.display = 'block';
 		mainVideo.style.display = 'none';
+		mainVideo.querySelector('iframe').setAttribute('src', '');
+		mainImageBg.style.display = 'block';
 		mainImage.setAttribute('src', source);
 		mainImageBg.style.backgroundImage = 'url(' + source + ')';
 		mainImageBg.dataset.fancyboxIndex = index;
