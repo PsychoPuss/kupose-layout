@@ -1,0 +1,37 @@
+.notfound {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+	min-height: 27vh;
+
+	// .notfound__col
+	&__col {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1 1 100%;
+		padding: 0 15px;
+		text-align: center;
+
+		@include respond-to(md) {
+			text-align: left;
+			flex-basis: 50%;
+		}
+
+		// .notfound__col_left
+		&_left {
+			color: $brand-color-primary;
+			font-size: 48vw;
+			font-weight: 900;
+			line-height: 1;
+
+			@include respond-to(md) {
+				font-size: 25vw;
+			}
+
+			@include respond-to(xl) {
+				font-size: 310px;
+			}
+		}
+	}
+}

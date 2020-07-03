@@ -3,18 +3,18 @@
 		"path": "$ROOTPATH$\\_source\\sass\\stylesheets\\layout\\content\\_products-list.scss",
 		"bookmarks": [
 			{
-				"line": 44,
+				"line": 45,
 				"column": 10,
 				"label": ""
 			},
 			{
-				"line": 145,
-				"column": 19,
+				"line": 209,
+				"column": 10,
 				"label": ""
 			},
 			{
-				"line": 185,
-				"column": 10,
+				"line": 164,
+				"column": 1,
 				"label": ""
 			}
 		]
@@ -35,11 +35,116 @@
 		]
 	},
 	{
-		"path": "c:\\Users\\Evgeny\\AppData\\Local\\Temp\\scp24899\\local\\templates\\bitlate_sport\\js\\catalog.section.script.js",
+		"path": "c:\\Users\\Evgeny\\AppData\\Local\\Temp\\scp40180\\local\\templates\\bitlate_sport\\js\\scripts.js",
 		"bookmarks": [
 			{
-				"line": 1628,
-				"column": 17,
+				"line": 1018,
+				"column": 45,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "c:\\Users\\Evgeny\\AppData\\Local\\Temp\\scp03318\\www\\kupose.ru\\local\\templates\\bitlate_sport\\components\\bitrix\\catalog.section\\board_custom\\template.php",
+		"bookmarks": [
+			{
+				"line": 414,
+				"column": 29,
+				"label": ""
+			},
+			{
+				"line": 459,
+				"column": 25,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "c:\\Users\\Evgeny\\AppData\\Local\\Temp\\scp37129\\local\\templates\\bitlate_sport\\components\\bitlate\\sale.order.ajax\\new\\template.php",
+		"bookmarks": [
+			{
+				"line": 90,
+				"column": 24,
+				"label": ""
+			},
+			{
+				"line": 361,
+				"column": 16,
+				"label": ""
+			},
+			{
+				"line": 429,
+				"column": 19,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\_source\\js\\scripts.js",
+		"bookmarks": [
+			{
+				"line": 99,
+				"column": 7,
+				"label": ""
+			},
+			{
+				"line": 176,
+				"column": 18,
+				"label": ""
+			},
+			{
+				"line": 282,
+				"column": 19,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "c:\\Users\\Evgeny\\AppData\\Local\\Temp\\scp21295\\local\\templates\\bitlate_sport\\js\\site.js",
+		"bookmarks": [
+			{
+				"line": 32,
+				"column": 24,
+				"label": ""
+			},
+			{
+				"line": 638,
+				"column": 13,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "c:\\Users\\Evgeny\\AppData\\Local\\Temp\\scp44549\\local\\templates\\bitlate_sport\\components\\bitrix\\catalog.element\\element_custom\\template.php",
+		"bookmarks": [
+			{
+				"line": 535,
+				"column": 11,
+				"label": ""
+			},
+			{
+				"line": 753,
+				"column": 5,
+				"label": ""
+			},
+			{
+				"line": 837,
+				"column": 34,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "c:\\Users\\Evgeny\\AppData\\Local\\Temp\\scp31590\\local\\templates\\bitlate_sport\\js\\catalog.element.script.js",
+		"bookmarks": [
+			{
+				"line": 477,
+				"column": 70,
+				"label": ""
+			},
+			{
+				"line": 2266,
+				"column": 18,
 				"label": ""
 			}
 		]

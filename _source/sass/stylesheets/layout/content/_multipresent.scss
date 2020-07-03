@@ -13,19 +13,30 @@
 		margin: 0 -12px 30px;
 
 		.products {
+			width: 100%;
 			flex: 0 1 100%;
+
 			@include respond-to(sm) {
+				width: auto;
 				flex: 0 1 50%;
 			}
+
 			@include respond-to(md) {
 				flex: 0 1 33.33334%;
 			}
+
 			@include respond-to(lg) {
 				flex: 0 1 25%;
 			}
-			@include respond-to(xl) {
-				flex: 0 1 20%;
-			}
 		}
+	}
+
+	// .multipresent__img
+	&__img {
+		width: auto;
+		height: 221px;
+		border-radius: 8px;
+		object-fit: cover;
+		margin-bottom: 15px;
 	}
 }

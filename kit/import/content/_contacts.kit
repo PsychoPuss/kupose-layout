@@ -36,35 +36,36 @@
 							</div>
 
 							<!-- ./local/templates/bitlate_sport/components/bitrix/main.feedback/.default/template.php: -->
-							<form action="/company/contacts/" id="main-feedback-form" method="POST" class="form contacts__form" data-ajax="/nl_ajax/main_feedback.php" novalidate="novalidate">
-								<input type="hidden" name="sessid" id="sessid" value="490725466fcc517a6686f7efd6a387db">
-								<div class="contacts__form-wrapper">
-									<div class="contacts__form-col">
-										<input type="text" name="user_name" placeholder="Имя" value="" class="form-input">
-										<input type="text" name="user_email" placeholder="Email" value="" class="form-input">
-										<div class="captcha">
-											<div class="captcha__col">
-												<input type="text" name="captcha_word" placeholder="Код с картинки" class="form-input">
-												<input type="hidden" name="captcha_sid" value="0f1227ea15c589fdd7a9e2fa5b1d57df">
-											</div>
-											<div class="captcha__col">
-												<img src="https://kupose.ru/bitrix/tools/captcha.php?captcha_sid=0f1227ea15c589fdd7a9e2fa5b1d57df" alt="CAPTCHA" class="photo captcha__img">
+							<div id="bx_main_feedback" class="contacts__bx-wrapper">
+								<form action="/company/contacts/" id="main-feedback-form" method="POST" class="form contacts__form" data-ajax="/nl_ajax/main_feedback.php" novalidate="novalidate">
+									<input type="hidden" name="sessid" id="sessid" value="490725466fcc517a6686f7efd6a387db">
+									<div class="contacts__form-wrapper">
+										<div class="contacts__form-col">
+											<input type="text" name="user_name" placeholder="Имя" value="" class="form-input">
+											<input type="text" name="user_email" placeholder="Email" value="" class="form-input">
+											<div class="captcha">
+												<div class="captcha__col">
+													<input type="text" name="captcha_word" placeholder="Код с картинки" class="form-input">
+													<input type="hidden" name="captcha_sid" value="0f1227ea15c589fdd7a9e2fa5b1d57df">
+												</div>
+												<div class="captcha__col">
+													<img src="https://kupose.ru/bitrix/tools/captcha.php?captcha_sid=0f1227ea15c589fdd7a9e2fa5b1d57df" alt="CAPTCHA" class="photo captcha__img">
+												</div>
 											</div>
 										</div>
+										<div class="contacts__form-col">
+											<textarea name="MESSAGE" placeholder="Текст сообщения" class="form-textarea form-textarea_contacts"></textarea>
+										</div>
 									</div>
-									<div class="contacts__form-col">
-										<textarea name="MESSAGE" placeholder="Текст сообщения" class="form-textarea form-textarea_contacts"></textarea>
-									</div>
-								</div>
-								<input type="hidden" name="PARAMS_HASH" value="e63ad70c4e29b48a37d7563e23b06584">
-								<input type="hidden" name="submit" value="submit">
-								<button type="submit" class="btn btn_medium btn_lg btn_secondary a-contacts-accept">Отправить</button>
-								<br>
-								<label class="form-label">
-									<input type="checkbox" class="form-label__checkbox" value="Y" name="checkbox_rules"><i></i><span class="js-order-confirm-text">Нажимая на кнопку "Отправить", я даю свое согласие на обработку персональных данных в соответствии с указанными условиями в <a href="/company/pd.php" target="_blank" class="service">Положении о защите персональных данных</a>.</span>
-								</label>
-							</form>
-
+									<input type="hidden" name="PARAMS_HASH" value="e63ad70c4e29b48a37d7563e23b06584">
+									<input type="hidden" name="submit" value="submit">
+									<button type="submit" class="btn btn_medium btn_lg btn_secondary a-contacts-accept">Отправить</button>
+									<br>
+									<label class="form-label">
+										<input type="checkbox" class="form-label__checkbox" value="Y" name="checkbox_rules"><i></i><span class="js-order-confirm-text">Нажимая на кнопку "Отправить", я даю свое согласие на обработку персональных данных в соответствии с указанными условиями в <a href="/company/pd.php" target="_blank" class="service">Положении о защите персональных данных</a>.</span>
+									</label>
+								</form>
+							</div>
 
 							<!-- оригинал формы: -->
 							<!-- 							

@@ -153,13 +153,9 @@
 	}
 }
 
-
-
 .svg-icon-white {
 	fill: $white;
 }
-
-
 
 .svg-icon-btn {
 	position: relative;
@@ -171,6 +167,19 @@
 		height: 22px;
 		fill: $white;
 		margin-bottom: -5px;
+	}
+
+	// .svg-icon-btn_play
+	&_play {
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		opacity: 0.8;
+		transition: 0.4s;
+
+		.img-preview-link_video:hover & {
+			opacity: 1;
+		}
 	}
 
 	// .svg-icon-btn_angle-down

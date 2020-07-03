@@ -49,6 +49,14 @@
 	}
 }
 
+.feedback-success {
+	color: $brand-color-primary;
+	font-weight: 700;
+	margin-bottom: 20px;
+	width: 100%;
+    text-align: center;
+}
+
 .contacts {
 
 	// .contacts__map
@@ -61,7 +69,7 @@
 			margin-bottom: 20px;
 		}
 
-		// TODO убрать!
+		// TODO временно, для статики
 		img {
 			@include respond-to(md) {
 				border-radius: 10px;
@@ -96,6 +104,16 @@
 		padding: 15px;
 	}
 
+	// .contacts__bx-wrapper
+	&__bx-wrapper {
+		display: flex;
+		flex: 1 1 100%;
+
+		@include respond-to(md) {
+			flex-basis: 69%;
+		}
+	}
+
 	// .contacts__form
 	&__form {
 		display: flex;
@@ -103,10 +121,6 @@
 		align-items: flex-end;
 		flex: 1 1 100%;
 		padding: 0 7px;
-
-		@include respond-to(md) {
-			flex-basis: 69%;
-		}
 	}
 
 	// .contacts__form-wrapper

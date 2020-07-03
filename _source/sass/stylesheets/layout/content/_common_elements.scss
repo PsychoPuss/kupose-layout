@@ -61,13 +61,16 @@
 	}
 }
 
-
-
 //** Prices */
 .prices-wrapper {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+
+	// .prices-wrapper_catalog
+	&_catalog {
+		margin-bottom: 10px;
+	}
 
 	//.prices-wrapper_card
 	&_card {
@@ -98,7 +101,6 @@
 	&_catalog {
 		color: $brand-color-primary;
 		font-size: 18px;
-		margin-bottom: 10px;
 	}
 
 	//.price_card
@@ -144,6 +146,12 @@
 		@include respond-to(md) {
 			margin-left: 25px;
 		}
+	}
+
+	// .price-old_catalog
+	&_catalog {
+		font-size: 18px;
+		margin-right: 10px;
 	}
 
 	// .price-old_card
@@ -295,6 +303,7 @@
 		white-space: nowrap;
 		text-align: center;
 		transition: 0.1s;
+
 		@include respond-to(lg) {
 			padding-top: 6px;
 		}

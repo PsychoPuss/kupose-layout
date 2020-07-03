@@ -1,8 +1,8 @@
-
 .filter .inner-menu {
 	height: 0;
 	overflow: hidden;
 	transition: height 0.7s ease-out;
+
 	@include respond-to(md) {
 		height: auto !important;
 	}
@@ -13,7 +13,11 @@
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-flow: row wrap;
-	flex-flow: row wrap
+	flex-flow: row wrap;
+
+	form {
+		width: 100%;
+	}
 }
 
 .catalog-filters {
@@ -71,8 +75,10 @@
 	//
 	margin: 10px 0 0;
 	padding: 0;
+
 	@include respond-to(md) {
 		display: flex;
+		flex-wrap: wrap;
 	}
 }
 
@@ -129,96 +135,14 @@
 	max-height: 23.75rem
 }
 
-.catalog-filters__buttons { //
+.catalog-filters__buttons {
+	//
 	padding: 0 14px;
 }
-.catalog-filters__buttons .button:nth-child(2) { //
+
+.catalog-filters__buttons .button:nth-child(2) {
+	//
 	margin-top: 10px;
-}
-.catalog-filters .slider {
-	//
-}
-
-.slider {
-	//
-	position: relative;
-	height: 3px;
-	background-color: $dark-grey;
-	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	-ms-touch-action: none;
-	touch-action: none
-}
-
-.slider-fill {
-	//
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: inline-block;
-	height: 3px;
-	background-color: $text-color;
-	-webkit-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out
-}
-
-.slider-fill.is-dragging {
-	-webkit-transition: all 0s linear;
-	transition: all 0s linear
-}
-
-.slider-handle {
-	//
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-	position: absolute;
-	left: 0;
-	z-index: 1;
-	display: inline-block;
-	width: 14px;
-	height: 14px;
-	background-color: $white;
-	-webkit-transition: all .2s ease-in-out;
-	transition: all .2s ease-in-out;
-	-ms-touch-action: manipulation;
-	touch-action: manipulation;
-	border: 3px solid $brand-color-primary !important;
-	border-radius: 50%
-}
-
-.slider { //
-	border-radius: 6px;
-	margin-bottom: 10px;
-}
-
-.slider .slider-handle {
-	//
-	border: 0;
-	outline: 0
-}
-
-.icon.icon-round-minus,
-.icon.icon-round-plus {
-	background-image: url(../../../images/sprite.png);
-	width: 18px;
-	height: 18px
-}
-
-.slider .slider-handle:first-child {
-	margin-left: -2px
-}
-
-.slider .slider-handle:last-child {
-	margin-left: 2px
-}
-
-.slider .slider-handle:hover {
-	//
-	border-color: $brand-color-primary-darken !important
 }
 
 // добавлено
@@ -242,8 +166,10 @@ fieldset [type=radio]+label {
 	display: inline-block;
 	padding-top: 1px;
 	margin-right: 11px;
+
 	@include respond-to(md) {
 		margin-right: 0;
+		width: 100%;
 	}
 }
 
@@ -293,5 +219,8 @@ fieldset.checkbox input:checked+label::after {
 	height: 15px;
 	background: url(../img/checkbox.svg) 0 0 no-repeat;
 	background-size: contain;
+}
 
+.leader-offset {
+	margin-top: -20px;
 }

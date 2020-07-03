@@ -6,6 +6,96 @@
 					<div class="heading">
 						<span>Цена</span>
 					</div>
+
+
+					<div class="rangeslider">
+						<div class="rangeslider__inputs">
+							<div class="rangeslider__input">
+								<div class="rangeslider__input-label">От</div>
+								<input type="text" class="form-input form-input_filter" id="arrFilter_P1_MIN" name="arrFilter_P1_MIN" value="" placeholder="0">
+							</div>
+							<div class="rangeslider__input">
+								<div class="rangeslider__input-label">До</div>
+								<input type="text" class="form-input form-input_filter" id="arrFilter_P1_MAX" name="arrFilter_P1_MAX" value="" placeholder="180000">
+							</div>
+						</div>
+						<div id="price-rangeslider"></div>
+						<script>
+							let rangeSlider = document.getElementById('price-rangeslider'),
+								input0 = document.getElementById('arrFilter_P1_MIN'),
+								input1 = document.getElementById('arrFilter_P1_MAX'),
+								inputs = [input0, input1];
+
+							noUiSlider.create(rangeSlider, {
+								start: [600, 180000],
+								connect: true,
+								step: 500,
+								range: {
+									'min': [600],
+									'max': [180000]
+								},
+								format: wNumb({
+									decimals: 0,
+									// thousand: ' ',
+								})
+							});
+
+							rangeSlider.noUiSlider.on('update', function (values, handle) {
+								inputs[handle].value = values[handle];
+							});
+
+							// Listen to keydown events on the input field.
+							inputs.forEach(function (input, handle) {
+								input.addEventListener('change', function () {
+									rangeSlider.noUiSlider.setHandle(handle, this.value);
+								});
+								input.addEventListener('keydown', function (e) {
+									var values = rangeSlider.noUiSlider.get();
+									var value = Number(values[handle]);
+									// [[handle0_down, handle0_up], [handle1_down, handle1_up]]
+									var steps = rangeSlider.noUiSlider.steps();
+									// [down, up]
+									var step = steps[handle];
+									var position;
+									// 13 is enter,
+									// 38 is key up,
+									// 40 is key down.
+									switch (e.which) {
+										// case 13:
+										// 	rangeSlider.noUiSlider.setHandle(handle, this.value);
+										// 	break;
+										case 38:
+											// Get step to go increase slider value (up)
+											position = step[1];
+											// false = no step is set
+											if (position === false) {
+												position = 1;
+											}
+											// null = edge of slider
+											if (position !== null) {
+												rangeSlider.noUiSlider.setHandle(handle, value + position);
+											}
+											break;
+										case 40:
+											position = step[0];
+											if (position === false) {
+												position = 1;
+											}
+											if (position !== null) {
+												rangeSlider.noUiSlider.setHandle(handle, value - position);
+											}
+											break;
+									}
+								});
+							});
+
+						</script>
+					</div>
+
+
+					<!-- 
+
+default slider
 					<div class="body bx-filter-container-modef">
 						<div class="row">
 							<div class="row catalog-slider-row">
@@ -28,7 +118,10 @@
 							<span class="slider-fill" data-slider-fill="" style="width: 0px; min-width: 99.34%; left: 0%;"></span>
 							<span class="slider-handle" data-slider-handle="" role="slider" tabindex="0" aria-controls="arrFilter_P1_MAX" aria-valuenow="180000" aria-valuemax="180000" aria-valuemin="0" aria-orientation="horizontal" style="left: 91%;"></span>
 						</div>
-					</div>
+					</div> -->
+
+
+
 				</div>
 				<div class="catalog-filters__block bx-filter-parameters-box">
 					<div class="heading">
@@ -101,29 +194,92 @@
 					<div class="heading">
 						<span>Количество человек</span>
 					</div>
-					<div class="body bx-filter-container-modef">
-						<div class="row">
-							<div class="row catalog-slider-row">
-								<div class="column small-6">
-									<div class="input-group">
-										<span class="input-group-label hollow">От</span>
-										<input id="arrFilter_215_MIN" name="arrFilter_215_MIN" class="input-group-field hollow" value="" type="number" onkeyup="smartFilter.keyup(this)" data-tip-top="3" placeholder="1" max="30" min="1" step="1">
-									</div>
-								</div>
-								<div class="column small-6">
-									<div class="input-group">
-										<span class="input-group-label hollow">До</span>
-										<input id="arrFilter_215_MAX" name="arrFilter_215_MAX" class="input-group-field hollow" value="" type="number" onkeyup="smartFilter.keyup(this)" data-tip-top="3" placeholder="30" max="30" min="1" step="1">
-									</div>
-								</div>
+
+
+					<div class="rangeslider">
+						<div class="rangeslider__inputs">
+							<div class="rangeslider__input">
+								<div class="rangeslider__input-label">От</div>
+								<input type="text" class="form-input form-input_filter" id="arrFilter_215_MIN" name="arrFilter_215_MIN" value="" placeholder="1" max="30" min="1">
+							</div>
+							<div class="rangeslider__input">
+								<div class="rangeslider__input-label">До</div>
+								<input type="text" class="form-input form-input_filter" id="arrFilter_215_MAX" name="arrFilter_215_MAX" value="" placeholder="30" max="30" min="1">
 							</div>
 						</div>
-						<div class="slider" data-start="1" data-end="30" data-initial-start="1" data-initial-end="30" data-slider="2euxky-slider">
-							<span class="slider-handle" data-slider-handle="" role="slider" tabindex="0" aria-controls="arrFilter_215_MIN" aria-valuenow="1" aria-valuemax="30" aria-valuemin="1" aria-orientation="horizontal" style="left: 0%;"></span>
-							<span class="slider-fill" data-slider-fill="" style="width: 0px; min-width: 99.34%; left: 0%;"></span>
-							<span class="slider-handle" data-slider-handle="" role="slider" tabindex="0" aria-controls="arrFilter_215_MAX" aria-valuenow="30" aria-valuemax="30" aria-valuemin="1" aria-orientation="horizontal" style="left: 91%;"></span>
-						</div>
+						<div id="custom-rangeslider"></div>
+						<script>
+							let customrangeSlider = document.getElementById('custom-rangeslider'),
+								inputX = document.getElementById('arrFilter_215_MIN'),
+								inputY = document.getElementById('arrFilter_215_MAX'),
+								inputsZ = [inputX, inputY];
+
+							noUiSlider.create(customrangeSlider, {
+								start: [1, 30],
+								connect: true,
+								step: 1,
+								range: {
+									'min': [1],
+									'max': [30]
+								},
+								format: wNumb({
+									decimals: 0,
+								})
+							});
+
+							customrangeSlider.noUiSlider.on('update', function (values, handle) {
+								inputsZ[handle].value = values[handle];
+							});
+
+							// Listen to keydown events on the input field.
+							inputsZ.forEach(function (input, handle) {
+								input.addEventListener('change', function () {
+									customrangeSlider.noUiSlider.setHandle(handle, this.value);
+								});
+								input.addEventListener('keydown', function (e) {
+									var values = customrangeSlider.noUiSlider.get();
+									var value = Number(values[handle]);
+									// [[handle0_down, handle0_up], [handle1_down, handle1_up]]
+									var steps = customrangeSlider.noUiSlider.steps();
+									// [down, up]
+									var step = steps[handle];
+									var position;
+									// 13 is enter,
+									// 38 is key up,
+									// 40 is key down.
+									switch (e.which) {
+										// case 13:
+										// 	customrangeSlider.noUiSlider.setHandle(handle, this.value);
+										// 	break;
+										case 38:
+											// Get step to go increase slider value (up)
+											position = step[1];
+											// false = no step is set
+											if (position === false) {
+												position = 1;
+											}
+											// null = edge of slider
+											if (position !== null) {
+												customrangeSlider.noUiSlider.setHandle(handle, value + position);
+											}
+											break;
+										case 40:
+											position = step[0];
+											if (position === false) {
+												position = 1;
+											}
+											if (position !== null) {
+												customrangeSlider.noUiSlider.setHandle(handle, value - position);
+											}
+											break;
+									}
+								});
+							});
+
+						</script>
 					</div>
+
+
 				</div>
 				<input type="hidden" name="sort" value="">
 				<input type="hidden" name="view" value="">

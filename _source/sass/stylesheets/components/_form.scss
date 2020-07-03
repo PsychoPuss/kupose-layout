@@ -16,8 +16,13 @@
 	margin: 0 0 20px;
 
 	@include respond-to(md) {
+		max-width: 420px;
 		margin-right: 30px;
 		margin-bottom: 0;
+	}
+
+	@include respond-to(lg) {
+		max-width: 475px;
 	}
 }
 
@@ -65,6 +70,15 @@
 		height: 36px !important;
 	}
 
+	// .form-input_filter
+	&_filter {
+		height: 25px !important;
+		color: $dark-grey;
+		font-size: 12px;
+		box-shadow: inset 3px 3px 2px rgba($black, 0.1);
+		padding: 3px 5px 0;
+	}
+
 	// .form-input_date
 	&_date {
 		font-size: 14px !important;
@@ -86,9 +100,17 @@
 	padding-top: 13px;
 	resize: none;
 
+	&.error {
+		border: 1px solid $brand-color-secondary;
+	}
+
 	// .form-textarea_contacts
 	&_contacts {
-		height: calc(100% - 10px);
+
+		@include respond-to(xl) {
+			min-height: auto;
+			height: calc(100% - 10px);
+		}
 	}
 }
 
@@ -219,6 +241,14 @@
 	margin-bottom: 10px;
 }
 
+.search-page {
+	margin-bottom: 40px;
+
+	// .search-page__form
+	&__form {
+		justify-content: center;
+	}
+}
 
 
 
@@ -227,10 +257,11 @@
 	font-size: 15px;
 	padding-left: 25px;
 	position: relative;
-	margin: 0 0 9px;
+	margin: 0;
 	cursor: pointer;
 	display: inline-block;
 	padding-top: 2px;
+	padding-bottom: 9px;
 
 	// .form-label_orange
 	&_orange {
@@ -318,16 +349,27 @@
 	}
 }
 
-// input для фильтра (фильтр не переверстывался, стили старые от первой версии сайта на решении)
-.input-group-field {
-	color: $dark-grey;
-	font-size: 12px;
-	background: $light-grey;
-	box-shadow: inset 3px 3px 2px rgba($black, 0.1);
-	border-radius: 5px;
-	border: 1px solid $dark-grey;
-	width: 55px;
-	height: 25px;
-	line-height: 24px;
-	padding: 0 5px;
+// слайдер для фильтра
+.rangeslider {
+	padding-top: 10px;
+	margin-bottom: 10px;
+
+	// .rangeslider__inputs
+	&__inputs {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 6px;
+	}
+
+	// .rangeslider__input
+	&__input {
+		width: 60px;
+	}
+
+	// .rangeslider__input-label
+	&__input-label {
+		font-size: 18px;
+		text-transform: lowercase;
+		color: $brand-color-primary;
+	}
 }

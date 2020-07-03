@@ -7,7 +7,7 @@
 	&__item {
 		height: 197px;
 		display: block;
-		background: center no-repeat;
+		background: 0 center no-repeat;
 		background-size: cover;
 		@include respond-to(md) {
 			height: 300px;

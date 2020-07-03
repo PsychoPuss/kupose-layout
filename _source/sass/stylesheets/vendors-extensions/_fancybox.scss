@@ -25,11 +25,18 @@
 }
 
 .fancybox-col {
-	padding: 0 15px;
+	padding: 7px 15px;
+
+	@include respond-to(md) {
+		padding: 0 15px;
+	}
 }
 
 .fancybox-flex {
-	display: flex;
+
+	@include respond-to(md) {
+		display: flex;
+	}
 }
 
 .fancybox-inner-link {
@@ -87,4 +94,16 @@
 	font-size: 20px;
 	font-weight: 700;
 	margin-bottom: 10px;
+}
+
+// activate
+#item-description {
+	width: 100%;
+	max-width: 600px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.compensate-for-scrollbar {
+	margin-right: 0 !important;
 }

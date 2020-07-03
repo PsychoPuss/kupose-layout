@@ -15,6 +15,7 @@
 
 	// .activate__step2
 	&__step2 {
+		display: none;
 		margin-bottom: 50px;
 	}
 
@@ -27,6 +28,7 @@
 
 	// .activate__step3
 	&__step3 {
+		display: none;
 		margin-bottom: 65px;
 	}
 
@@ -101,7 +103,11 @@
 	}
 }
 
-
+.activate-success {
+	display: none;
+	text-align: center;
+	min-height: 27vh;
+}
 
 .activate-example {
 	margin-top: 30px;

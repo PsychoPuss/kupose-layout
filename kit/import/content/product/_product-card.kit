@@ -5,21 +5,39 @@
 						<!-- <video width="100%" controls>
 							<source src="img/temp/video_sample.mp4">
 						</video> -->
-						<a href="javascript:void(0)" class="product__preview-main-link" data-fancybox-trigger="gallery" data-fancybox-index="0" style="background-image: url(img/temp/prod_1.jpg);">
+
+
+						<a href="javascript:void(0)" class="product__preview-main-link" data-fancybox-trigger="gallery" data-fancybox-index="0" style="background-image: url(img/temp/prod_1.jpg); display:none;">
 							<img src="img/temp/prod_1.jpg" alt="" class="main-img-preview">
 						</a>
+
+
+						<div class="product__preview-main-link product__preview-video">
+							<iframe src="https://player.vimeo.com/video/365002277?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/6AQUHnkOQl0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+						</div>
 					</div>
+
+
 					<div class="product__preview-gallery">
-						<a href="img/temp/prod_1.jpg" class="img-preview-link" data-index="0"><img src="img/temp/prod-thumb_1.jpg" alt="" class="img-preview img-preview_active"></a>
-						<a href="img/temp/video_sample.mp4" class="video-preview-link" data-index="1" data-fancybox="video"><img src="img/temp/prod-thumb_2.jpg" alt="" class="img-preview"></a>
-						<a href="img/temp/prod_3.jpg" class="img-preview-link" data-index="2"><img src="img/temp/prod-thumb_3.jpg" alt="" class="img-preview"></a>
-						<a href="img/temp/prod_4.jpg" class="img-preview-link" data-index="3"><img src="img/temp/prod-thumb_4.jpg" alt="" class="img-preview"></a>
+						<a href="javascript:void(0)" class="img-preview-link img-preview-link_video" data-index="0">
+							<svg class="svg-icon-btn svg-icon-btn_play">
+								<use xlink:href="#icon-play"></use>
+							</svg>
+							<img src="https://i.vimeocdn.com/video/868034516_200x150.webp" alt="" class="img-preview img-preview_active">
+							<iframe src="https://player.vimeo.com/video/365002277?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+							<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/6AQUHnkOQl0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+						</a>
+						<!-- <a href="img/temp/video_sample.mp4" class="video-preview-link" data-index="1" data-fancybox="video"><img src="img/temp/prod-thumb_2.jpg" alt="" class="img-preview"></a> -->
+						<a href="img/temp/prod_3.jpg" class="img-preview-link" data-index="1"><img src="img/temp/prod-thumb_3.jpg" alt="" class="img-preview"></a>
+						<a href="img/temp/prod_4.jpg" class="img-preview-link" data-index="2"><img src="img/temp/prod-thumb_4.jpg" alt="" class="img-preview"></a>
 						<a href="javascript:void(0)" class="img-preview-link_all" data-fancybox-trigger="gallery"><span class="img-preview-text">все фото</span></a>
 					</div>
 				</div>
 				<div class="product__lightbox">
-					<a href="img/temp/prod_1.jpg" data-fancybox="gallery"><img src="img/temp/prod-thumb_1.jpg" alt=""></a>
-					<a href="img/temp/video_sample.mp4" data-fancybox="gallery"><img src="img/temp/prod-thumb_2.jpg" alt=""></a>
+					<a href="https://vimeo.com/365002277" data-fancybox="gallery"><img src="https://i.vimeocdn.com/video/868034516_200x150.webp" alt=""></a>
+					<!-- <a href="https://www.youtube.com/embed/6AQUHnkOQl0" data-fancybox="gallery"></a> -->
+					<!-- <a href="img/temp/video_sample.mp4" data-fancybox="gallery"><img src="img/temp/prod-thumb_2.jpg" alt=""></a> -->
 					<a href="img/temp/prod_3.jpg" data-fancybox="gallery"><img src="img/temp/prod-thumb_3.jpg" alt=""></a>
 					<a href="img/temp/prod_4.jpg" data-fancybox="gallery"><img src="img/temp/prod-thumb_4.jpg" alt=""></a>
 					<a href="img/temp/prod_2.jpg" data-fancybox="gallery"><img src="img/temp/prod-thumb_2.jpg" alt=""></a>
@@ -73,16 +91,20 @@
 								<span class="tooltip__text"><b>Электронный сертификат</b> будет мгновенно доставлен на электронную почту.<br><b>Сертификат в подарочном конверте</b> будет доставлен курьером по указанному адресу.<br>Дизайны сертификатов и конвертов вы сможете выбрать в процессе оформления заказа.</span>
 							</div>
 							<div class="switcher switcher_cert-type">
-								<div class="switcher__option switcher-selected">Электронный</div>
-								<div class="switcher__option">В конверте</div>
+								<div class="switcher__option switcher-selected" data-shipping="0">Электронный</div>
+								<div class="switcher__option" data-shipping="350">В конверте</div>
 							</div>
 						</div>
 						<div class="product__buy">
-							<div class="prices-wrapper prices-wrapper_card">
-								<div class="price-old price-old_card">800 руб.</div>
-								<div class="price price_card">700 руб.</div>
+							<div class="product__prices" id="">
+								<div class="prices-wrapper prices-wrapper_card">
+									<div class="price-old price-old_card">800 руб.</div>
+									<div class="price price_card">700 руб.</div>
+								</div>
 							</div>
-							<div class="btn btn_secondary btn_lg btn_card">В корзину</div>
+							<div class="product__buttons">
+								<div class="btn btn_secondary btn_lg btn_card">В корзину</div>
+							</div>
 						</div>
 					</div>
 				</div>

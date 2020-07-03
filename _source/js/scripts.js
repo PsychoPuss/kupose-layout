@@ -13,7 +13,7 @@ initFancybox();
 
 
 //** init datepicker */
-initDatepicker()
+initDatepicker();
 
 
 //** toggle filter on mobiles */
@@ -64,7 +64,8 @@ function closeNavMobile(e) {
 const searchIcon = document.querySelector('.search-form .form-button_search'),
 	searchForm = document.querySelector('.search-form'),
 	searchInput = document.querySelector('.form-input_search'),
-	searchSvg = document.querySelector('.svg-icon__search');
+	searchSvg = document.querySelector('.svg-icon__search'),
+	searchDropdown = document.getElementById('search-dropdown');
 
 searchIcon.addEventListener('click', initSearch);
 
@@ -89,27 +90,62 @@ function closeSearch(e) {
 		searchInput.blur();
 		searchForm.classList.add('search-form_closed');
 		searchSvg.classList.add('svg-icon-white');
-		document.getElementById('search-dropdown').innerHTML = '';
+		if (searchDropdown) {
+			searchDropdown.innerHTML = '';
+		}
+	}
+}
+
+
+//** catalog sort show/hide */
+// const sortBox = document.querySelector('.catalog__sort-box');
+
+function toggleCatalogSort(e) {
+	const sortContainer = document.querySelector('.catalog__sort-select');
+	if (sortContainer) {
+		if (document.querySelector('.catalog__sort-box-active').contains(e.target) === true) {
+			sortContainer.classList.toggle('catalog__sort-select_active');
+		}
+	}
+}
+// close sort by outside click
+function closeCatalogSort(e) {
+	const sortContainer = document.querySelector('.catalog__sort-select');
+	if (sortContainer) {
+		if (document.querySelector('.catalog__sort-box').contains(e.target) === false) {
+			sortContainer.classList.remove('catalog__sort-select_active');
+		}
 	}
 }
 
 
 //** switcher toggle */
 
-// TODO
-// карточка товара; надо установить сессию через аякс и прочитать ее в корзине
-let switcherOptionProd = document.querySelectorAll('.product__cert-type .switcher__option');
+// карточка товара; устанавливается тип сертификата и читается в корзине
+let switcherOptionProd = document.querySelectorAll('.product__cert-type .switcher__option'),
+	arrayElem = [];
 
 for (let i = 0; i < switcherOptionProd.length; i++) {
 	let self = switcherOptionProd[i];
+	arrayElem.push(switcherOptionProd[i]);
 	self.addEventListener('click', toggleSwitcherProd);
 }
 
-function toggleSwitcherProd() {
+function toggleSwitcherProd(e) {
+	setCookie('cert-type', arrayElem.indexOf(e.target));
 	let switcherActive = document.querySelector('.switcher-selected');
 	if (!this.classList.contains('switcher-selected')) {
 		switcherActive.classList.remove('switcher-selected');
 		this.classList.toggle('switcher-selected');
+	}
+
+	let currentPriceBlock = document.querySelector('.price_card'),
+		currentPrice = currentPriceBlock.dataset.price,
+		shipping = e.target.dataset.shipping,
+		freeshipping = 10000;
+
+	if (currentPrice < freeshipping) {
+		currentPriceBlock.innerText = (Number(currentPrice) + Number(shipping)).toString().replace(/(?!^)(?=(\d{3})+(?=\.|$))/gm, ' ') + ' руб.';
 	}
 }
 
@@ -138,19 +174,34 @@ function toggleSwitcherTime() {
 	}
 }
 
-// список товаров в корзине; могут быть несколько товаров, переключать у обоих; уточнить по показу фансибокса
-let switcherOptionCart = document.querySelectorAll('.cart__cert-type .switcher__option');
+// список товаров в корзине; могут быть несколько товаров, переключать у обоих
+let switcherOptionCart = document.querySelectorAll('.cart__cert-type .switcher__option'),
+	indexType = getCookie('cert-type') ? getCookie('cert-type') : 0,
+	switcherProduct = document.querySelectorAll('.cart__cert-type .switcher_cert-type'),
+	selects = document.querySelectorAll('.item-type-select-hide');
 
 for (let i = 0; i < switcherOptionCart.length; i++) {
 	let self = switcherOptionCart[i];
 	self.addEventListener('click', toggleSwitcherCart);
 }
 
+for (let i = 0; i < switcherProduct.length; i++) {
+	let switcher = switcherProduct[i].querySelectorAll('.switcher__option');
+	for (let j = 0; j < switcher.length; j++) {
+		if (j == indexType) {
+			switcher[j].classList.toggle('switcher-selected');
+			setCookie('selectType', switcher[j].dataset.type);
+		}
+	}
+	selects[i].value = getCookie('selectType');
+}
+
+
 function toggleSwitcherCart(e) {
+	setCookie('cert-type', e.target.dataset.type - 1);
 	let switchers = document.querySelectorAll('.cart__cert-type .switcher__option'),
 		switchersActive = document.querySelectorAll('.cart__cert-type .switcher-selected'),
-		chooseLink = document.querySelectorAll('.cart__cert-type .choose-pack'),
-		selects = document.querySelectorAll('.item-type-select-hide');
+		chooseLink = document.querySelectorAll('.cart__cert-type .choose-pack');
 
 	for (let i = 0; i < chooseLink.length; i++) {
 		let self = chooseLink[i];
@@ -214,27 +265,44 @@ if (tabTriggers.length > 0) {
 //** product gallery images toggle */
 const mainImage = document.querySelector('.main-img-preview'),
 	mainImageBg = document.querySelector('.product__preview-main-link'),
+	mainVideo = document.querySelector('.product__preview-video'),
 	imgPreviews = document.querySelectorAll('.img-preview'),
-	linkPreviews = document.querySelectorAll('.img-preview-link');
+	linkPreviews = document.querySelectorAll('.img-preview-link'),
+	videolinkPreviews = document.querySelectorAll('.img-preview-link_video');
 
 for (let i = 0; i < linkPreviews.length; i++) {
 	let self = linkPreviews[i];
 	self.addEventListener('click', togglePreview);
 }
 
+for (let i = 0; i < videolinkPreviews.length; i++) {
+	let self = videolinkPreviews[i];
+	self.addEventListener('click', togglePreview);
+}
+
 function togglePreview(e) {
 	e.preventDefault();
-	const image = e.target.parentNode.getAttribute('href'),
+	const source = e.target.parentNode.getAttribute('href'),
 		index = e.target.parentNode.dataset.index;
 
 	for (let i = 0; i < imgPreviews.length; i++) {
 		imgPreviews[i].classList.remove('img-preview_active');
 	}
-	e.target.classList.add('img-preview_active');
 
-	mainImage.setAttribute('src', image);
-	mainImageBg.style.backgroundImage = 'url(' + image + ')';
-	mainImageBg.dataset.fancyboxIndex = index;
+	if (e.target.closest('a').classList.contains('img-preview-link_video')) {
+		e.target.closest('a').querySelector('.img-preview').classList.add('img-preview_active');
+		let iframe = e.target.closest('a').getElementsByTagName('iframe');
+		mainImageBg.style.display = 'none';
+		mainVideo.style.display = 'block';
+		mainVideo.innerHTML = iframe[0].outerHTML;
+	} else {
+		e.target.classList.add('img-preview_active');
+		mainImageBg.style.display = 'block';
+		mainVideo.style.display = 'none';
+		mainImage.setAttribute('src', source);
+		mainImageBg.style.backgroundImage = 'url(' + source + ')';
+		mainImageBg.dataset.fancyboxIndex = index;
+	}
 }
 
 
@@ -262,4 +330,6 @@ function toggleAccordion(e) {
 document.onclick = function (e) {
 	closeSearch(e);
 	closeNavMobile(e);
+	toggleCatalogSort(e);
+	closeCatalogSort(e);
 }

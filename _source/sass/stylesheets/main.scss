@@ -21,6 +21,7 @@
 'layout/nav-catalog',
 'layout/nav-mobile',
 'layout/breadcrumbs',
+'layout/404',
 'layout/content/common_elements',
 'layout/content/section_leaders',
 'layout/content/section_for-whom',
@@ -60,4 +61,5 @@
 
 // 8. Vendors extensions
 @import 'vendors-extensions/owl-carousel/owl.theme',
-'vendors-extensions/fancybox';
+'vendors-extensions/fancybox',
+'vendors-extensions/nouislider/nouislider';

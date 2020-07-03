@@ -133,6 +133,7 @@
 		border-radius: 50%;
 		background: $brand-color-primary;
 		cursor: pointer;
+		z-index: 9;
 
 		@include on-event {
 			background: $brand-color-primary-darken;
