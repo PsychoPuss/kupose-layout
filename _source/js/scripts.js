@@ -298,7 +298,9 @@ function togglePreview(e) {
 	} else {
 		e.target.classList.add('img-preview_active');
 		mainVideo.style.display = 'none';
-		mainVideo.querySelector('iframe').setAttribute('src', '');
+		if (mainVideo.querySelector('iframe')) {
+			mainVideo.querySelector('iframe').setAttribute('src', '');
+		}
 		mainImageBg.style.display = 'block';
 		mainImage.setAttribute('src', source);
 		mainImageBg.style.backgroundImage = 'url(' + source + ')';

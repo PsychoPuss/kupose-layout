@@ -183,7 +183,7 @@
 	// .product__options-wrapper
 	&__options-wrapper {
 		flex: 1 1 auto;
-		margin: 30px 0 17px;
+		margin: 30px 0 7px;
 	}
 
 	// .product__options-list
@@ -193,7 +193,10 @@
 	}
 
 	// .product__recommends
-	&__recommends {}
+	&__recommends {
+		flex: 1 1 auto;
+		margin-top: 10px;
+	}
 
 	// .product__recommends-title
 	&__recommends-title {

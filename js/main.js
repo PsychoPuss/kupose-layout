@@ -1,5 +1,15 @@
+//@prepros-append components/carousel.js
+//@prepros-append components/masonry.js
+//@prepros-append components/fancybox.js
+//@prepros-append components/datepicker.js
 
+//@prepros-append onload-start.js
+//@prepros-append vendors/dynamic.adapt.js
+//@prepros-append components/is-mobile.js
+//@prepros-append scripts.js
+//@prepros-append onload-end.js
 
+//@prepros-append old-scripts-prod.js
 /* Carousel init */
 let breakpoints = {
 	xs: 320,
@@ -583,7 +593,9 @@ function togglePreview(e) {
 	} else {
 		e.target.classList.add('img-preview_active');
 		mainVideo.style.display = 'none';
-		mainVideo.querySelector('iframe').setAttribute('src', '');
+		if (mainVideo.querySelector('iframe')) {
+			mainVideo.querySelector('iframe').setAttribute('src', '');
+		}
 		mainImageBg.style.display = 'block';
 		mainImage.setAttribute('src', source);
 		mainImageBg.style.backgroundImage = 'url(' + source + ')';
