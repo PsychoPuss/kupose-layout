@@ -83,17 +83,22 @@
 		"path": "$ROOTPATH$\\_source\\js\\scripts.js",
 		"bookmarks": [
 			{
-				"line": 99,
+				"line": 100,
 				"column": 7,
 				"label": ""
 			},
 			{
-				"line": 176,
+				"line": 163,
+				"column": 8,
+				"label": ""
+			},
+			{
+				"line": 213,
 				"column": 18,
 				"label": ""
 			},
 			{
-				"line": 282,
+				"line": 319,
 				"column": 19,
 				"label": ""
 			}
@@ -145,6 +150,16 @@
 			{
 				"line": 2266,
 				"column": 18,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "c:\\Users\\Evgeny\\AppData\\Local\\Temp\\scp42344\\local\\templates\\bitlate_sport\\js\\catalog.element.script.js",
+		"bookmarks": [
+			{
+				"line": 2263,
+				"column": 8,
 				"label": ""
 			}
 		]

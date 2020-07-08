@@ -4,7 +4,7 @@
 	width: 100% !important;
 	background: $white;
 
-	@include respond-to(sm) {
+	@include respond-to(xm) {
 		width: 50% !important;
 	}
 

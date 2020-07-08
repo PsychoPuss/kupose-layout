@@ -15,6 +15,7 @@ initFancybox();
 //** init datepicker */
 initDatepicker();
 
+const freeshipping = 10000;
 
 //** toggle filter on mobiles */
 const btnFilter = document.querySelector('.filter__show-button .btn'),
@@ -118,6 +119,35 @@ function closeCatalogSort(e) {
 	}
 }
 
+//** product card additional items price toggle */
+let checkboxRecommends = document.querySelectorAll('.product__recommends-list input');
+
+for (let i = 0; i < checkboxRecommends.length; i++) {
+	let self = checkboxRecommends[i];
+	self.addEventListener('change', toggleRecommends);
+}
+
+function toggleRecommends(e) {
+
+	let switcherActive = document.querySelector('.switcher-selected'),
+		dopElements = document.querySelectorAll('.product__recommends-list input:checked'),
+		dopPrice = Number(0);
+
+	for (let i = 0; i < dopElements.length; i++) {
+		dopPrice += Number(dopElements[i].dataset.price);
+	}
+
+	let currentPriceBlock = document.querySelector('.price_card'),
+		currentPrice = currentPriceBlock.dataset.price,
+		shipping = switcherActive.dataset.shipping;
+
+	if (currentPrice >= freeshipping) {
+		shipping = 0;
+	}
+	currentPriceBlock.innerText = (Number(currentPrice) + Number(shipping) + Number(dopPrice)).toString().replace(/(?!^)(?=(\d{3})+(?=\.|$))/gm, ' ') + ' руб.';
+}
+
+
 
 //** switcher toggle */
 
@@ -133,7 +163,14 @@ for (let i = 0; i < switcherOptionProd.length; i++) {
 
 function toggleSwitcherProd(e) {
 	setCookie('cert-type', arrayElem.indexOf(e.target));
-	let switcherActive = document.querySelector('.switcher-selected');
+	let switcherActive = document.querySelector('.switcher-selected'),
+		dopElements = document.querySelectorAll('.product__recommends-list input:checked'),
+		dopPrice = Number(0);
+
+	for (let i = 0; i < dopElements.length; i++) {
+		dopPrice += Number(dopElements[i].dataset.price);
+	}
+
 	if (!this.classList.contains('switcher-selected')) {
 		switcherActive.classList.remove('switcher-selected');
 		this.classList.toggle('switcher-selected');
@@ -141,12 +178,12 @@ function toggleSwitcherProd(e) {
 
 	let currentPriceBlock = document.querySelector('.price_card'),
 		currentPrice = currentPriceBlock.dataset.price,
-		shipping = e.target.dataset.shipping,
-		freeshipping = 10000;
+		shipping = e.target.dataset.shipping;
 
-	if (currentPrice < freeshipping) {
-		currentPriceBlock.innerText = (Number(currentPrice) + Number(shipping)).toString().replace(/(?!^)(?=(\d{3})+(?=\.|$))/gm, ' ') + ' руб.';
+	if (currentPrice >= freeshipping) {
+		shipping = 0;
 	}
+	currentPriceBlock.innerText = (Number(currentPrice) + Number(shipping) + Number(dopPrice)).toString().replace(/(?!^)(?=(\d{3})+(?=\.|$))/gm, ' ') + ' руб.';
 }
 
 // выбор времени; заполнить значение в hidden

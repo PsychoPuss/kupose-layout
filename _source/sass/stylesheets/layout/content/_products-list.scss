@@ -14,19 +14,19 @@
 
 	// .products_kit
 	&_kit {
-		height: 455px;
+		height: auto;
 
-		@include respond-to(sm) {
+		@include respond-to(xm) {
 			height: 435px;
 		}
 	}
 
 	// .products_cat 
 	&_cat {
-		height: 405px;
+		height: auto;
 
-		@include respond-to(sm) {
-			height: 405px;
+		@include respond-to(xm) {
+			height: 415px;
 		}
 	}
 

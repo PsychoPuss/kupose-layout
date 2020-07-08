@@ -195,6 +195,9 @@
 	// .product__recommends
 	&__recommends {
 		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 		margin-top: 10px;
 	}
 
@@ -323,11 +326,11 @@
 	// .product__carousel
 	&__carousel {
 		margin: 0 -11px;
-		width: 100vw;
+		// width: 100vw;
 		margin-top: 10px;
 
 		@include respond-to(xl) {
-			width: calc(100vw - (100vw - 1180px) / 2);
+			// width: calc(100vw - (100vw - 1180px) / 2);
 		}
 
 		.owl-stage-outer {
