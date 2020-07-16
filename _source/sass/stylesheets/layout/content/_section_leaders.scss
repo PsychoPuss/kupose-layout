@@ -88,9 +88,17 @@
 
 .leader-img {
 	width: 100%;
-	height: auto;
+	height: 230px;
 	border-radius: 10px;
 	object-fit: cover;
+
+	@include respond-to(sm) {
+		height: 180px;
+	}
+
+	@include respond-to(xm) {
+		height: 210px;
+	}
 
 	@include respond-to(md) {
 		height: 250px;
