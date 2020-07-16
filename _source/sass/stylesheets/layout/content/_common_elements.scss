@@ -176,21 +176,26 @@
 	// .benefits__item
 	&__item {
 		display: flex;
-		flex: 50%;
-		max-width: 250px;
+		flex: 1 1 auto;
+		width: 50%;
+		// max-width: 250px;
 		padding: 30px 5px 0;
+		box-sizing: border-box !important;
 		flex-direction: column;
 		align-items: center;
 
 		@include respond-to(lg) {
-			flex-basis: 25%;
-			max-width: none;
+			flex-basis: auto;
+			width: 25%;
+			// max-width: none;
+			box-sizing: border-box !important;
 			padding: 20px 15px 0;
 		}
 	}
 
 	// .benefits__text
 	&__text {
+		width: 100%;
 		font-size: 14px;
 		line-height: 20px;
 		text-align: center;

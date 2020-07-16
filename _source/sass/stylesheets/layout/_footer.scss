@@ -17,7 +17,8 @@
 
 	// .footer__col
 	&__col {
-		flex: 100%;
+		width: 100%;
+		flex: 1 1 auto;
 		max-width: 400px;
 		padding: 0 10px;
 		margin-bottom: 43px;
@@ -27,7 +28,8 @@
 		}
 
 		@include respond-to(md) {
-			flex: 25%;
+			width: 25%;
+			flex: 1 1 auto;
 			// margin-bottom: 0;
 		}
 	}
