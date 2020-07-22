@@ -24,6 +24,7 @@
 	// .products_cat 
 	&_cat {
 		height: auto;
+		position: relative;
 
 		@include respond-to(xm) {
 			height: 415px;

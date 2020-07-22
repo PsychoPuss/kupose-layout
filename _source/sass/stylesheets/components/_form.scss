@@ -175,11 +175,20 @@
 
 .search-results {
 	position: absolute;
-	left: 10px;
-	top: 20px;
+	left: 0;
+	top: 43px;
 	z-index: 9;
 	width: 100%;
 	min-width: 300px;
+
+	@include respond-to(md) {
+		top: 50px;
+	}
+
+	@include respond-to(lg) {
+		left: 10px;
+		top: 20px;
+	}
 
 	// .search-results__items
 	&__items {
