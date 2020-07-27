@@ -115,9 +115,12 @@
 		stroke: $text-color;
 	}
 
-
-
-
+	// .svg-icon__social
+	&__social {
+		width: 33px;
+		height: 33px;
+		fill: $white;
+	}
 
 	// .svg-icon_text-load-more
 	&_text-load-more {

@@ -39,6 +39,29 @@
 		display: inline-block;
 	}
 
+	// .footer__social
+	&__social {
+		margin-top: 40px;
+	}
+
+	// .footer__social-header
+	&__social-header {
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+
+	// .footer__social-icons
+	&__social-icons {
+		margin: 0 -5px;
+
+		a {
+			display: inline-block;
+			width: 33px;
+			height: 33px;
+			margin: 0 5px;
+		}
+	}
+
 	// .footer__nav-items
 	&__nav-items {
 		margin-top: -4px;
