@@ -306,7 +306,7 @@ initFancybox();
 //** init datepicker */
 initDatepicker();
 
-const freeshipping = 10000;
+const freeshipping = delivery_free_from; // from scripts.js
 
 //** toggle filter on mobiles */
 const btnFilter = document.querySelector('.filter__show-button .btn'),
@@ -422,7 +422,8 @@ function toggleRecommends(e) {
 
 	let switcherActive = document.querySelector('.switcher-selected'),
 		dopElements = document.querySelectorAll('.product__recommends-list input:checked'),
-		dopPrice = Number(0);
+		dopPrice = Number(0),
+		packPrice = Number(0);
 
 	for (let i = 0; i < dopElements.length; i++) {
 		dopPrice += Number(dopElements[i].dataset.price);
@@ -435,7 +436,13 @@ function toggleRecommends(e) {
 	if (currentPrice >= freeshipping) {
 		shipping = 0;
 	}
-	currentPriceBlock.innerText = (Number(currentPrice) + Number(shipping) + Number(dopPrice)).toString().replace(/(?!^)(?=(\d{3})+(?=\.|$))/gm, ' ') + ' руб.';
+
+
+	if (getCookie('cert-type') == 1) {
+		packPrice = pack_price_static; // from scripts.js
+	}
+
+	currentPriceBlock.innerText = (Number(currentPrice) + Number(shipping) + Number(packPrice) + Number(dopPrice)).toString().replace(/(?!^)(?=(\d{3})+(?=\.|$))/gm, ' ') + ' руб.';
 }
 
 
@@ -456,7 +463,8 @@ function toggleSwitcherProd(e) {
 	setCookie('cert-type', arrayElem.indexOf(e.target));
 	let switcherActive = document.querySelector('.switcher-selected'),
 		dopElements = document.querySelectorAll('.product__recommends-list input:checked'),
-		dopPrice = Number(0);
+		dopPrice = Number(0),
+		packPrice = Number(0);
 
 	for (let i = 0; i < dopElements.length; i++) {
 		dopPrice += Number(dopElements[i].dataset.price);
@@ -474,7 +482,12 @@ function toggleSwitcherProd(e) {
 	if (currentPrice >= freeshipping) {
 		shipping = 0;
 	}
-	currentPriceBlock.innerText = (Number(currentPrice) + Number(shipping) + Number(dopPrice)).toString().replace(/(?!^)(?=(\d{3})+(?=\.|$))/gm, ' ') + ' руб.';
+
+	if (getCookie('cert-type') == 1) {
+		packPrice = pack_price_static; // from scripts.js
+	}
+
+	currentPriceBlock.innerText = (Number(currentPrice) + Number(shipping) + Number(packPrice) + Number(dopPrice)).toString().replace(/(?!^)(?=(\d{3})+(?=\.|$))/gm, ' ') + ' руб.';
 }
 
 // выбор времени; заполнить значение в hidden
