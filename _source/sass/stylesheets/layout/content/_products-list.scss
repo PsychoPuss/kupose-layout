@@ -1,4 +1,5 @@
 .products {
+	position: relative;
 	display: flex;
 	flex: 0 1 auto;
 	width: 322px; // для ie и слайдера продуктов. в остальных местах - masonry + ширина в процентах или flex-basis
