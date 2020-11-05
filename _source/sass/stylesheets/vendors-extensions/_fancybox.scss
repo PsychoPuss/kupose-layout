@@ -9,9 +9,19 @@
 
 .fancybox-block-caption {
 	text-align: center;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 900;
 	margin-bottom: 30px;
+
+	&_cart {
+		line-height: 1.2;
+		border-bottom: 1px solid $mid-grey;
+		margin: 0 auto 30px;
+
+		@include respond-to(sm) {
+			width: 345px;
+		}
+	}
 }
 
 .fancybox-block-login,
@@ -60,20 +70,30 @@
 }
 
 // cart
+#cart_pack_popup {
+	border-radius: 10px;
+
+	@include respond-to(xm) {
+		padding-left: 80px;
+		padding-right: 65px;
+	}
+}
+
 .cart-pack-popup {
 	display: flex;
 	flex-wrap: wrap;
-	width: auto;
-	max-width: 850px;
+	// max-width: 850px;
 	margin: 0 -15px;
 }
 
 .cart-pack-popup .pack {
+	position: relative;
 	text-align: center;
 	flex-basis: 100%;
 	padding: 20px 15px;
 
 	@include respond-to(md) {
+		width: 50%;
 		flex-basis: 50%;
 	}
 }
@@ -82,18 +102,48 @@
 	height: auto;
 	margin: 0 auto 20px;
 	width: 100%;
-	max-width: 380px;
+	border-radius: 10px;
+	// max-width: 380px;
+
+	@include respond-to(lg) {
+		width: 487px;
+		height: 361px;
+		object-fit: cover;
+	}
 }
 
 .cart-pack-popup .title {
-	margin-bottom: 10px;
+	font-size: 18px;
+	margin-bottom: 5px;
+	text-align: left;
+
+	@include respond-to(md) {
+		position: absolute;
+		top: 32px;
+		left: 30px;
+		margin-bottom: 0;
+		padding-right: 25px;
+	}
+	@include respond-to(lg) {
+		top: 42px;
+		left: 37px;
+		font-size: 22px;
+	}
+}
+
+.pack__bottom {
+	display: flex;
+	justify-content: flex-end;
 }
 
 .cart-pack-popup .price {
-	color: $brand-color-primary;
-	font-size: 20px;
-	font-weight: 700;
-	margin-bottom: 10px;
+	width: 50%;
+	text-align: right;
+	padding-right: 20px;
+	color: $text-color;
+	font-size: 22px;
+	line-height: 45px;
+	font-weight: 400;
 }
 
 // activate

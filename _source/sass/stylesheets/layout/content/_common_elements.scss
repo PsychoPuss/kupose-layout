@@ -101,6 +101,14 @@
 	&_catalog {
 		color: $brand-color-primary;
 		font-size: 18px;
+
+		// старый стиль от шаблона, устанавливается в  templates/bitlate_sport/js/catalog.section.script.js:1406
+		.old {
+			display: block;
+			float: left;
+			font-size: 18px;
+			margin-right: 10px;
+		}
 	}
 
 	//.price_card
@@ -116,7 +124,7 @@
 }
 
 .price-old {
-	color: $dark-grey;
+	color: $brand-color-secondary-light;
 	font-size: 20px;
 	font-weight: 400;
 	line-height: 1;
@@ -130,7 +138,7 @@
 		display: block;
 		width: 100%;
 		top: 46%;
-		border-bottom: 1px solid $dark-grey;
+		border-bottom: 1px solid $brand-color-secondary-light;
 	}
 
 	// .price-old_leader
@@ -229,9 +237,8 @@
 	// .tooltip__title
 	&__title {
 		display: inline-block;
-		margin-bottom: 9px;
-		font-size: 14px;
-		font-weight: 700;
+		margin-right: 15px;
+		font-size: 18px;
 	}
 
 	// .tooltip__label
@@ -265,17 +272,70 @@
 		position: absolute;
 		bottom: 20px;
 		left: calc(5vw - 15px);
-		padding: 24px 19px;
+		padding: 16px;
 		line-height: 1.5;
 		background: $white;
 		border: 1px solid $brand-color-primary;
 		border-radius: 10px;
 		transition: 0.2s;
 
-		@include respond-to(sm) {
-			width: 400px;
+		h5 {
+			font-size: 18px;
+			font-weight: 900;
+		}
+
+		p {
+			font-size: 14px;
+			color: $mid-blue;
+			margin: 5px 0 10px;
+		}
+
+		@include respond-to(md) {
+			width: 480px;
+			left: -70px;
+		}
+
+		@include respond-to(lg) {
 			left: 0;
 		}
+	}
+
+		//.tooltip__element
+		&__element {
+			display: flex;
+			align-items: center;
+			margin-bottom: 13px;
+
+			img {
+				display: block;
+				margin-right: 9px;
+				border-radius: 5px;
+				width: 87px;
+				height: 74px;
+				object-fit: cover;
+
+				@include respond-to(sm) {
+					margin-right: 26px;
+				}
+			}
+
+			span {
+				font-size: 12px;
+				line-height: 1.4;
+				
+				b {
+					display: block;
+					font-size: 14px;
+				}
+			}
+		}
+
+
+	// .tooltip__note
+	&__note {
+		font-size: 10px;
+		color: $mid-blue;
+		margin: 15px 0 0;
 	}
 }
 
@@ -295,22 +355,38 @@
 
 	// .switcher_cert-type
 	&_cert-type {
-		width: 230px;
+		margin-top: 5px;
+		margin-bottom: 9px;
+		width: 100%;
+
+		@include respond-to(sm) {
+			width: 376px;
+		}
 	}
 
 	// .switcher__option
 	&__option {
+		position: relative;
 		width: 100%;
 		color: $dark-grey;
 		font-size: 14px;
 		height: 30px;
-		padding: 5px 5px 0;
+		padding: 7px 5px 0;
 		white-space: nowrap;
 		text-align: center;
 		transition: 0.1s;
 
+		// .switcher__option_cert-type
+		&_cert-type {
+			font-size: 13px !important;
+			@include respond-to(sm) {
+				padding-left: 25px;
+				font-size: 14px !important;
+			}
+		}
+
 		@include respond-to(lg) {
-			padding-top: 6px;
+			padding-top: 7px;
 		}
 	}
 }

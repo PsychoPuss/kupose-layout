@@ -27,9 +27,19 @@
 		font-weight: 400;
 	}
 
+	// .btn_bold
+	&_bold {
+		font-weight: 700;
+	}
+
 	// .btn_wide
 	&_wide {
 		width: 100%;
+	}
+
+	// .btn_half
+	&_half {
+		width: 50%;
 	}
 
 	// .btn_long

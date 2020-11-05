@@ -221,7 +221,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		align-items: flex-end;
+		align-items: center;
 		margin: 11px 0 23px;
 
 		// .product__buy-wrapper_kit
@@ -233,7 +233,7 @@
 
 	// .product__cert-type
 	&__cert-type {
-		margin: 0 5px 3px 0;
+		margin: 0 5px 0 0;
 	}
 
 	// .product__cert-title

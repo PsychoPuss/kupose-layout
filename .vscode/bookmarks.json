@@ -88,17 +88,17 @@
 				"label": ""
 			},
 			{
-				"line": 170,
+				"line": 171,
 				"column": 8,
 				"label": ""
 			},
 			{
-				"line": 227,
+				"line": 228,
 				"column": 18,
 				"label": ""
 			},
 			{
-				"line": 333,
+				"line": 338,
 				"column": 19,
 				"label": ""
 			}
@@ -170,6 +170,26 @@
 			{
 				"line": 654,
 				"column": 39,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\_source\\js\\old-scripts.js",
+		"bookmarks": [
+			{
+				"line": 1103,
+				"column": 1,
+				"label": ""
+			},
+			{
+				"line": 1107,
+				"column": 22,
+				"label": ""
+			},
+			{
+				"line": 1115,
+				"column": 32,
 				"label": ""
 			}
 		]

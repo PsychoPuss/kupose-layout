@@ -34,15 +34,16 @@
 		</noscript>
 		<div class="bx_order_make">
 			<script>
-				var pack_types = '{"email":[{"type":"email","id":"2451","name":"Сертификат универсальный","image":"\/upload\/iblock\/f6c\/f6cea919094f5c957c5279aa5ce40f35.jpg","price":0},{"type":"email","id":"2450","name":"Сертификат \u0026quot;С любовью\u0026quot;","image":"\/upload\/iblock\/983\/98370b8b5baa99b1a5322f670b25d95f.jpg","price":0},{"type":"email","id":"2492","name":"Сертификат \u0026quot;С днем рождения\u0026quot; дизайн I","image":"\/upload\/iblock\/043\/043fbaae83a2ff32e43bb27aaa4d879a.jpg","price":0},{"type":"email","id":"2577","name":"Сертификат \u0026quot;С днем рождения\u0026quot; дизайн II","image":"\/upload\/iblock\/181\/1817caaeb6dc59e0348ad34487b99630.jpg","price":0},{"type":"email","id":"2512","name":"Сертификат \u0026quot;С днем свадьбы\u0026quot; дизайн I","image":"\/upload\/iblock\/2a9\/2a967d1f90783c9a7d7e83bb322179d0.jpg","price":0},{"type":"email","id":"2493","name":"Сертификат \u0026quot;С днем свадьбы\u0026quot; дизайн II","image":"\/upload\/iblock\/a41\/a417f29ce43bade21dc8a6a8a16d640b.jpg","price":0}],"post":[{"type":"post","id":"2447","name":"Конверт стандартный. дизайн I","image":"\/upload\/iblock\/c45\/c45bd426788d4dcafda90fa60c741f00.jpg","price":150},{"type":"post","id":"2578","name":"Конверт стандартный. дизайн II","image":"\/upload\/iblock\/181\/181b13fd9b27ebb6092ca48bf10def0d.jpg","price":150},{"type":"post","id":"2494","name":"Конверт \u0026quot;С днём рождения\u0026quot;","image":"\/upload\/iblock\/9f0\/9f0edf2ae396475b7652323e23d4b041.jpg","price":150},{"type":"post","id":"2495","name":"Конверт \u0026quot;С днём свадьбы\u0026quot;","image":"\/upload\/iblock\/cac\/cac8e7052f57f522e2f7092ad6ebb2c1.jpg","price":150},{"type":"post","id":"2515","name":"Конверт \u0026quot;С любовью\u0026quot;","image":"\/upload\/iblock\/6e2\/6e2194408ea055663527ca821cb7c429.jpg","price":150}]}';
+				var pack_types = '{"email":[{"type":"email","id":"2451","name":"Сертификат универсальный","image":"","price":0},{"type":"email","id":"2450","name":"Сертификат \u0026quot;С любовью\u0026quot;","image":"","price":0},{"type":"email","id":"2492","name":"Сертификат \u0026quot;С днем рождения\u0026quot; дизайн I","image":"","price":0},{"type":"email","id":"2577","name":"Сертификат \u0026quot;С днем рождения\u0026quot; дизайн II","image":"","price":0},{"type":"email","id":"2512","name":"Сертификат \u0026quot;С днем свадьбы\u0026quot; дизайн I","image":"","price":0},{"type":"email","id":"2493","name":"Сертификат \u0026quot;С днем свадьбы\u0026quot; дизайн II","image":"","price":0}],"post":[{"type":"post","id":"2447","name":"Конверт стандартный. дизайн I","image":"","price":150},{"type":"post","id":"2494","name":"Конверт \u0026quot;С днём рождения\u0026quot;","image":"","price":150},{"type":"post","id":"2495","name":"Конверт \u0026quot;С днём свадьбы\u0026quot;","image":"","price":150},{"type":"post","id":"2515","name":"Конверт \u0026quot;С любовью\u0026quot;","image":"","price":150},{"type":"post","id":"2578","name":"Конверт стандартный. дизайн II","image":"","price":150}],"box":[{"type":"box","id":"3302","name":"Коробка универсальный дизайн ","image":"img\/temp\/prod_1.jpg","price":500},{"type":"box","id":"3303","name":"Коробка \u0026quot;С днём свадьбы\u0026quot;","image":"img\/temp\/prod_1.jpg","price":520}]}';
 				pack_types = JSON.parse(pack_types);
 				var pack_main_type = 1;
 				var pack_selected = {};
 				var delivery_cart_price = '350';
 				var delivery_pack_price = '150';
-
+				
 				delivery_cart_price = parseInt(delivery_cart_price);
 				delivery_pack_price = parseInt(delivery_pack_price);
+			
 			</script>
 
 			<div class="js-cart-container">
@@ -115,14 +116,31 @@
 											<select name="item-type-select" class="item-type-select-hide">
 												<option value="1"></option>
 												<option value="2"></option>
+												<option value="3"></option>
 											</select>
 											<div class="choosen-pack" data-id=""></div>
 											<div class="cart__cert-type">
-												<a href="#cart_pack_popup" class="choose-pack js-choose-pack">Выберите дизайн сертификата</a>
-												<div class="switcher switcher_cert-type">
-													<div class="switcher__option switcher-selected" data-type="1">Электронный</div>
-													<div class="switcher__option" data-type="2">В конверте</div>
+												<div class="cart__cert-type-wrapper">
+													<div class="switcher switcher_cert-type">
+														<div class="switcher__option switcher__option_cert-type" data-type="1">
+															<svg class="svg-icon-btn svg-icon-btn_cert-email">
+																<use xlink:href="#icon-cert-email"></use>
+															</svg>
+															Электронный</div>
+														<div class="switcher__option switcher__option_cert-type" data-type="2">
+															<svg class="svg-icon-btn svg-icon-btn_cert-post">
+																<use xlink:href="#icon-cert-post"></use>
+															</svg>
+															В конверте</div>
+														<div class="switcher__option switcher__option_cert-type" data-type="3">
+															<svg class="svg-icon-btn svg-icon-btn_cert-box">
+																<use xlink:href="#icon-cert-box"></use>
+															</svg>
+															В коробке</div>
+													</div>
+													<a href="#cart_pack_popup" class="choose-pack js-choose-pack">Выберите дизайн сертификата<svg class="svg-icon__angle-down svg-icon__angle-down_choose-pack"><use xlink:href="#icon-angle-down"></use></svg></a>
 												</div>
+												<img src="img/temp/prod_1.jpg" alt="" class="cart__cert-preview">
 											</div>
 										</div>
 									</div>
@@ -201,14 +219,19 @@
 											<select name="item-type-select" class="item-type-select-hide">
 												<option value="1"></option>
 												<option value="2"></option>
+												<option value="3"></option>
 											</select>
 											<div class="choosen-pack" data-id=""></div>
 											<div class="cart__cert-type">
-												<a href="#cart_pack_popup" class="choose-pack js-choose-pack">Выберите дизайн сертификата</a>
-												<div class="switcher switcher_cert-type">
-													<div class="switcher__option switcher-selected" data-type="1">Электронный</div>
-													<div class="switcher__option" data-type="2">В конверте</div>
+												<div class="cart__cert-type-wrapper">
+													<div class="switcher switcher_cert-type">
+														<div class="switcher__option" data-type="1">Электронный</div>
+														<div class="switcher__option" data-type="2">В конверте</div>
+														<div class="switcher__option" data-type="3">В коробке</div>
+													</div>
+													<a href="#cart_pack_popup" class="choose-pack js-choose-pack">Выберите дизайн сертификата<svg class="svg-icon__angle-down svg-icon__angle-down_choose-pack"><use xlink:href="#icon-angle-down"></use></svg></a>
 												</div>
+												<img src="img/temp/prod_1.jpg" alt="" class="cart__cert-preview">
 											</div>
 										</div>
 									</div>
