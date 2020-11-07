@@ -87,7 +87,7 @@ function initOwl() {
         nav: false,
         navContainer: ".owl-custom-nav-block",
         autoWidth: true,
-        items: 3,
+        items: 1,
         navText: [],
       };
     $packSlider.owlCarousel(params);
